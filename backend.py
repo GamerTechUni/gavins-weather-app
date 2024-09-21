@@ -87,7 +87,8 @@ def fetch_observation(geohash, timezone):
                'wind': check_if_none_value("wind", wind_unit, observation_data),
                'wind_direction': check_if_none_value("wind", "direction", observation_data),
                'gust': check_if_none_value("gust", wind_unit, observation_data),
-               'max_gust': check_if_none_value("max_gust", wind_unit, observation_data)}
+               'max_gust': check_if_none_value("max_gust", wind_unit, observation_data),
+               'max_gust_time': parse_time(check_if_none_value("max_gust", 'time', observation_data), date_format="hour_minute", utc=True, timezone=timezone)}
 
     # print(observation_data)
 
