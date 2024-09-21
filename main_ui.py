@@ -27,7 +27,7 @@ class Ui_WeatherApp(object):
     def setupUi(self, WeatherApp):
         if not WeatherApp.objectName():
             WeatherApp.setObjectName(u"WeatherApp")
-        WeatherApp.resize(919, 781)
+        WeatherApp.resize(975, 813)
         WeatherApp.setStyleSheet(u"")
         self.centralwidget = QWidget(WeatherApp)
         self.centralwidget.setObjectName(u"centralwidget")
@@ -634,7 +634,7 @@ class Ui_WeatherApp(object):
 
         self.retranslateUi(WeatherApp)
 
-        self.tabWidget.setCurrentIndex(1)
+        self.tabWidget.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(WeatherApp)

@@ -7,7 +7,7 @@ from ratelimit import limits, sleep_and_retry
 
 import requests
 
-from settings import *
+from settings import WS_UNIT
 
 
 HEADERS = {
@@ -22,7 +22,8 @@ STATE_CODES = {
     'SA':  'IDS',   # South Australia
     'TAS': 'IDT',   # Tasmania
     'VIC': 'IDV',   # Victoria
-    'WA':  'IDW'    # Western Australia
+    'WA':  'IDW',   # Western Australia
+    'OT': 'IDQ'     # Torres Strait Islands
 }
 
 
@@ -272,7 +273,7 @@ def fetch_hourly_observations(wmo_code, state, timezone):
 
 
 if __name__ == "__main__":
-    # print(fetch_location_information('r1tuwby'))
+    print(fetch_location_information('rnj5usw'))
     # print(fetch_location_options('Perth'))
-    daily_forecast = fetch_daily_forecast('qsycvsc')
+    # daily_forecast = fetch_daily_forecast('qsycvsc')
     # print(daily_forecast[0])

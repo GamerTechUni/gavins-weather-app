@@ -117,6 +117,7 @@ class MainWindow(QMainWindow):
         try:
             geohash = self.location_and_geohash[self.ui.location_choices.currentText(
             )]
+            location_name = self.ui.location_choices.currentText()[:-4]
             print(geohash)
             location_info = fetch_location_information(geohash)
 
@@ -132,7 +133,7 @@ class MainWindow(QMainWindow):
                 wmo_code, state, timezone)
 
             self.set_placeholder_values(
-                ob_info, location_info, daily_forecast_info)
+                ob_info, daily_forecast_info, location_name)
 
             self.create_forecast_table(hourly_forecast_info)
             self.create_observation_table(hourly_observation_info)
@@ -144,7 +145,7 @@ class MainWindow(QMainWindow):
             QMessageBox.information(
                 self, "No Location Selected", "You have not selected a location\nPlease select a location")
 
-    def set_placeholder_values(self, ob_info, location_info, daily_forecast_info):
+    def set_placeholder_values(self, ob_info, daily_forecast_info, location_name):
         # Overview
         is_night = daily_forecast_info[0].get('is_night')
 
@@ -171,8 +172,7 @@ class MainWindow(QMainWindow):
             self.set_overview_forecast_icons(
                 daily_forecast_info[0].get('icon_descriptor'), self.ui.current_day_icon_overview, is_night)
 
-        self.ui.place_overview.setText(f"{location_info.get('name')}, {
-            location_info.get('state')}")
+        self.ui.place_overview.setText(location_name)
 
         # Overview UV index
         max_uv = daily_forecast_info[0].get('max_uv_index')
