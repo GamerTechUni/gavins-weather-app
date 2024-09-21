@@ -20,15 +20,20 @@ from backend import (fetch_location_options,
                      fetch_daily_forecast,
                      fetch_hourly_forecast,
                      fetch_hourly_observations,
-                     fetch_station_code
+                     fetch_station_code,
+                     read_settings,
+                     write_to_settings
                      )
-from settings import *
 
 
 class MainWindow(QMainWindow):
     def __init__(self):
         super(MainWindow, self).__init__()
         self.location_and_geohash = {}
+        self.ws_unit = read_settings('ws_unit')
+        self.previous_location_geohash = read_settings(
+            'previous_location_geohash')
+        self.previous_location_name = read_settings('previous_location_name')
 
         self.thread_manager = QThreadPool()
 
@@ -38,7 +43,8 @@ class MainWindow(QMainWindow):
 
         self.ui.location_input.textChanged.connect(
             self.display_locations_thread)
-        self.ui.get_weather_button.clicked.connect(self.get_weather_info)
+        self.ui.get_weather_button.clicked.connect(
+            self.get_current_location_from_selection)
         self.ui.overview.hide()
         self.ui.tabWidget.setTabEnabled(0, False)
         self.ui.tabWidget.setTabEnabled(1, False)
@@ -101,6 +107,9 @@ class MainWindow(QMainWindow):
         self.resize(self.light_shower_night_icon.width(),
                     self.light_shower_night_icon.height())
 
+        if self.previous_location_geohash != '':
+            self.get_previous_location_info()
+
     def display_locations(self):
         location = self.ui.location_input.text()
         self.location_and_geohash = fetch_location_options(location)
@@ -112,38 +121,48 @@ class MainWindow(QMainWindow):
     def display_locations_thread(self):
         self.thread_manager.start(self.display_locations)
 
+    def get_previous_location_info(self):
+        geohash = self.previous_location_geohash
+        location_name = self.previous_location_name
+        self.get_weather_info(location_name, geohash)
+
     @Slot()
-    def get_weather_info(self):
+    def get_current_location_from_selection(self):
         try:
             geohash = self.location_and_geohash[self.ui.location_choices.currentText(
             )]
             location_name = self.ui.location_choices.currentText()[:-4]
-            print(geohash)
-            location_info = fetch_location_information(geohash)
-
-            timezone = location_info.get('timezone')
-
-            ob_info = fetch_observation(geohash, timezone)
-            state = location_info.get('state')
-            wmo_code = fetch_station_code(
-                location_info.get('station_id'), state)
-            daily_forecast_info = fetch_daily_forecast(geohash, timezone)
-            hourly_forecast_info = fetch_hourly_forecast(geohash, timezone)
-            hourly_observation_info = fetch_hourly_observations(
-                wmo_code, state, timezone)
-
-            self.set_placeholder_values(
-                ob_info, daily_forecast_info, location_name)
-
-            self.create_forecast_table(hourly_forecast_info)
-            self.create_observation_table(hourly_observation_info)
-
-            self.ui.tabWidget.setTabEnabled(0, True)
-            self.ui.tabWidget.setTabEnabled(1, True)
-            self.ui.tabWidget.setTabEnabled(2, True)
+            write_to_settings('previous_location_geohash', geohash)
+            write_to_settings('previous_location_name', location_name)
+            self.get_weather_info(location_name, geohash)
         except KeyError:
             QMessageBox.information(
                 self, "No Location Selected", "You have not selected a location\nPlease select a location")
+
+    def get_weather_info(self, location_name, geohash):
+        location_info = fetch_location_information(geohash)
+
+        timezone = location_info.get('timezone')
+
+        ob_info = fetch_observation(geohash, timezone)
+        state = location_info.get('state')
+        wmo_code = fetch_station_code(
+            location_info.get('station_id'), state)
+        daily_forecast_info = fetch_daily_forecast(geohash, timezone)
+        hourly_forecast_info = fetch_hourly_forecast(geohash, timezone)
+        hourly_observation_info = fetch_hourly_observations(
+            wmo_code, state, timezone)
+
+        self.set_placeholder_values(
+            ob_info, daily_forecast_info, location_name)
+
+        self.create_forecast_table(hourly_forecast_info)
+        self.create_observation_table(hourly_observation_info)
+
+        self.ui.tabWidget.setTabEnabled(0, True)
+        self.ui.tabWidget.setTabEnabled(1, True)
+        self.ui.tabWidget.setTabEnabled(2, True)
+        self.ui.tabWidget.setCurrentWidget(self.ui.overview)
 
     def set_placeholder_values(self, ob_info, daily_forecast_info, location_name):
         # Overview
@@ -162,7 +181,8 @@ class MainWindow(QMainWindow):
                 f"Overnight Min: {str(daily_forecast_info[0].get('temp_now'))}\u00b0")
             self.ui.max_temp_overview.setText(
                 f"Tomorrow's Max: {str(daily_forecast_info[1].get('max_temp'))}\u00b0")
-            self.ui.current_day_icon_overview.setText('🌙')
+            self.set_overview_forecast_icons(
+                daily_forecast_info[0].get('icon_descriptor'), self.ui.current_day_icon_overview, is_night)
         else:
 
             self.ui.min_temp_overview.setText(f"Min: {str(
@@ -268,7 +288,7 @@ class MainWindow(QMainWindow):
             wind_direction_full = 'North Northwest'
 
         self.ui.wind_speed_overview.setText(
-            f"{ob_info.get('wind')}{WS_UNIT} {wind_direction_full}")
+            f"{ob_info.get('wind')}{self.ws_unit} {wind_direction_full}")
 
         # Future Forecast Overview
         self.ui.day1_overview.setText("Tomorrow")
@@ -312,7 +332,7 @@ class MainWindow(QMainWindow):
         self.ui.highlights_min_temp_time.setText(
             f"at {ob_info.get('min_temp_time')}")
         self.ui.highlights_gust_speed.setText(
-            f"{ob_info.get('max_gust')}{WS_UNIT}")
+            f"{ob_info.get('max_gust')}{self.ws_unit}")
         self.ui.highlights_gust_speed_time.setText(
             f"at {ob_info.get('max_gust_time')}")
         self.ui.highlights_rain_since_9am.setText(
@@ -374,7 +394,7 @@ class MainWindow(QMainWindow):
     def create_forecast_table(self, hourly_data):
         time_list = []
         category_list = ['Air temperature (\u00b0C)', 'Feels like (\u00b0C)', 'Dew point temperature (\u00b0C)',
-                         'UV Index', f'Wind speed ({WS_UNIT})', 'Wind direction']
+                         'UV Index', f'Wind speed ({self.ws_unit})', 'Wind direction']
         for hour in hourly_data:
             hour_time = hour.get('time')
             time_list.append(hour_time)
@@ -403,7 +423,7 @@ class MainWindow(QMainWindow):
     def create_observation_table(self, hourly_data):
         time_list = []
         category_list = ['Air temperature (°C)', 'Feels like (°C)', 'Dew point temperature (°C)',
-                         'Humidity', f'Wind speed ({WS_UNIT})', f'Gust Speed ({WS_UNIT})', 'Wind direction', 'Pressure (hPa)']
+                         'Humidity', f'Wind speed ({self.ws_unit})', f'Gust Speed ({self.ws_unit})', 'Wind direction', 'Pressure (hPa)']
         for hour in hourly_data:
             hour_time = hour.get('time')
             time_list.append(hour_time)

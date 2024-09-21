@@ -1,13 +1,12 @@
 import json
 import datetime
+import configparser
 from dateutil import tz
 import xml.etree.ElementTree as ET
 
 from ratelimit import limits, sleep_and_retry
 
 import requests
-
-from settings import WS_UNIT
 
 
 HEADERS = {
@@ -25,6 +24,21 @@ STATE_CODES = {
     'WA':  'IDW',   # Western Australia
     'OT': 'IDQ'     # Torres Strait Islands
 }
+
+
+def read_settings(entry):
+    config = configparser.ConfigParser()
+    config.read('settings.ini')
+    value = config['Default'][entry]
+    return value
+
+
+def write_to_settings(entry, value):
+    config = configparser.ConfigParser()
+    config.read('settings.ini')
+    config['Default'][entry] = value
+    with open('settings.ini', 'w', encoding='utf-8') as configfile:
+        config.write(configfile)
 
 
 @sleep_and_retry
@@ -54,8 +68,8 @@ def fetch_location_information(geohash):
     response1 = requests.get(
         f"https://api.weather.bom.gov.au/v1/locations/{geohash}", timeout=90, headers=HEADERS)
     location_info_raw = json.loads(json.dumps(response1.json()))
-    response2 = requests.get(f"https://api.weather.bom.gov.au/v1/locations/{
-                             geohash[:-1]}/observations", timeout=90, headers=HEADERS)
+    response2 = requests.get(
+        f"https://api.weather.bom.gov.au/v1/locations/{geohash[:-1]}/observations", timeout=90, headers=HEADERS)
     observation_data = json.loads(json.dumps(response2.json())).get("data")
     location_info = {'name': check_if_none_value('data', 'name', location_info_raw),
                      'state': check_if_none_value('data', 'state', location_info_raw),
@@ -71,10 +85,11 @@ def fetch_observation(geohash, timezone):
     response = requests.get(
         f"https://api.weather.bom.gov.au/v1/locations/{geohash[:-1]}/observations", timeout=90, headers=HEADERS)
     observation_data = json.loads(json.dumps(response.json())).get("data")
+    ws_unit = read_settings('ws_unit')
     wind_unit = ''
-    if WS_UNIT == 'km/h':
+    if ws_unit == 'km/h':
         wind_unit = 'speed_kilometre'
-    elif WS_UNIT == 'kn':
+    elif ws_unit == 'kn':
         wind_unit = 'speed_knot'
     ob_info = {'max_temp': check_if_none_value("max_temp", "value", observation_data),
                'max_temp_time': parse_time(check_if_none_value("max_temp", "time", observation_data), date_format="hour_minute", utc=True, timezone=timezone),
@@ -128,7 +143,6 @@ def fetch_daily_forecast(geohash, timezone):
              'max_rain_amount': check_if_none_value('amount', 'max', rain_info),
              'chance_of_rain': check_if_none_value(None, 'chance', rain_info)})
         daily_forecast_info.append(forecast_dict)
-    print(daily_forecast_info[0])
     return daily_forecast_info
 
 
@@ -193,10 +207,11 @@ def fetch_hourly_forecast(geohash, timezone):
     hourly_forecast_data = json.loads(
         json.dumps(response.json())).get('data')
 
+    ws_unit = read_settings('ws_unit')
     wind_unit = ''
-    if WS_UNIT == 'km/h':
+    if ws_unit == 'km/h':
         wind_unit = 'speed_kilometre'
-    elif WS_UNIT == 'kn':
+    elif ws_unit == 'kn':
         wind_unit = 'speed_knot'
 
     hourly_forecast_info = []
@@ -249,10 +264,11 @@ def fetch_hourly_observations(wmo_code, state, timezone):
     hourly_observation_data = json.loads(json.dumps(response.json()))[
         'observations'].get('data')
 
+    ws_unit = read_settings('ws_unit')
     wind_unit = ''
-    if WS_UNIT == 'km/h':
+    if ws_unit == 'km/h':
         wind_unit = 'kmh'
-    elif WS_UNIT == 'kn':
+    elif ws_unit == 'kn':
         wind_unit = 'kt'
 
     hourly_observation_info = []
@@ -274,7 +290,9 @@ def fetch_hourly_observations(wmo_code, state, timezone):
 
 
 if __name__ == "__main__":
-    print(fetch_location_information('rnj5usw'))
+    # print(fetch_location_information('rnj5usw'))
     # print(fetch_location_options('Perth'))
     # daily_forecast = fetch_daily_forecast('qsycvsc')
     # print(daily_forecast[0])
+    # write_to_settings({'ws_unit': 'km/h'})
+    print(read_settings('ws_unit'))
