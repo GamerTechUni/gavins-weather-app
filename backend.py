@@ -1,5 +1,6 @@
 import json
 import datetime
+from dateutil import tz
 import xml.etree.ElementTree as ET
 
 from ratelimit import limits, sleep_and_retry
@@ -58,13 +59,14 @@ def fetch_location_information(geohash):
     location_info = {'name': check_if_none_value('data', 'name', location_info_raw),
                      'state': check_if_none_value('data', 'state', location_info_raw),
                      'geohash': check_if_none_value('data', 'geohash', location_info_raw),
+                     'timezone': check_if_none_value('data', 'timezone', location_info_raw),
                      'station_name': check_if_none_value('station', 'name', observation_data),
                      'station_id': check_if_none_value('station', 'bom_id', observation_data)}
 
     return location_info
 
 
-def fetch_observation(geohash):
+def fetch_observation(geohash, timezone):
     response = requests.get(
         f"https://api.weather.bom.gov.au/v1/locations/{geohash[:-1]}/observations", timeout=90, headers=HEADERS)
     observation_data = json.loads(json.dumps(response.json())).get("data")
@@ -74,9 +76,9 @@ def fetch_observation(geohash):
     elif WS_UNIT == 'kn':
         wind_unit = 'speed_knot'
     ob_info = {'max_temp': check_if_none_value("max_temp", "value", observation_data),
-               'max_temp_time': parse_time(check_if_none_value("max_temp", "time", observation_data), date_format="hour_minute", utc=True),
+               'max_temp_time': parse_time(check_if_none_value("max_temp", "time", observation_data), date_format="hour_minute", utc=True, timezone=timezone),
                'min_temp': check_if_none_value("min_temp", "value", observation_data),
-               'min_temp_time': parse_time(check_if_none_value("min_temp", "time", observation_data), date_format="hour_minute", utc=True),
+               'min_temp_time': parse_time(check_if_none_value("min_temp", "time", observation_data), date_format="hour_minute", utc=True, timezone=timezone),
                'current_temp': check_if_none_value(None, "temp", observation_data),
                'feels_like_temp': check_if_none_value(None, "temp_feels_like", observation_data),
                'humidity': check_if_none_value(None, "humidity", observation_data),
@@ -91,7 +93,7 @@ def fetch_observation(geohash):
     return ob_info
 
 
-def fetch_daily_forecast(geohash):
+def fetch_daily_forecast(geohash, timezone):
     response = requests.get(
         f"https://api.weather.bom.gov.au/v1/locations/{geohash}/forecasts/daily", timeout=90, headers=HEADERS)
 
@@ -102,18 +104,18 @@ def fetch_daily_forecast(geohash):
         forecast_dict = {  # UV Information
             'max_uv_index': check_if_none_value('uv', 'max_index', day),
             'max_uv_category': check_if_none_value('uv', 'category', day),
-            'sun_prot_start_time': parse_time(check_if_none_value('uv', 'start_time', day), date_format='hour_minute', utc=True),
-            'sun_prot_end_time': parse_time(check_if_none_value('uv', 'end_time', day), date_format='hour_minute', utc=True),
+            'sun_prot_start_time': parse_time(check_if_none_value('uv', 'start_time', day), date_format='hour_minute', utc=True, timezone=timezone),
+            'sun_prot_end_time': parse_time(check_if_none_value('uv', 'end_time', day), date_format='hour_minute', utc=True, timezone=timezone),
             # General Info
             'max_temp': check_if_none_value(None, 'temp_max', day),
             'min_temp': check_if_none_value(None, 'temp_min', day),
             'short_text': check_if_none_value(None, 'short_text', day),
             'icon_descriptor': check_if_none_value(None, 'icon_descriptor', day),
             'fire_danger': check_if_none_value(None, 'fire_danger', day),
-            'date': parse_time(check_if_none_value(None, 'date', day), date_format='weekday', utc=True),
+            'date': parse_time(check_if_none_value(None, 'date', day), date_format='weekday', utc=True, timezone=timezone),
             # Astronomical Info
-            'sunrise_time': parse_time(check_if_none_value('astronomical', 'sunrise_time', day), date_format='hour_minute', utc=True),
-            'sunset_time': parse_time(check_if_none_value('astronomical', 'sunset_time', day), date_format='hour_minute', utc=True),
+            'sunrise_time': parse_time(check_if_none_value('astronomical', 'sunrise_time', day), date_format='hour_minute', utc=True, timezone=timezone),
+            'sunset_time': parse_time(check_if_none_value('astronomical', 'sunset_time', day), date_format='hour_minute', utc=True, timezone=timezone),
             # Now Information
             'is_night': check_if_none_value('now', 'is_night', day),
             'temp_now': check_if_none_value('now', 'temp_now', day),
@@ -142,43 +144,47 @@ def check_if_none_value(key, value_name, data):
     return value
 
 
-def parse_time(iso_time, date_format, utc):
+def parse_time(iso_time, date_format, utc, timezone):
 
     if utc:
         try:
+            tz_data = tz.gettz(timezone)
             dt = datetime.datetime.fromisoformat(iso_time)
             if date_format == 'hour_minute':
                 local_time = datetime.datetime.strftime(
-                    dt.astimezone(), "%I:%M%p")
+                    dt.astimezone(tz_data), "%I:%M%p")
             elif date_format == 'weekday':
-                local_time = datetime.datetime.strftime(dt.astimezone(), "%A")
+                local_time = datetime.datetime.strftime(
+                    dt.astimezone(tz_data), "%A")
             else:
                 local_time = datetime.datetime.strftime(
-                    dt.astimezone(), "%d/%m/%Y %I:%M%p")
+                    dt.astimezone(tz_data), "%d/%m/%Y %I:%M%p")
         except ValueError:
             local_time = ''
 
     else:
-        format_string = '%Y%m%d%H%M%S'
-        split_time = datetime.datetime.strptime(iso_time, format_string)
-        converted_time = f"{split_time.isoformat()}Z"
         try:
+            tz_data = tz.gettz(timezone)
+            format_string = '%Y%m%d%H%M%S'
+            split_time = datetime.datetime.strptime(iso_time, format_string)
+            converted_time = f"{split_time.isoformat()}Z"
             dt = datetime.datetime.fromisoformat(converted_time)
             if date_format == 'hour_minute':
                 local_time = datetime.datetime.strftime(
-                    dt.astimezone(), "%I:%M%p")
+                    dt.astimezone(tz_data), "%I:%M%p")
             elif date_format == 'weekday':
-                local_time = datetime.datetime.strftime(dt.astimezone(), "%A")
+                local_time = datetime.datetime.strftime(
+                    dt.astimezone(tz_data), "%A")
             else:
                 local_time = datetime.datetime.strftime(
-                    dt.astimezone(), "%d/%m/%Y %I:%M%p")
+                    dt.astimezone(tz_data), "%d/%m/%Y %I:%M%p")
         except ValueError:
             local_time = ''
 
     return local_time
 
 
-def fetch_hourly_forecast(geohash):
+def fetch_hourly_forecast(geohash, timezone):
     response = requests.get(
         f"https://api.weather.bom.gov.au/v1/locations/{geohash[:-1]}/forecasts/hourly", timeout=90, headers=HEADERS)
 
@@ -201,7 +207,7 @@ def fetch_hourly_forecast(geohash):
             'feels_like_temp': check_if_none_value(None, 'temp_feels_like', hour),
             'dew_point': check_if_none_value(None, 'dew_point', hour),
             'icon_descriptor': check_if_none_value(None, 'icon_descriptor', hour),
-            'time': parse_time(check_if_none_value(None, 'time', hour), date_format='hour_minute', utc=True),
+            'time': parse_time(check_if_none_value(None, 'time', hour), date_format='hour_minute', utc=True, timezone=timezone),
             # Now Information
             'is_night': check_if_none_value('now', 'is_night', hour),
             'relative_humidity': check_if_none_value(None, 'relative_humidity', hour),
@@ -233,7 +239,7 @@ def fetch_station_code(bom_code, state):
     return wmo_code
 
 
-def fetch_hourly_observations(wmo_code, state):
+def fetch_hourly_observations(wmo_code, state, timezone):
     state_code = STATE_CODES.get(state)
     response = requests.get(
         f"http://www.bom.gov.au/fwo/{state_code}60801/{state_code}60801.{wmo_code}.json", timeout=90, headers=HEADERS)
@@ -250,7 +256,7 @@ def fetch_hourly_observations(wmo_code, state):
     hourly_observation_info = []
     for hour in hourly_observation_data:
 
-        observation_dict = {'time': parse_time(check_if_none_value(None, 'aifstime_utc', hour), 'hour_minute', False),
+        observation_dict = {'time': parse_time(check_if_none_value(None, 'aifstime_utc', hour), date_format='hour_minute', utc=False, timezone=timezone),
                             'name': check_if_none_value(None, 'name', hour),
                             'temp': check_if_none_value(None, 'air_temp', hour),
                             'feels_like_temp': check_if_none_value(None, 'apparent_t', hour),
@@ -266,7 +272,7 @@ def fetch_hourly_observations(wmo_code, state):
 
 
 if __name__ == "__main__":
-    print(fetch_location_information('r1tuwby'))
+    # print(fetch_location_information('r1tuwby'))
     # print(fetch_location_options('Perth'))
-    # daily_forecast = fetch_daily_forecast('r1nwvj5')
+    daily_forecast = fetch_daily_forecast('qsycvsc')
     # print(daily_forecast[0])

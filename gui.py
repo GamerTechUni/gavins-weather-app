@@ -34,7 +34,7 @@ class MainWindow(QMainWindow):
 
         self.ui = Ui_WeatherApp()
         self.ui.setupUi(self)
-        self.setWindowTitle("Weather App")
+        self.setWindowTitle("Gavin's Weather App")
 
         self.ui.location_input.textChanged.connect(
             self.display_locations_thread)
@@ -45,15 +45,61 @@ class MainWindow(QMainWindow):
         self.ui.tabWidget.setTabEnabled(2, False)
 
         # Weather Icons
-        self.sunny_icon = QPixmap('assets/sunny.png')
-        self.cloudy_icon = QPixmap('assets/cloudy.png')
-        self.mostly_sunny_icon = QPixmap('assets/mostly_sunny.png')
-        self.shower_icon = QPixmap('assets/shower.png')
+        self.sunny_icon = QPixmap('assets/bom/sunny.png')
+        self.cloudy_icon = QPixmap('assets/bom/cloudy.png')
+        self.hazy_icon = QPixmap('assets/bom/haze.png')
+        self.light_rain_icon = QPixmap('assets/bom/light-rain.png')
+        self.partly_cloudy_icon = QPixmap('assets/bom/partly-cloudy.png')
+        self.shower_icon = QPixmap('assets/bom/showers.png')
+        self.rain_icon = QPixmap('assets/bom/rain.png')
+        self.storm_icon = QPixmap('assets/bom/storm.png')
+        self.windy_icon = QPixmap('assets/bom/wind.png')
+        self.fog_icon = QPixmap('assets/bom/fog.png')
+        self.dusty_icon = QPixmap('assets/bom/dust.png')
+        self.frost_icon = QPixmap('assets/bom/frost.png')
+        self.snow_icon = QPixmap('assets/bom/snow.png')
+        self.light_shower_icon = QPixmap('assets/bom/light-showers.png')
+        self.heavy_shower_icon = QPixmap('assets/bom/heavy-showers.png')
+        self.cyclone_icon = QPixmap('assets/bom/tropicalcyclone.png')
+        self.clear_icon = QPixmap('assets/bom/clear.png')
+        self.partly_cloudy_night_icon = QPixmap(
+            'assets/bom/partly-cloudy-night.png')
+        self.hazy_night_icon = QPixmap('assets/bom/haze-night.png')
+        self.fog_night_icon = QPixmap('assets/bom/fog-night.png')
+        self.shower_night_icon = QPixmap('assets/bom/showers-night.png')
+        self.light_shower_night_icon = QPixmap(
+            'assets/bom/light-showers-night.png')
+
         self.resize(self.sunny_icon.width(), self.sunny_icon.height())
         self.resize(self.cloudy_icon.width(), self.cloudy_icon.height())
-        self.resize(self.mostly_sunny_icon.width(),
-                    self.mostly_sunny_icon.height())
+        self.resize(self.hazy_icon.width(), self.hazy_icon.height())
+        self.resize(self.light_rain_icon.width(),
+                    self.light_rain_icon.height())
+        self.resize(self.partly_cloudy_icon.width(),
+                    self.partly_cloudy_icon.height())
         self.resize(self.shower_icon.width(), self.shower_icon.height())
+        self.resize(self.rain_icon.width(), self.rain_icon.height())
+        self.resize(self.storm_icon.width(), self.storm_icon.height())
+        self.resize(self.windy_icon.width(), self.windy_icon.height())
+        self.resize(self.fog_icon.width(), self.fog_icon.height())
+        self.resize(self.dusty_icon.width(), self.dusty_icon.height())
+        self.resize(self.frost_icon.width(), self.frost_icon.height())
+        self.resize(self.snow_icon.width(), self.snow_icon.height())
+        self.resize(self.light_shower_icon.width(),
+                    self.light_shower_icon.height())
+        self.resize(self.heavy_shower_icon.width(),
+                    self.heavy_shower_icon.height())
+        self.resize(self.cyclone_icon.width(), self.cyclone_icon.height())
+        self.resize(self.clear_icon.width(), self.clear_icon.height())
+        self.resize(self.partly_cloudy_night_icon.width(),
+                    self.partly_cloudy_night_icon.height())
+        self.resize(self.hazy_night_icon.width(),
+                    self.hazy_night_icon.height())
+        self.resize(self.fog_night_icon.width(), self.fog_night_icon.height())
+        self.resize(self.shower_night_icon.width(),
+                    self.shower_night_icon.height())
+        self.resize(self.light_shower_night_icon.width(),
+                    self.light_shower_night_icon.height())
 
     def display_locations(self):
         location = self.ui.location_input.text()
@@ -72,15 +118,18 @@ class MainWindow(QMainWindow):
             geohash = self.location_and_geohash[self.ui.location_choices.currentText(
             )]
             print(geohash)
-            ob_info = fetch_observation(geohash)
             location_info = fetch_location_information(geohash)
+
+            timezone = location_info.get('timezone')
+
+            ob_info = fetch_observation(geohash, timezone)
             state = location_info.get('state')
             wmo_code = fetch_station_code(
                 location_info.get('station_id'), state)
-            daily_forecast_info = fetch_daily_forecast(geohash)
-            hourly_forecast_info = fetch_hourly_forecast(geohash)
+            daily_forecast_info = fetch_daily_forecast(geohash, timezone)
+            hourly_forecast_info = fetch_hourly_forecast(geohash, timezone)
             hourly_observation_info = fetch_hourly_observations(
-                wmo_code, state)
+                wmo_code, state, timezone)
 
             self.set_placeholder_values(
                 ob_info, location_info, daily_forecast_info)
@@ -120,7 +169,7 @@ class MainWindow(QMainWindow):
             self.ui.max_temp_overview.setText(f"Max: {str(
                 daily_forecast_info[0].get('max_temp'))}\u00b0")
             self.set_overview_forecast_icons(
-                daily_forecast_info[0].get('icon_descriptor'), self.ui.current_day_icon_overview)
+                daily_forecast_info[0].get('icon_descriptor'), self.ui.current_day_icon_overview, is_night)
 
         self.ui.place_overview.setText(f"{location_info.get('name')}, {
             location_info.get('state')}")
@@ -226,31 +275,31 @@ class MainWindow(QMainWindow):
         self.ui.day1_temp_overview.setText(f"{daily_forecast_info[1].get(
             'min_temp')}\u00b0—{daily_forecast_info[1].get('max_temp')}\u00b0")
         self.set_overview_forecast_icons(
-            daily_forecast_info[1].get('icon_descriptor'), self.ui.icon_overview1)
+            daily_forecast_info[1].get('icon_descriptor'), self.ui.icon_overview1, is_night)
 
         self.ui.day2_overview.setText(daily_forecast_info[2].get('date'))
         self.ui.day2_temp_overview.setText(f"{daily_forecast_info[2].get(
             'min_temp')}\u00b0—{daily_forecast_info[2].get('max_temp')}\u00b0")
         self.set_overview_forecast_icons(
-            daily_forecast_info[2].get('icon_descriptor'), self.ui.icon_overview2)
+            daily_forecast_info[2].get('icon_descriptor'), self.ui.icon_overview2, is_night)
 
         self.ui.day3_overview.setText(daily_forecast_info[3].get('date'))
         self.ui.day3_temp_overview.setText(f"{daily_forecast_info[3].get(
             'min_temp')}\u00b0—{daily_forecast_info[3].get('max_temp')}\u00b0")
         self.set_overview_forecast_icons(
-            daily_forecast_info[3].get('icon_descriptor'), self.ui.icon_overview3)
+            daily_forecast_info[3].get('icon_descriptor'), self.ui.icon_overview3, is_night)
 
         self.ui.day4_overview.setText(daily_forecast_info[4].get('date'))
         self.ui.day4_temp_overview.setText(f"{daily_forecast_info[4].get(
             'min_temp')}\u00b0—{daily_forecast_info[4].get('max_temp')}\u00b0")
         self.set_overview_forecast_icons(
-            daily_forecast_info[4].get('icon_descriptor'), self.ui.icon_overview4)
+            daily_forecast_info[4].get('icon_descriptor'), self.ui.icon_overview4, is_night)
 
         self.ui.day5_overview.setText(daily_forecast_info[5].get('date'))
         self.ui.day5_temp_overview.setText(f"{daily_forecast_info[5].get(
             'min_temp')}\u00b0—{daily_forecast_info[5].get('max_temp')}\u00b0")
         self.set_overview_forecast_icons(
-            daily_forecast_info[5].get('icon_descriptor'), self.ui.icon_overview5)
+            daily_forecast_info[5].get('icon_descriptor'), self.ui.icon_overview5, is_night)
 
         # Past Weather
 
@@ -269,18 +318,56 @@ class MainWindow(QMainWindow):
         self.ui.highlights_rain_since_9am.setText(
             f"{ob_info.get('rain_since_9am')}mm")
 
-    def set_overview_forecast_icons(self, weather_condition, label):
+    def set_overview_forecast_icons(self, weather_condition, label, is_night):
+        if is_night:
+            if weather_condition == 'clear':
+                label.setPixmap(self.clear_icon)
+            elif weather_condition == 'partly_cloudy':
+                label.setPixmap(self.partly_cloudy_night_icon)
+            elif weather_condition == 'hazy':
+                label.setPixmap(self.hazy_night_icon)
+            elif weather_condition == 'fog':
+                label.setPixmap(self.fog_night_icon)
+            elif weather_condition == 'shower':
+                label.setPixmap(self.shower_night_icon)
+            elif weather_condition == 'light_shower':
+                label.setPixmap(self.light_shower_night_icon)
+        else:
+            if weather_condition == 'sunny':
+                label.setPixmap(self.sunny_icon)
+            elif weather_condition == 'mostly_sunny' or weather_condition == 'partly_cloudy':
+                label.setPixmap(self.partly_cloudy_icon)
+            elif weather_condition == 'shower':
+                label.setPixmap(self.shower_icon)
+            elif weather_condition == 'hazy':
+                label.setPixmap(self.hazy_icon)
+            elif weather_condition == 'fog':
+                label.setPixmap(self.fog_icon)
+            elif weather_condition == 'shower':
+                label.setPixmap(self.shower_icon)
+            elif weather_condition == 'light_shower':
+                label.setPixmap(self.light_shower_icon)
 
-        if weather_condition == 'sunny':
-            label.setPixmap(self.sunny_icon)
-        elif weather_condition == 'mostly_sunny':
-            label.setPixmap(self.mostly_sunny_icon)
-        elif weather_condition == 'shower':
-            label.setPixmap(self.shower_icon)
-        elif weather_condition == 'cloudy':
+        if weather_condition == 'cloudy':
             label.setPixmap(self.cloudy_icon)
-        elif weather_condition == 'thunder':
-            label.setText("⛈️")
+        elif weather_condition == 'storm':
+            label.setPixmap(self.storm_icon)
+        elif weather_condition == 'light_rain':
+            label.setPixmap(self.light_rain_icon)
+        elif weather_condition == 'windy':
+            label.setPixmap(self.windy_icon)
+        elif weather_condition == 'rain':
+            label.setPixmap(self.rain_icon)
+        elif weather_condition == 'dusty':
+            label.setPixmap(self.dusty_icon)
+        elif weather_condition == 'frost':
+            label.setPixmap(self.frost_icon)
+        elif weather_condition == 'snow':
+            label.setPixmap(self.snow_icon)
+        elif weather_condition == 'heavy_shower':
+            label.setPixmap(self.heavy_shower_icon)
+        elif weather_condition == 'cyclone':
+            label.setPixmap(self.cyclone_icon)
 
         label.setScaledContents(True)
 
