@@ -1,0 +1,1641 @@
+<?xml version="1.0"?>
+<product xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="v1.7.1" xsi:noNamespaceSchemaLocation="http://www.bom.gov.au/schema/v1.7/product.xsd">
+  <amoc>
+    <source>
+      <sender>Australian Government Bureau of Meteorology</sender>
+      <region>Tasmania</region>
+      <office>TASRO</office>
+      <copyright>http://www.bom.gov.au/other/copyright.shtml</copyright>
+      <disclaimer>http://www.bom.gov.au/other/disclaimer.shtml</disclaimer>
+    </source>
+    <identifier>IDT60920</identifier>
+    <issue-time-utc>2024-09-19T09:31:02+00:00</issue-time-utc>
+    <issue-time-local tz="EST">2024-09-19T19:31:02+10:00</issue-time-local>
+    <sent-time>2024-09-19T09:32:11+00:00</sent-time>
+    <status>O</status>
+    <service>WSP</service>
+    <product-type>O</product-type>
+    <phase>NEW</phase>
+  </amoc>
+  <observations>
+    <station wmo-id="94970" bom-id="094029" tz="Australia/Hobart" stn-name="HOBART (ELLERSLIE ROAD)" stn-height="50.50" type="AWS" lat="-42.8897" lon="147.3278" forecast-district-id="TAS_PW006" description="Hobart">
+      <period index="0" time-utc="2024-09-19T09:30:00+00:00" time-local="2024-09-19T19:30:00+10:00" wind-src="metar_10">
+        <level index="0" type="surface">
+          <element units="Celsius" type="apparent_temp">0.6</element>
+          <element units="Celsius" type="delta_t">3.3</element>
+          <element units="km/h" type="gust_kmh">43</element>
+          <element units="knots" type="wind_gust_spd">23</element>
+          <element units="Celsius" type="air_temperature">6.7</element>
+          <element units="Celsius" type="dew_point">-2.2</element>
+          <element units="hPa" type="pres">993.9</element>
+          <element units="hPa" type="msl_pres">993.9</element>
+          <element units="hPa" type="qnh_pres">993.9</element>
+          <element units="mm" type="rain_hour">0.0</element>
+          <element units="mm" type="rain_ten">0.0</element>
+          <element units="%" type="rel-humidity">53</element>
+          <element type="wind_dir">WSW</element>
+          <element units="deg" type="wind_dir_deg">258</element>
+          <element units="km/h" type="wind_spd_kmh">20</element>
+          <element units="knots" type="wind_spd">11</element>
+          <element start-time-local="2024-09-19T09:00:00+10:00" end-time-local="2024-09-19T19:31:00+10:00" duration="631" start-time-utc="2024-09-18T23:00:00+00:00" end-time-utc="2024-09-19T09:31:00+00:00" units="mm" type="rainfall">8.0</element>
+          <element start-time-local="2024-09-18T09:00:00+10:00" end-time-local="2024-09-19T09:00:00+10:00" duration="1440" start-time-utc="2024-09-17T23:00:00+00:00" end-time-utc="2024-09-18T23:00:00+00:00" units="mm" type="rainfall_24hr">1.8</element>
+          <element start-time-local="2024-09-19T06:00:00+10:00" end-time-local="2024-09-19T21:00:00+10:00" start-time-utc="2024-09-18T20:00:00+00:00" end-time-utc="2024-09-19T11:00:00+00:00" units="Celsius" type="maximum_air_temperature" instance="running" time-utc="2024-09-18T23:15:00+00:00" time-local="2024-09-19T09:15:00+10:00">12.3</element>
+          <element start-time-local="2024-09-19T18:00:00+10:00" end-time-local="2024-09-20T09:00:00+10:00" start-time-utc="2024-09-19T08:00:00+00:00" end-time-utc="2024-09-19T23:00:00+00:00" units="Celsius" type="minimum_air_temperature" instance="running" time-utc="2024-09-19T08:19:00+00:00" time-local="2024-09-19T18:19:00+10:00">5.4</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="knots" type="maximum_gust_spd" instance="running" time-utc="2024-09-19T05:31:00+00:00" time-local="2024-09-19T15:31:00+10:00">53</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="km/h" type="maximum_gust_kmh" instance="running" time-utc="2024-09-19T05:31:00+00:00" time-local="2024-09-19T15:31:00+10:00">98</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" type="maximum_gust_dir" instance="running" time-utc="2024-09-19T05:31:00+00:00" time-local="2024-09-19T15:31:00+10:00">WNW</element>
+        </level>
+      </period>
+    </station>
+    <station wmo-id="94953" bom-id="091292" tz="Australia/Hobart" stn-name="SMITHTON AERODROME" stn-height="7.50" type="AWS" lat="-40.8347" lon="145.0847" forecast-district-id="TAS_PW010" description="Smithton">
+      <period index="0" time-utc="2024-09-19T09:30:00+00:00" time-local="2024-09-19T19:30:00+10:00" wind-src="metar_10">
+        <level index="0" type="surface">
+          <element units="Celsius" type="apparent_temp">1.2</element>
+          <element units="Celsius" type="delta_t">2.1</element>
+          <element units="km/h" type="gust_kmh">35</element>
+          <element units="knots" type="wind_gust_spd">19</element>
+          <element units="Celsius" type="air_temperature">7.7</element>
+          <element units="Celsius" type="dew_point">2.8</element>
+          <element units="hPa" type="pres">1002.1</element>
+          <element units="hPa" type="msl_pres">1002.1</element>
+          <element units="hPa" type="qnh_pres">1002.1</element>
+          <element units="mm" type="rain_hour">0.0</element>
+          <element units="mm" type="rain_ten">0.0</element>
+          <element units="%" type="rel-humidity">71</element>
+          <element type="wind_dir">WSW</element>
+          <element units="deg" type="wind_dir_deg">246</element>
+          <element units="km/h" type="wind_spd_kmh">26</element>
+          <element units="knots" type="wind_spd">14</element>
+          <element start-time-local="2024-09-19T09:00:00+10:00" end-time-local="2024-09-19T19:32:00+10:00" duration="632" start-time-utc="2024-09-18T23:00:00+00:00" end-time-utc="2024-09-19T09:32:00+00:00" units="mm" type="rainfall">7.6</element>
+          <element start-time-local="2024-09-18T09:00:00+10:00" end-time-local="2024-09-19T09:00:00+10:00" duration="1440" start-time-utc="2024-09-17T23:00:00+00:00" end-time-utc="2024-09-18T23:00:00+00:00" units="mm" type="rainfall_24hr">8.6</element>
+          <element start-time-local="2024-09-19T06:00:00+10:00" end-time-local="2024-09-19T21:00:00+10:00" start-time-utc="2024-09-18T20:00:00+00:00" end-time-utc="2024-09-19T11:00:00+00:00" units="Celsius" type="maximum_air_temperature" instance="running" time-utc="2024-09-19T02:11:00+00:00" time-local="2024-09-19T12:11:00+10:00">13.2</element>
+          <element start-time-local="2024-09-19T18:00:00+10:00" end-time-local="2024-09-20T09:00:00+10:00" start-time-utc="2024-09-19T08:00:00+00:00" end-time-utc="2024-09-19T23:00:00+00:00" units="Celsius" type="minimum_air_temperature" instance="running" time-utc="2024-09-19T08:04:00+00:00" time-local="2024-09-19T18:04:00+10:00">6.5</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="knots" type="maximum_gust_spd" instance="running" time-utc="2024-09-19T01:35:00+00:00" time-local="2024-09-19T11:35:00+10:00">50</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="km/h" type="maximum_gust_kmh" instance="running" time-utc="2024-09-19T01:35:00+00:00" time-local="2024-09-19T11:35:00+10:00">93</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" type="maximum_gust_dir" instance="running" time-utc="2024-09-19T01:35:00+00:00" time-local="2024-09-19T11:35:00+10:00">WNW</element>
+        </level>
+      </period>
+    </station>
+    <station wmo-id="94987" bom-id="092114" tz="Australia/Hobart" stn-name="FRIENDLY BEACHES" stn-height="55.00" type="AWS" lat="-41.9953" lon="148.2794" forecast-district-id="TAS_PW003" description="Friendly Beaches">
+      <period index="0" time-utc="2024-09-19T09:30:00+00:00" time-local="2024-09-19T19:30:00+10:00" wind-src="metar_10">
+        <level index="0" type="surface">
+          <element units="Celsius" type="apparent_temp">2.4</element>
+          <element units="Celsius" type="delta_t">3.8</element>
+          <element units="km/h" type="gust_kmh">32</element>
+          <element units="knots" type="wind_gust_spd">17</element>
+          <element units="Celsius" type="air_temperature">7.6</element>
+          <element units="Celsius" type="dew_point">-2.7</element>
+          <element units="hPa" type="pres">995.1</element>
+          <element units="hPa" type="msl_pres">995.1</element>
+          <element units="hPa" type="qnh_pres">995.1</element>
+          <element units="mm" type="rain_hour">0.0</element>
+          <element units="mm" type="rain_ten">0.0</element>
+          <element units="%" type="rel-humidity">48</element>
+          <element type="wind_dir">W</element>
+          <element units="deg" type="wind_dir_deg">263</element>
+          <element units="km/h" type="wind_spd_kmh">15</element>
+          <element units="knots" type="wind_spd">8</element>
+          <element start-time-local="2024-09-19T09:00:00+10:00" end-time-local="2024-09-19T19:32:00+10:00" duration="632" start-time-utc="2024-09-18T23:00:00+00:00" end-time-utc="2024-09-19T09:32:00+00:00" units="mm" type="rainfall">0.0</element>
+          <element start-time-local="2024-09-18T09:00:00+10:00" end-time-local="2024-09-19T09:00:00+10:00" duration="1440" start-time-utc="2024-09-17T23:00:00+00:00" end-time-utc="2024-09-18T23:00:00+00:00" units="mm" type="rainfall_24hr">0.0</element>
+          <element start-time-local="2024-09-19T06:00:00+10:00" end-time-local="2024-09-19T21:00:00+10:00" start-time-utc="2024-09-18T20:00:00+00:00" end-time-utc="2024-09-19T11:00:00+00:00" units="Celsius" type="maximum_air_temperature" instance="running" time-utc="2024-09-19T03:23:00+00:00" time-local="2024-09-19T13:23:00+10:00">15.4</element>
+          <element start-time-local="2024-09-19T18:00:00+10:00" end-time-local="2024-09-20T09:00:00+10:00" start-time-utc="2024-09-19T08:00:00+00:00" end-time-utc="2024-09-19T23:00:00+00:00" units="Celsius" type="minimum_air_temperature" instance="running" time-utc="2024-09-19T09:22:00+00:00" time-local="2024-09-19T19:22:00+10:00">7.0</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="knots" type="maximum_gust_spd" instance="running" time-utc="2024-09-19T02:08:00+00:00" time-local="2024-09-19T12:08:00+10:00">42</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="km/h" type="maximum_gust_kmh" instance="running" time-utc="2024-09-19T02:08:00+00:00" time-local="2024-09-19T12:08:00+10:00">78</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" type="maximum_gust_dir" instance="running" time-utc="2024-09-19T02:08:00+00:00" time-local="2024-09-19T12:08:00+10:00">WNW</element>
+        </level>
+      </period>
+    </station>
+    <station wmo-id="95988" bom-id="092124" tz="Australia/Hobart" stn-name="MARIA ISLAND (POINT LESUEUR)" stn-height="28.00" type="AWS" lat="-42.6621" lon="148.0179" forecast-district-id="TAS_PW003" description="Maria Island">
+      <period index="0" time-utc="2024-09-19T09:30:00+00:00" time-local="2024-09-19T19:30:00+10:00" wind-src="metar_10">
+        <level index="0" type="surface">
+          <element units="Celsius" type="apparent_temp">0.2</element>
+          <element units="Celsius" type="delta_t">2.0</element>
+          <element units="km/h" type="gust_kmh">22</element>
+          <element units="knots" type="wind_gust_spd">12</element>
+          <element units="Celsius" type="air_temperature">5.7</element>
+          <element units="Celsius" type="dew_point">0.7</element>
+          <element units="hPa" type="pres">994.1</element>
+          <element units="hPa" type="msl_pres">994.1</element>
+          <element units="hPa" type="qnh_pres">994.1</element>
+          <element units="mm" type="rain_hour">0.0</element>
+          <element units="mm" type="rain_ten">0.0</element>
+          <element units="%" type="rel-humidity">70</element>
+          <element type="wind_dir">WNW</element>
+          <element units="deg" type="wind_dir_deg">294</element>
+          <element units="km/h" type="wind_spd_kmh">19</element>
+          <element units="knots" type="wind_spd">10</element>
+          <element start-time-local="2024-09-19T09:00:00+10:00" end-time-local="2024-09-19T19:32:00+10:00" duration="632" start-time-utc="2024-09-18T23:00:00+00:00" end-time-utc="2024-09-19T09:32:00+00:00" units="mm" type="rainfall">0.6</element>
+          <element start-time-local="2024-09-18T09:00:00+10:00" end-time-local="2024-09-19T09:00:00+10:00" duration="1440" start-time-utc="2024-09-17T23:00:00+00:00" end-time-utc="2024-09-18T23:00:00+00:00" units="mm" type="rainfall_24hr">0.2</element>
+          <element start-time-local="2024-09-19T06:00:00+10:00" end-time-local="2024-09-19T21:00:00+10:00" start-time-utc="2024-09-18T20:00:00+00:00" end-time-utc="2024-09-19T11:00:00+00:00" units="Celsius" type="maximum_air_temperature" instance="running" time-utc="2024-09-19T01:50:00+00:00" time-local="2024-09-19T11:50:00+10:00">14.2</element>
+          <element start-time-local="2024-09-19T18:00:00+10:00" end-time-local="2024-09-20T09:00:00+10:00" start-time-utc="2024-09-19T08:00:00+00:00" end-time-utc="2024-09-19T23:00:00+00:00" units="Celsius" type="minimum_air_temperature" instance="running" time-utc="2024-09-19T09:25:00+00:00" time-local="2024-09-19T19:25:00+10:00">5.5</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="knots" type="maximum_gust_spd" instance="running" time-utc="2024-09-19T03:04:00+00:00" time-local="2024-09-19T13:04:00+10:00">52</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="km/h" type="maximum_gust_kmh" instance="running" time-utc="2024-09-19T03:04:00+00:00" time-local="2024-09-19T13:04:00+10:00">96</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" type="maximum_gust_dir" instance="running" time-utc="2024-09-19T03:04:00+00:00" time-local="2024-09-19T13:04:00+10:00">WNW</element>
+        </level>
+      </period>
+    </station>
+    <station wmo-id="95986" bom-id="094155" tz="Australia/Hobart" stn-name="TASMAN ISLAND" stn-height="240.00" type="AWS" lat="-43.2397" lon="148.0025" forecast-district-id="TAS_PW006" description="Tasman Island">
+      <period index="0" time-utc="2024-09-19T09:30:00+00:00" time-local="2024-09-19T19:30:00+10:00" wind-src="metar_10">
+        <level index="0" type="surface">
+          <element units="km/h" type="gust_kmh">46</element>
+          <element units="knots" type="wind_gust_spd">25</element>
+          <element units="hPa" type="pres">991.7</element>
+          <element units="hPa" type="msl_pres">991.7</element>
+          <element units="hPa" type="qnh_pres">991.6</element>
+          <element units="mm" type="rain_hour">0.0</element>
+          <element units="mm" type="rain_ten">0.0</element>
+          <element type="wind_dir">WNW</element>
+          <element units="deg" type="wind_dir_deg">282</element>
+          <element units="km/h" type="wind_spd_kmh">19</element>
+          <element units="knots" type="wind_spd">10</element>
+          <element start-time-local="2024-09-19T09:00:00+10:00" end-time-local="2024-09-19T19:32:00+10:00" duration="632" start-time-utc="2024-09-18T23:00:00+00:00" end-time-utc="2024-09-19T09:32:00+00:00" units="mm" type="rainfall">4.0</element>
+          <element start-time-local="2024-09-18T09:00:00+10:00" end-time-local="2024-09-19T09:00:00+10:00" duration="1440" start-time-utc="2024-09-17T23:00:00+00:00" end-time-utc="2024-09-18T23:00:00+00:00" units="mm" type="rainfall_24hr">2.0</element>
+          <element start-time-local="2024-09-19T06:00:00+10:00" end-time-local="2024-09-19T21:00:00+10:00" start-time-utc="2024-09-18T20:00:00+00:00" end-time-utc="2024-09-19T11:00:00+00:00" units="Celsius" type="maximum_air_temperature" instance="running" time-utc="2024-09-19T00:43:00+00:00" time-local="2024-09-19T10:43:00+10:00">11.8</element>
+          <element start-time-local="2024-09-19T18:00:00+10:00" end-time-local="2024-09-20T09:00:00+10:00" start-time-utc="2024-09-19T08:00:00+00:00" end-time-utc="2024-09-19T23:00:00+00:00" units="Celsius" type="minimum_air_temperature" instance="running" time-utc="2024-09-19T08:00:00+00:00" time-local="2024-09-19T18:00:00+10:00">3.4</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="knots" type="maximum_gust_spd" instance="running" time-utc="2024-09-19T03:37:00+00:00" time-local="2024-09-19T13:37:00+10:00">48</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="km/h" type="maximum_gust_kmh" instance="running" time-utc="2024-09-19T03:37:00+00:00" time-local="2024-09-19T13:37:00+10:00">89</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" type="maximum_gust_dir" instance="running" time-utc="2024-09-19T03:37:00+00:00" time-local="2024-09-19T13:37:00+10:00">NW</element>
+        </level>
+      </period>
+    </station>
+    <station wmo-id="95987" bom-id="092133" tz="Australia/Hobart" stn-name="SPRING BAY NTC AWS" stn-height="0.00" type="AWS" lat="-42.5464" lon="147.9308" forecast-district-id="TAS_MW005" description="Spring Bay">
+      <period index="0" time-utc="2024-09-19T09:00:00+00:00" time-local="2024-09-19T19:00:00+10:00">
+        <level index="0" type="surface">
+          <element units="Celsius" type="air_temperature">7.4</element>
+          <element units="hPa" type="pres">994.4</element>
+          <element units="hPa" type="msl_pres">994.4</element>
+          <element units="hPa" type="qnh_pres">994.4</element>
+        </level>
+      </period>
+    </station>
+    <station wmo-id="94981" bom-id="092148" tz="Australia/Hobart" stn-name="SWANSEA (FRANCIS STREET)" stn-height="19.00" type="Non-AWS" lat="-42.1381" lon="148.0736" forecast-district-id="TAS_PW003" description="Swansea">
+      <period index="0" time-utc="2024-09-18T23:00:00+00:00" time-local="2024-09-19T09:00:00+10:00" wind-src="mdf">
+        <level index="0" type="surface">
+          <element units="Celsius" type="apparent_temp">5.5</element>
+          <element type="cloud">Partly cloudy</element>
+          <element units="m" type="cloud_base_m">600</element>
+          <element type="cloud_oktas">3</element>
+          <element type="cloud_type_id">31</element>
+          <element units="Celsius" type="delta_t">3.6</element>
+          <element units="Celsius" type="air_temperature">11.5</element>
+          <element units="Celsius" type="dew_point">3.4</element>
+          <element units="%" type="rel-humidity">57</element>
+          <element units="km" type="vis_km">30</element>
+          <element type="weather">Fine</element>
+          <element type="wind_dir">NNW</element>
+          <element units="deg" type="wind_dir_deg">340</element>
+          <element units="km/h" type="wind_spd_kmh">24</element>
+          <element units="knots" type="wind_spd">13</element>
+          <element start-time-local="2024-09-18T09:00:00+10:00" end-time-local="2024-09-19T09:00:00+10:00" duration="1440" start-time-utc="2024-09-17T23:00:00+00:00" end-time-utc="2024-09-18T23:00:00+00:00" units="mm" type="rainfall">1.0</element>
+          <element start-time-local="2024-09-18T09:00:00+10:00" end-time-local="2024-09-19T09:00:00+10:00" duration="1440" start-time-utc="2024-09-17T23:00:00+00:00" end-time-utc="2024-09-18T23:00:00+00:00" units="mm" type="rainfall_24hr">1.0</element>
+        </level>
+      </period>
+    </station>
+    <station wmo-id="95967" bom-id="094198" tz="Australia/Hobart" stn-name="CAPE BRUNY (CAPE BRUNY)" stn-height="59.70" type="AWS" lat="-43.4886" lon="147.1444" forecast-district-id="TAS_PW006" description="Cape Bruny AWS">
+      <period index="0" time-utc="2024-09-19T09:30:00+00:00" time-local="2024-09-19T19:30:00+10:00" wind-src="metar_10">
+        <level index="0" type="surface">
+          <element units="Celsius" type="apparent_temp">-9.2</element>
+          <element units="Celsius" type="delta_t">1.2</element>
+          <element units="km/h" type="gust_kmh">95</element>
+          <element units="knots" type="wind_gust_spd">51</element>
+          <element units="Celsius" type="air_temperature">5.5</element>
+          <element units="Celsius" type="dew_point">2.7</element>
+          <element units="hPa" type="pres">992.2</element>
+          <element units="hPa" type="msl_pres">992.2</element>
+          <element units="hPa" type="qnh_pres">992.2</element>
+          <element units="mm" type="rain_hour">0.2</element>
+          <element units="mm" type="rain_ten">0.2</element>
+          <element units="%" type="rel-humidity">82</element>
+          <element type="wind_dir">W</element>
+          <element units="deg" type="wind_dir_deg">275</element>
+          <element units="km/h" type="wind_spd_kmh">69</element>
+          <element units="knots" type="wind_spd">37</element>
+          <element start-time-local="2024-09-19T09:00:00+10:00" end-time-local="2024-09-19T19:32:00+10:00" duration="632" start-time-utc="2024-09-18T23:00:00+00:00" end-time-utc="2024-09-19T09:32:00+00:00" units="mm" type="rainfall">7.2</element>
+          <element start-time-local="2024-09-18T09:00:00+10:00" end-time-local="2024-09-19T09:00:00+10:00" duration="1440" start-time-utc="2024-09-17T23:00:00+00:00" end-time-utc="2024-09-18T23:00:00+00:00" units="mm" type="rainfall_24hr">5.6</element>
+          <element start-time-local="2024-09-19T06:00:00+10:00" end-time-local="2024-09-19T21:00:00+10:00" start-time-utc="2024-09-18T20:00:00+00:00" end-time-utc="2024-09-19T11:00:00+00:00" units="Celsius" type="maximum_air_temperature" instance="running" time-utc="2024-09-18T23:52:00+00:00" time-local="2024-09-19T09:52:00+10:00">10.5</element>
+          <element start-time-local="2024-09-19T18:00:00+10:00" end-time-local="2024-09-20T09:00:00+10:00" start-time-utc="2024-09-19T08:00:00+00:00" end-time-utc="2024-09-19T23:00:00+00:00" units="Celsius" type="minimum_air_temperature" instance="running" time-utc="2024-09-19T09:22:00+00:00" time-local="2024-09-19T19:22:00+10:00">4.9</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="knots" type="maximum_gust_spd" instance="running" time-utc="2024-09-19T05:51:00+00:00" time-local="2024-09-19T15:51:00+10:00">59</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="km/h" type="maximum_gust_kmh" instance="running" time-utc="2024-09-19T05:51:00+00:00" time-local="2024-09-19T15:51:00+10:00">109</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" type="maximum_gust_dir" instance="running" time-utc="2024-09-19T05:51:00+00:00" time-local="2024-09-19T15:51:00+10:00">W</element>
+        </level>
+      </period>
+    </station>
+    <station wmo-id="95961" bom-id="097080" tz="Australia/Hobart" stn-name="LOW ROCKY POINT" stn-height="34.00" type="AWS" lat="-42.9831" lon="145.5025" forecast-district-id="TAS_PW009" description="Low Rocky Point">
+      <period index="0" time-utc="2024-09-19T09:30:00+00:00" time-local="2024-09-19T19:30:00+10:00" wind-src="metar_10">
+        <level index="0" type="surface">
+          <element units="Celsius" type="apparent_temp">-3.8</element>
+          <element units="Celsius" type="delta_t">1.5</element>
+          <element units="km/h" type="gust_kmh">74</element>
+          <element units="knots" type="wind_gust_spd">40</element>
+          <element units="Celsius" type="air_temperature">7.4</element>
+          <element units="Celsius" type="dew_point">4.0</element>
+          <element units="hPa" type="pres">996.4</element>
+          <element units="hPa" type="msl_pres">996.4</element>
+          <element units="hPa" type="qnh_pres">996.4</element>
+          <element units="mm" type="rain_hour">0.2</element>
+          <element units="mm" type="rain_ten">0.0</element>
+          <element units="%" type="rel-humidity">79</element>
+          <element type="wind_dir">W</element>
+          <element units="deg" type="wind_dir_deg">275</element>
+          <element units="km/h" type="wind_spd_kmh">52</element>
+          <element units="knots" type="wind_spd">28</element>
+          <element start-time-local="2024-09-19T09:00:00+10:00" end-time-local="2024-09-19T19:31:00+10:00" duration="631" start-time-utc="2024-09-18T23:00:00+00:00" end-time-utc="2024-09-19T09:31:00+00:00" units="mm" type="rainfall">3.6</element>
+          <element start-time-local="2024-09-18T09:00:00+10:00" end-time-local="2024-09-19T09:00:00+10:00" duration="1440" start-time-utc="2024-09-17T23:00:00+00:00" end-time-utc="2024-09-18T23:00:00+00:00" units="mm" type="rainfall_24hr">7.2</element>
+          <element start-time-local="2024-09-19T06:00:00+10:00" end-time-local="2024-09-19T21:00:00+10:00" start-time-utc="2024-09-18T20:00:00+00:00" end-time-utc="2024-09-19T11:00:00+00:00" units="Celsius" type="maximum_air_temperature" instance="running" time-utc="2024-09-19T00:05:00+00:00" time-local="2024-09-19T10:05:00+10:00">11.2</element>
+          <element start-time-local="2024-09-19T18:00:00+10:00" end-time-local="2024-09-20T09:00:00+10:00" start-time-utc="2024-09-19T08:00:00+00:00" end-time-utc="2024-09-19T23:00:00+00:00" units="Celsius" type="minimum_air_temperature" instance="running" time-utc="2024-09-19T09:27:00+00:00" time-local="2024-09-19T19:27:00+10:00">6.3</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="knots" type="maximum_gust_spd" instance="running" time-utc="2024-09-19T00:32:00+00:00" time-local="2024-09-19T10:32:00+10:00">63</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="km/h" type="maximum_gust_kmh" instance="running" time-utc="2024-09-19T00:32:00+00:00" time-local="2024-09-19T10:32:00+10:00">117</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" type="maximum_gust_dir" instance="running" time-utc="2024-09-19T00:32:00+00:00" time-local="2024-09-19T10:32:00+10:00">WNW</element>
+        </level>
+      </period>
+    </station>
+    <station wmo-id="94962" bom-id="094041" tz="Australia/Hobart" stn-name="MAATSUYKER ISLAND LIGHTHOUSE" stn-height="146.50" type="AWS" lat="-43.6578" lon="146.2711" forecast-district-id="TAS_PW009" description="Maatsuyker Island">
+      <period index="0" time-utc="2024-09-19T09:30:00+00:00" time-local="2024-09-19T19:30:00+10:00" wind-src="metar_10">
+        <level index="0" type="surface">
+          <element units="Celsius" type="apparent_temp">-11.6</element>
+          <element units="Celsius" type="delta_t">2.1</element>
+          <element units="km/h" type="gust_kmh">102</element>
+          <element units="knots" type="wind_gust_spd">55</element>
+          <element units="Celsius" type="air_temperature">6.7</element>
+          <element units="Celsius" type="dew_point">1.6</element>
+          <element units="hPa" type="pres">991.7</element>
+          <element units="hPa" type="msl_pres">991.7</element>
+          <element units="hPa" type="qnh_pres">991.6</element>
+          <element units="mm" type="rain_hour">0.0</element>
+          <element units="mm" type="rain_ten">0.0</element>
+          <element units="%" type="rel-humidity">70</element>
+          <element type="wind_dir">WNW</element>
+          <element units="deg" type="wind_dir_deg">296</element>
+          <element units="km/h" type="wind_spd_kmh">87</element>
+          <element units="knots" type="wind_spd">47</element>
+          <element start-time-local="2024-09-19T09:00:00+10:00" end-time-local="2024-09-19T19:32:00+10:00" duration="632" start-time-utc="2024-09-18T23:00:00+00:00" end-time-utc="2024-09-19T09:32:00+00:00" units="mm" type="rainfall">3.4</element>
+          <element start-time-local="2024-09-18T09:00:00+10:00" end-time-local="2024-09-19T09:00:00+10:00" duration="1440" start-time-utc="2024-09-17T23:00:00+00:00" end-time-utc="2024-09-18T23:00:00+00:00" units="mm" type="rainfall_24hr">8.2</element>
+          <element start-time-local="2024-09-19T06:00:00+10:00" end-time-local="2024-09-19T21:00:00+10:00" start-time-utc="2024-09-18T20:00:00+00:00" end-time-utc="2024-09-19T11:00:00+00:00" units="Celsius" type="maximum_air_temperature" instance="running" time-utc="2024-09-18T23:43:00+00:00" time-local="2024-09-19T09:43:00+10:00">9.2</element>
+          <element start-time-local="2024-09-19T18:00:00+10:00" end-time-local="2024-09-20T09:00:00+10:00" start-time-utc="2024-09-19T08:00:00+00:00" end-time-utc="2024-09-19T23:00:00+00:00" units="Celsius" type="minimum_air_temperature" instance="running" time-utc="2024-09-19T08:55:00+00:00" time-local="2024-09-19T18:55:00+10:00">4.1</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="knots" type="maximum_gust_spd" instance="running" time-utc="2024-09-19T01:32:00+00:00" time-local="2024-09-19T11:32:00+10:00">79</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="km/h" type="maximum_gust_kmh" instance="running" time-utc="2024-09-19T01:32:00+00:00" time-local="2024-09-19T11:32:00+10:00">146</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" type="maximum_gust_dir" instance="running" time-utc="2024-09-19T01:32:00+00:00" time-local="2024-09-19T11:32:00+10:00">N</element>
+        </level>
+      </period>
+    </station>
+    <station wmo-id="94974" bom-id="097000" tz="Australia/Hobart" stn-name="CAPE SORELL" stn-height="19.30" type="AWS" lat="-42.1986" lon="145.1700" forecast-district-id="TAS_PW009" description="Cape Sorell">
+      <period index="0" time-utc="2024-09-19T09:30:00+00:00" time-local="2024-09-19T19:30:00+10:00" wind-src="metar_10">
+        <level index="0" type="surface">
+          <element units="Celsius" type="apparent_temp">-3.6</element>
+          <element units="Celsius" type="delta_t">2.1</element>
+          <element units="km/h" type="gust_kmh">61</element>
+          <element units="knots" type="wind_gust_spd">33</element>
+          <element units="Celsius" type="air_temperature">7.5</element>
+          <element units="Celsius" type="dew_point">2.6</element>
+          <element units="hPa" type="pres">998.7</element>
+          <element units="hPa" type="msl_pres">998.7</element>
+          <element units="hPa" type="qnh_pres">998.7</element>
+          <element units="mm" type="rain_hour">0.0</element>
+          <element units="mm" type="rain_ten">0.0</element>
+          <element units="%" type="rel-humidity">71</element>
+          <element type="wind_dir">WSW</element>
+          <element units="deg" type="wind_dir_deg">252</element>
+          <element units="km/h" type="wind_spd_kmh">50</element>
+          <element units="knots" type="wind_spd">27</element>
+          <element start-time-local="2024-09-19T09:00:00+10:00" end-time-local="2024-09-19T19:32:00+10:00" duration="632" start-time-utc="2024-09-18T23:00:00+00:00" end-time-utc="2024-09-19T09:32:00+00:00" units="mm" type="rainfall">3.6</element>
+          <element start-time-local="2024-09-18T09:00:00+10:00" end-time-local="2024-09-19T09:00:00+10:00" duration="1440" start-time-utc="2024-09-17T23:00:00+00:00" end-time-utc="2024-09-18T23:00:00+00:00" units="mm" type="rainfall_24hr">4.2</element>
+          <element start-time-local="2024-09-19T06:00:00+10:00" end-time-local="2024-09-19T21:00:00+10:00" start-time-utc="2024-09-18T20:00:00+00:00" end-time-utc="2024-09-19T11:00:00+00:00" units="Celsius" type="maximum_air_temperature" instance="running" time-utc="2024-09-19T00:07:00+00:00" time-local="2024-09-19T10:07:00+10:00">11.3</element>
+          <element start-time-local="2024-09-19T18:00:00+10:00" end-time-local="2024-09-20T09:00:00+10:00" start-time-utc="2024-09-19T08:00:00+00:00" end-time-utc="2024-09-19T23:00:00+00:00" units="Celsius" type="minimum_air_temperature" instance="running" time-utc="2024-09-19T08:18:00+00:00" time-local="2024-09-19T18:18:00+10:00">5.7</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="knots" type="maximum_gust_spd" instance="running" time-utc="2024-09-19T01:40:00+00:00" time-local="2024-09-19T11:40:00+10:00">61</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="km/h" type="maximum_gust_kmh" instance="running" time-utc="2024-09-19T01:40:00+00:00" time-local="2024-09-19T11:40:00+10:00">113</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" type="maximum_gust_dir" instance="running" time-utc="2024-09-19T01:40:00+00:00" time-local="2024-09-19T11:40:00+10:00">WSW</element>
+        </level>
+      </period>
+    </station>
+    <station wmo-id="94956" bom-id="097072" tz="Australia/Hobart" stn-name="STRAHAN AERODROME" stn-height="21.00" type="AWS" lat="-42.1550" lon="145.2908" forecast-district-id="TAS_PW009" description="Strahan">
+      <period index="0" time-utc="2024-09-19T09:30:00+00:00" time-local="2024-09-19T19:30:00+10:00" wind-src="metar_10">
+        <level index="0" type="surface">
+          <element units="Celsius" type="apparent_temp">-0.9</element>
+          <element type="cloud">Partly cloudy</element>
+          <element units="m" type="cloud_base_m">1110</element>
+          <element type="cloud_oktas">3</element>
+          <element units="Celsius" type="delta_t">2.2</element>
+          <element units="km/h" type="gust_kmh">50</element>
+          <element units="knots" type="wind_gust_spd">27</element>
+          <element units="Celsius" type="air_temperature">7.1</element>
+          <element units="Celsius" type="dew_point">1.6</element>
+          <element units="hPa" type="pres">999.7</element>
+          <element units="hPa" type="msl_pres">999.7</element>
+          <element units="hPa" type="qnh_pres">999.7</element>
+          <element units="mm" type="rain_hour">0.0</element>
+          <element units="mm" type="rain_ten">0.0</element>
+          <element units="%" type="rel-humidity">68</element>
+          <element units="km" type="vis_km">10</element>
+          <element type="wind_dir">W</element>
+          <element units="deg" type="wind_dir_deg">262</element>
+          <element units="km/h" type="wind_spd_kmh">33</element>
+          <element units="knots" type="wind_spd">18</element>
+          <element start-time-local="2024-09-19T09:00:00+10:00" end-time-local="2024-09-19T19:32:00+10:00" duration="632" start-time-utc="2024-09-18T23:00:00+00:00" end-time-utc="2024-09-19T09:32:00+00:00" units="mm" type="rainfall">9.6</element>
+          <element start-time-local="2024-09-18T09:00:00+10:00" end-time-local="2024-09-19T09:00:00+10:00" duration="1440" start-time-utc="2024-09-17T23:00:00+00:00" end-time-utc="2024-09-18T23:00:00+00:00" units="mm" type="rainfall_24hr">10.0</element>
+          <element start-time-local="2024-09-19T06:00:00+10:00" end-time-local="2024-09-19T21:00:00+10:00" start-time-utc="2024-09-18T20:00:00+00:00" end-time-utc="2024-09-19T11:00:00+00:00" units="Celsius" type="maximum_air_temperature" instance="running" time-utc="2024-09-19T02:59:00+00:00" time-local="2024-09-19T12:59:00+10:00">11.0</element>
+          <element start-time-local="2024-09-19T18:00:00+10:00" end-time-local="2024-09-20T09:00:00+10:00" start-time-utc="2024-09-19T08:00:00+00:00" end-time-utc="2024-09-19T23:00:00+00:00" units="Celsius" type="minimum_air_temperature" instance="running" time-utc="2024-09-19T08:28:00+00:00" time-local="2024-09-19T18:28:00+10:00">4.7</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="knots" type="maximum_gust_spd" instance="running" time-utc="2024-09-19T01:14:00+00:00" time-local="2024-09-19T11:14:00+10:00">52</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="km/h" type="maximum_gust_kmh" instance="running" time-utc="2024-09-19T01:14:00+00:00" time-local="2024-09-19T11:14:00+10:00">96</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" type="maximum_gust_dir" instance="running" time-utc="2024-09-19T01:14:00+00:00" time-local="2024-09-19T11:14:00+10:00">WNW</element>
+        </level>
+      </period>
+    </station>
+    <station wmo-id="95985" bom-id="092123" tz="Australia/Hobart" stn-name="SWAN ISLAND" stn-height="15.00" type="AWS" lat="-40.7292" lon="148.1250" forecast-district-id="TAS_PW002" description="Swan Island">
+      <period index="0" time-utc="2024-09-19T09:30:00+00:00" time-local="2024-09-19T19:30:00+10:00" wind-src="metar_10">
+        <level index="0" type="surface">
+          <element units="Celsius" type="apparent_temp">-1.7</element>
+          <element units="Celsius" type="delta_t">3.0</element>
+          <element units="km/h" type="gust_kmh">72</element>
+          <element units="knots" type="wind_gust_spd">39</element>
+          <element units="Celsius" type="air_temperature">9.7</element>
+          <element units="Celsius" type="dew_point">2.6</element>
+          <element units="hPa" type="pres">997.5</element>
+          <element units="hPa" type="msl_pres">997.5</element>
+          <element units="hPa" type="qnh_pres">997.5</element>
+          <element units="mm" type="rain_hour">0.0</element>
+          <element units="mm" type="rain_ten">0.0</element>
+          <element units="%" type="rel-humidity">61</element>
+          <element type="wind_dir">W</element>
+          <element units="deg" type="wind_dir_deg">276</element>
+          <element units="km/h" type="wind_spd_kmh">52</element>
+          <element units="knots" type="wind_spd">28</element>
+          <element start-time-local="2024-09-19T09:00:00+10:00" end-time-local="2024-09-19T19:32:00+10:00" duration="632" start-time-utc="2024-09-18T23:00:00+00:00" end-time-utc="2024-09-19T09:32:00+00:00" units="mm" type="rainfall">1.4</element>
+          <element start-time-local="2024-09-18T09:00:00+10:00" end-time-local="2024-09-19T09:00:00+10:00" duration="1440" start-time-utc="2024-09-17T23:00:00+00:00" end-time-utc="2024-09-18T23:00:00+00:00" units="mm" type="rainfall_24hr">2.0</element>
+          <element start-time-local="2024-09-19T06:00:00+10:00" end-time-local="2024-09-19T21:00:00+10:00" start-time-utc="2024-09-18T20:00:00+00:00" end-time-utc="2024-09-19T11:00:00+00:00" units="Celsius" type="maximum_air_temperature" instance="running" time-utc="2024-09-19T02:30:00+00:00" time-local="2024-09-19T12:30:00+10:00">13.2</element>
+          <element start-time-local="2024-09-19T18:00:00+10:00" end-time-local="2024-09-20T09:00:00+10:00" start-time-utc="2024-09-19T08:00:00+00:00" end-time-utc="2024-09-19T23:00:00+00:00" units="Celsius" type="minimum_air_temperature" instance="running" time-utc="2024-09-19T08:37:00+00:00" time-local="2024-09-19T18:37:00+10:00">9.4</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="knots" type="maximum_gust_spd" instance="running" time-utc="2024-09-19T04:17:00+00:00" time-local="2024-09-19T14:17:00+10:00">47</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="km/h" type="maximum_gust_kmh" instance="running" time-utc="2024-09-19T04:17:00+00:00" time-local="2024-09-19T14:17:00+10:00">87</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" type="maximum_gust_dir" instance="running" time-utc="2024-09-19T04:17:00+00:00" time-local="2024-09-19T14:17:00+10:00">W</element>
+        </level>
+      </period>
+    </station>
+    <station wmo-id="94619" bom-id="094250" tz="Australia/Hobart" stn-name="HOBART AIRPORT" stn-height="2.20" type="AWS" lat="-42.8333" lon="147.5119" forecast-district-id="TAS_PW006" description="Hobart Airport">
+      <period index="0" time-utc="2024-09-19T09:30:00+00:00" time-local="2024-09-19T19:30:00+10:00" wind-src="metar_10">
+        <level index="0" type="surface">
+          <element units="Celsius" type="apparent_temp">-2.3</element>
+          <element type="cloud">Partly cloudy</element>
+          <element units="m" type="cloud_base_m">1710</element>
+          <element type="cloud_oktas">5</element>
+          <element units="Celsius" type="delta_t">1.8</element>
+          <element units="km/h" type="gust_kmh">41</element>
+          <element units="knots" type="wind_gust_spd">22</element>
+          <element units="Celsius" type="air_temperature">5.6</element>
+          <element units="Celsius" type="dew_point">1.2</element>
+          <element units="hPa" type="pres">994.5</element>
+          <element units="hPa" type="msl_pres">994.5</element>
+          <element units="hPa" type="qnh_pres">994.5</element>
+          <element units="mm" type="rain_hour">0.0</element>
+          <element units="mm" type="rain_ten">0.0</element>
+          <element units="%" type="rel-humidity">73</element>
+          <element units="km" type="vis_km">10</element>
+          <element type="wind_dir">WNW</element>
+          <element units="deg" type="wind_dir_deg">283</element>
+          <element units="km/h" type="wind_spd_kmh">32</element>
+          <element units="knots" type="wind_spd">17</element>
+          <element start-time-local="2024-09-19T09:00:00+10:00" end-time-local="2024-09-19T19:31:00+10:00" duration="631" start-time-utc="2024-09-18T23:00:00+00:00" end-time-utc="2024-09-19T09:31:00+00:00" units="mm" type="rainfall">4.0</element>
+          <element start-time-local="2024-09-18T09:00:00+10:00" end-time-local="2024-09-19T09:00:00+10:00" duration="1440" start-time-utc="2024-09-17T23:00:00+00:00" end-time-utc="2024-09-18T23:00:00+00:00" units="mm" type="rainfall_24hr">0.0</element>
+          <element start-time-local="2024-09-19T06:00:00+10:00" end-time-local="2024-09-19T21:00:00+10:00" start-time-utc="2024-09-18T20:00:00+00:00" end-time-utc="2024-09-19T11:00:00+00:00" units="Celsius" type="maximum_air_temperature" instance="running" time-utc="2024-09-19T01:55:00+00:00" time-local="2024-09-19T11:55:00+10:00">14.1</element>
+          <element start-time-local="2024-09-19T18:00:00+10:00" end-time-local="2024-09-20T09:00:00+10:00" start-time-utc="2024-09-19T08:00:00+00:00" end-time-utc="2024-09-19T23:00:00+00:00" units="Celsius" type="minimum_air_temperature" instance="running" time-utc="2024-09-19T08:41:00+00:00" time-local="2024-09-19T18:41:00+10:00">4.4</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="knots" type="maximum_gust_spd" instance="running" time-utc="2024-09-19T04:47:00+00:00" time-local="2024-09-19T14:47:00+10:00">43</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="km/h" type="maximum_gust_kmh" instance="running" time-utc="2024-09-19T04:47:00+00:00" time-local="2024-09-19T14:47:00+10:00">80</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" type="maximum_gust_dir" instance="running" time-utc="2024-09-19T04:47:00+00:00" time-local="2024-09-19T14:47:00+10:00">W</element>
+        </level>
+      </period>
+    </station>
+    <station wmo-id="95972" bom-id="094212" tz="Australia/Hobart" stn-name="CAMPANIA (KINCORA)" stn-height="45.00" type="AWS" lat="-42.6867" lon="147.4258" forecast-district-id="TAS_PW006" description="Campania">
+      <period index="0" time-utc="2024-09-19T09:30:00+00:00" time-local="2024-09-19T19:30:00+10:00" wind-src="metar_10">
+        <level index="0" type="surface">
+          <element units="Celsius" type="apparent_temp">-1.5</element>
+          <element units="Celsius" type="delta_t">1.9</element>
+          <element units="km/h" type="gust_kmh">59</element>
+          <element units="knots" type="wind_gust_spd">32</element>
+          <element units="Celsius" type="air_temperature">5.7</element>
+          <element units="Celsius" type="dew_point">0.9</element>
+          <element units="mm" type="rain_hour">0.0</element>
+          <element units="mm" type="rain_ten">0.0</element>
+          <element units="%" type="rel-humidity">71</element>
+          <element type="wind_dir">W</element>
+          <element units="deg" type="wind_dir_deg">262</element>
+          <element units="km/h" type="wind_spd_kmh">28</element>
+          <element units="knots" type="wind_spd">15</element>
+          <element start-time-local="2024-09-19T09:00:00+10:00" end-time-local="2024-09-19T19:32:00+10:00" duration="632" start-time-utc="2024-09-18T23:00:00+00:00" end-time-utc="2024-09-19T09:32:00+00:00" units="mm" type="rainfall">4.4</element>
+          <element start-time-local="2024-09-18T09:00:00+10:00" end-time-local="2024-09-19T09:00:00+10:00" duration="1440" start-time-utc="2024-09-17T23:00:00+00:00" end-time-utc="2024-09-18T23:00:00+00:00" units="mm" type="rainfall_24hr">2.8</element>
+          <element start-time-local="2024-09-19T06:00:00+10:00" end-time-local="2024-09-19T21:00:00+10:00" start-time-utc="2024-09-18T20:00:00+00:00" end-time-utc="2024-09-19T11:00:00+00:00" units="Celsius" type="maximum_air_temperature" instance="running" time-utc="2024-09-19T01:36:00+00:00" time-local="2024-09-19T11:36:00+10:00">13.8</element>
+          <element start-time-local="2024-09-19T18:00:00+10:00" end-time-local="2024-09-20T09:00:00+10:00" start-time-utc="2024-09-19T08:00:00+00:00" end-time-utc="2024-09-19T23:00:00+00:00" units="Celsius" type="minimum_air_temperature" instance="running" time-utc="2024-09-19T08:47:00+00:00" time-local="2024-09-19T18:47:00+10:00">4.2</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="knots" type="maximum_gust_spd" instance="running" time-utc="2024-09-19T04:57:00+00:00" time-local="2024-09-19T14:57:00+10:00">53</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="km/h" type="maximum_gust_kmh" instance="running" time-utc="2024-09-19T04:57:00+00:00" time-local="2024-09-19T14:57:00+10:00">98</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" type="maximum_gust_dir" instance="running" time-utc="2024-09-19T04:57:00+00:00" time-local="2024-09-19T14:57:00+10:00">W</element>
+        </level>
+      </period>
+    </station>
+    <station wmo-id="94961" bom-id="094020" tz="Australia/Hobart" stn-name="DOVER" stn-height="20.00" type="Non-AWS" lat="-43.3330" lon="146.9980" forecast-district-id="TAS_PW006" description="Dover">
+      <period index="0" time-utc="2024-09-18T23:00:00+00:00" time-local="2024-09-19T09:00:00+10:00" wind-src="mdf">
+        <level index="0" type="surface">
+          <element units="Celsius" type="apparent_temp">3.8</element>
+          <element type="cloud">Mostly cloudy</element>
+          <element units="m" type="cloud_base_m">200</element>
+          <element type="cloud_oktas">6</element>
+          <element type="cloud_type_id">38</element>
+          <element units="Celsius" type="delta_t">1.6</element>
+          <element units="Celsius" type="air_temperature">9.0</element>
+          <element units="Celsius" type="dew_point">5.5</element>
+          <element units="%" type="rel-humidity">79</element>
+          <element units="km" type="vis_km">20</element>
+          <element type="weather">Showers</element>
+          <element type="wind_dir">NW</element>
+          <element units="deg" type="wind_dir_deg">320</element>
+          <element units="km/h" type="wind_spd_kmh">22</element>
+          <element units="knots" type="wind_spd">12</element>
+          <element start-time-local="2024-09-18T09:00:00+10:00" end-time-local="2024-09-19T09:00:00+10:00" duration="1440" start-time-utc="2024-09-17T23:00:00+00:00" end-time-utc="2024-09-18T23:00:00+00:00" units="mm" type="rainfall">8.0</element>
+          <element start-time-local="2024-09-18T09:00:00+10:00" end-time-local="2024-09-19T09:00:00+10:00" duration="1440" start-time-utc="2024-09-17T23:00:00+00:00" end-time-utc="2024-09-18T23:00:00+00:00" units="mm" type="rainfall_24hr">8.0</element>
+        </level>
+      </period>
+    </station>
+    <station wmo-id="94980" bom-id="099005" tz="Australia/Hobart" stn-name="FLINDERS ISLAND AIRPORT" stn-height="9.00" type="AWS" lat="-40.0911" lon="148.0024" forecast-district-id="TAS_PW001" description="Flinders Island Airport">
+      <period index="0" time-utc="2024-09-19T09:30:00+00:00" time-local="2024-09-19T19:30:00+10:00" wind-src="metar_10">
+        <level index="0" type="surface">
+          <element units="Celsius" type="apparent_temp">-3.2</element>
+          <element type="cloud">Mostly clear</element>
+          <element units="m" type="cloud_base_m">1020</element>
+          <element type="cloud_oktas">1</element>
+          <element units="Celsius" type="delta_t">2.3</element>
+          <element units="km/h" type="gust_kmh">78</element>
+          <element units="knots" type="wind_gust_spd">42</element>
+          <element units="Celsius" type="air_temperature">9.9</element>
+          <element units="Celsius" type="dew_point">4.9</element>
+          <element units="hPa" type="pres">1000.7</element>
+          <element units="hPa" type="msl_pres">1000.7</element>
+          <element units="hPa" type="qnh_pres">1000.7</element>
+          <element units="mm" type="rain_hour">0.2</element>
+          <element units="mm" type="rain_ten">0.0</element>
+          <element units="%" type="rel-humidity">71</element>
+          <element units="km" type="vis_km">10</element>
+          <element type="wind_dir">WSW</element>
+          <element units="deg" type="wind_dir_deg">256</element>
+          <element units="km/h" type="wind_spd_kmh">63</element>
+          <element units="knots" type="wind_spd">34</element>
+          <element start-time-local="2024-09-19T09:00:00+10:00" end-time-local="2024-09-19T19:32:00+10:00" duration="632" start-time-utc="2024-09-18T23:00:00+00:00" end-time-utc="2024-09-19T09:32:00+00:00" units="mm" type="rainfall">2.4</element>
+          <element start-time-local="2024-09-18T09:00:00+10:00" end-time-local="2024-09-19T09:00:00+10:00" duration="1440" start-time-utc="2024-09-17T23:00:00+00:00" end-time-utc="2024-09-18T23:00:00+00:00" units="mm" type="rainfall_24hr">3.8</element>
+          <element start-time-local="2024-09-19T06:00:00+10:00" end-time-local="2024-09-19T21:00:00+10:00" start-time-utc="2024-09-18T20:00:00+00:00" end-time-utc="2024-09-19T11:00:00+00:00" units="Celsius" type="maximum_air_temperature" instance="running" time-utc="2024-09-19T01:46:00+00:00" time-local="2024-09-19T11:46:00+10:00">14.0</element>
+          <element start-time-local="2024-09-19T18:00:00+10:00" end-time-local="2024-09-20T09:00:00+10:00" start-time-utc="2024-09-19T08:00:00+00:00" end-time-utc="2024-09-19T23:00:00+00:00" units="Celsius" type="minimum_air_temperature" instance="running" time-utc="2024-09-19T08:50:00+00:00" time-local="2024-09-19T18:50:00+10:00">8.5</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="knots" type="maximum_gust_spd" instance="running" time-utc="2024-09-19T06:38:00+00:00" time-local="2024-09-19T16:38:00+10:00">48</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="km/h" type="maximum_gust_kmh" instance="running" time-utc="2024-09-19T06:38:00+00:00" time-local="2024-09-19T16:38:00+10:00">89</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" type="maximum_gust_dir" instance="running" time-utc="2024-09-19T06:38:00+00:00" time-local="2024-09-19T16:38:00+10:00">W</element>
+        </level>
+      </period>
+    </station>
+    <station wmo-id="95959" bom-id="096033" tz="Australia/Hobart" stn-name="LIAWENEE" stn-height="1057.00" type="AWS" lat="-41.8997" lon="146.6694" forecast-district-id="TAS_PW008" description="Liawenee">
+      <period index="0" time-utc="2024-09-19T09:30:00+00:00" time-local="2024-09-19T19:30:00+10:00" wind-src="metar_10">
+        <level index="0" type="surface">
+          <element units="Celsius" type="apparent_temp">-11.2</element>
+          <element units="Celsius" type="delta_t">0.1</element>
+          <element units="km/h" type="gust_kmh">46</element>
+          <element units="knots" type="wind_gust_spd">25</element>
+          <element units="Celsius" type="air_temperature">-2.2</element>
+          <element units="Celsius" type="dew_point">-2.7</element>
+          <element units="hPa" type="pres">994.2</element>
+          <element units="hPa" type="msl_pres">994.2</element>
+          <element units="hPa" type="qnh_pres">993.5</element>
+          <element units="mm" type="rain_hour">0.8</element>
+          <element units="mm" type="rain_ten">0.4</element>
+          <element units="%" type="rel-humidity">96</element>
+          <element type="wind_dir">WSW</element>
+          <element units="deg" type="wind_dir_deg">239</element>
+          <element units="km/h" type="wind_spd_kmh">35</element>
+          <element units="knots" type="wind_spd">19</element>
+          <element start-time-local="2024-09-19T09:00:00+10:00" end-time-local="2024-09-19T19:32:00+10:00" duration="632" start-time-utc="2024-09-18T23:00:00+00:00" end-time-utc="2024-09-19T09:32:00+00:00" units="mm" type="rainfall">5.6</element>
+          <element start-time-local="2024-09-18T09:00:00+10:00" end-time-local="2024-09-19T09:00:00+10:00" duration="1440" start-time-utc="2024-09-17T23:00:00+00:00" end-time-utc="2024-09-18T23:00:00+00:00" units="mm" type="rainfall_24hr">5.6</element>
+          <element start-time-local="2024-09-19T06:00:00+10:00" end-time-local="2024-09-19T21:00:00+10:00" start-time-utc="2024-09-18T20:00:00+00:00" end-time-utc="2024-09-19T11:00:00+00:00" units="Celsius" type="maximum_air_temperature" instance="running" time-utc="2024-09-19T01:15:00+00:00" time-local="2024-09-19T11:15:00+10:00">3.8</element>
+          <element start-time-local="2024-09-19T18:00:00+10:00" end-time-local="2024-09-20T09:00:00+10:00" start-time-utc="2024-09-19T08:00:00+00:00" end-time-utc="2024-09-19T23:00:00+00:00" units="Celsius" type="minimum_air_temperature" instance="running" time-utc="2024-09-19T08:52:00+00:00" time-local="2024-09-19T18:52:00+10:00">-2.7</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="knots" type="maximum_gust_spd" instance="running" time-utc="2024-09-19T07:08:00+00:00" time-local="2024-09-19T17:08:00+10:00">49</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="km/h" type="maximum_gust_kmh" instance="running" time-utc="2024-09-19T07:08:00+00:00" time-local="2024-09-19T17:08:00+10:00">91</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" type="maximum_gust_dir" instance="running" time-utc="2024-09-19T07:08:00+00:00" time-local="2024-09-19T17:08:00+10:00">WSW</element>
+        </level>
+      </period>
+    </station>
+    <station wmo-id="94950" bom-id="091223" tz="Australia/Hobart" stn-name="MARRAWAH" stn-height="107.30" type="Non-AWS" lat="-40.9089" lon="144.7094" forecast-district-id="TAS_FA001" description="Marrawah">
+      <period index="0" time-utc="2024-09-16T23:00:00+00:00" time-local="2024-09-17T09:00:00+10:00" wind-src="mdf">
+        <level index="0" type="surface">
+          <element units="Celsius" type="apparent_temp">2.2</element>
+          <element type="cloud">Mostly cloudy</element>
+          <element units="m" type="cloud_base_m">1000</element>
+          <element type="cloud_oktas">7</element>
+          <element type="cloud_type_id">33</element>
+          <element units="Celsius" type="delta_t">1.5</element>
+          <element units="Celsius" type="air_temperature">10.0</element>
+          <element units="Celsius" type="dew_point">6.8</element>
+          <element units="hPa" type="pres">1021.5</element>
+          <element units="hPa" type="msl_pres">1021.5</element>
+          <element units="%" type="rel-humidity">80</element>
+          <element units="m" type="sea_height">3</element>
+          <element type="swell_dir">SW</element>
+          <element units="m" type="swell_height">3.5</element>
+          <element units="s" type="swell_period">10</element>
+          <element units="km" type="vis_km">10</element>
+          <element type="weather">Showers</element>
+          <element type="wind_dir">WSW</element>
+          <element units="deg" type="wind_dir_deg">250</element>
+          <element units="km/h" type="wind_spd_kmh">37</element>
+          <element units="knots" type="wind_spd">20</element>
+          <element start-time-local="2024-09-16T09:00:00+10:00" end-time-local="2024-09-17T09:00:00+10:00" duration="1440" start-time-utc="2024-09-15T23:00:00+00:00" end-time-utc="2024-09-16T23:00:00+00:00" units="mm" type="rainfall">6.0</element>
+          <element start-time-local="2024-09-16T09:00:00+10:00" end-time-local="2024-09-17T09:00:00+10:00" duration="1440" start-time-utc="2024-09-15T23:00:00+00:00" end-time-utc="2024-09-16T23:00:00+00:00" units="mm" type="rainfall_24hr">6.0</element>
+        </level>
+      </period>
+    </station>
+    <station wmo-id="95979" bom-id="094087" tz="Australia/Hobart" stn-name="KUNANYI (MOUNT WELLINGTON PINNACLE)" stn-height="1260.47" type="AWS" lat="-42.8950" lon="147.2358" forecast-district-id="TAS_PW006" description="kunanyi /Mount Wellington">
+      <period index="0" time-utc="2024-09-19T09:30:00+00:00" time-local="2024-09-19T19:30:00+10:00" wind-src="metar_10">
+        <level index="0" type="surface">
+          <element units="Celsius" type="apparent_temp">-17.0</element>
+          <element units="Celsius" type="delta_t">0.0</element>
+          <element units="km/h" type="gust_kmh">70</element>
+          <element units="knots" type="wind_gust_spd">38</element>
+          <element units="Celsius" type="air_temperature">-4.2</element>
+          <element units="Celsius" type="dew_point">-4.6</element>
+          <element units="mm" type="rain_hour">0.0</element>
+          <element units="mm" type="rain_ten">0.0</element>
+          <element units="%" type="rel-humidity">97</element>
+          <element type="wind_dir">WSW</element>
+          <element units="deg" type="wind_dir_deg">244</element>
+          <element units="km/h" type="wind_spd_kmh">54</element>
+          <element units="knots" type="wind_spd">29</element>
+          <element start-time-local="2024-09-19T09:00:00+10:00" end-time-local="2024-09-19T19:32:00+10:00" duration="632" start-time-utc="2024-09-18T23:00:00+00:00" end-time-utc="2024-09-19T09:32:00+00:00" units="mm" type="rainfall">0.8</element>
+          <element start-time-local="2024-09-18T09:00:00+10:00" end-time-local="2024-09-19T09:00:00+10:00" duration="1440" start-time-utc="2024-09-17T23:00:00+00:00" end-time-utc="2024-09-18T23:00:00+00:00" units="mm" type="rainfall_24hr">0.6</element>
+          <element start-time-local="2024-09-19T06:00:00+10:00" end-time-local="2024-09-19T21:00:00+10:00" start-time-utc="2024-09-18T20:00:00+00:00" end-time-utc="2024-09-19T11:00:00+00:00" units="Celsius" type="maximum_air_temperature" instance="running" time-utc="2024-09-19T01:52:00+00:00" time-local="2024-09-19T11:52:00+10:00">-0.2</element>
+          <element start-time-local="2024-09-19T18:00:00+10:00" end-time-local="2024-09-20T09:00:00+10:00" start-time-utc="2024-09-19T08:00:00+00:00" end-time-utc="2024-09-19T23:00:00+00:00" units="Celsius" type="minimum_air_temperature" instance="running" time-utc="2024-09-19T08:31:00+00:00" time-local="2024-09-19T18:31:00+10:00">-4.5</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="knots" type="maximum_gust_spd" instance="running" time-utc="2024-09-19T05:05:00+00:00" time-local="2024-09-19T15:05:00+10:00">68</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="km/h" type="maximum_gust_kmh" instance="running" time-utc="2024-09-19T05:05:00+00:00" time-local="2024-09-19T15:05:00+10:00">126</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" type="maximum_gust_dir" instance="running" time-utc="2024-09-19T05:05:00+00:00" time-local="2024-09-19T15:05:00+10:00">WSW</element>
+        </level>
+      </period>
+    </station>
+    <station wmo-id="94957" bom-id="095048" tz="Australia/Hobart" stn-name="OUSE FIRE STATION" stn-height="90.00" type="AWS" lat="-42.4842" lon="146.7106" forecast-district-id="TAS_PW007" description="Ouse">
+      <period index="0" time-utc="2024-09-19T09:30:00+00:00" time-local="2024-09-19T19:30:00+10:00" wind-src="metar_10">
+        <level index="0" type="surface">
+          <element units="Celsius" type="apparent_temp">-1.5</element>
+          <element units="Celsius" type="delta_t">1.2</element>
+          <element units="km/h" type="gust_kmh">28</element>
+          <element units="knots" type="wind_gust_spd">15</element>
+          <element units="Celsius" type="air_temperature">4.0</element>
+          <element units="Celsius" type="dew_point">0.9</element>
+          <element units="hPa" type="pres">996.0</element>
+          <element units="hPa" type="msl_pres">996.0</element>
+          <element units="hPa" type="qnh_pres">995.9</element>
+          <element units="mm" type="rain_hour">1.2</element>
+          <element units="mm" type="rain_ten">0.0</element>
+          <element units="%" type="rel-humidity">80</element>
+          <element type="wind_dir">WNW</element>
+          <element units="deg" type="wind_dir_deg">291</element>
+          <element units="km/h" type="wind_spd_kmh">19</element>
+          <element units="knots" type="wind_spd">10</element>
+          <element start-time-local="2024-09-19T09:00:00+10:00" end-time-local="2024-09-19T19:31:00+10:00" duration="631" start-time-utc="2024-09-18T23:00:00+00:00" end-time-utc="2024-09-19T09:31:00+00:00" units="mm" type="rainfall">8.0</element>
+          <element start-time-local="2024-09-18T09:00:00+10:00" end-time-local="2024-09-19T09:00:00+10:00" duration="1440" start-time-utc="2024-09-17T23:00:00+00:00" end-time-utc="2024-09-18T23:00:00+00:00" units="mm" type="rainfall_24hr">9.2</element>
+          <element start-time-local="2024-09-19T06:00:00+10:00" end-time-local="2024-09-19T21:00:00+10:00" start-time-utc="2024-09-18T20:00:00+00:00" end-time-utc="2024-09-19T11:00:00+00:00" units="Celsius" type="maximum_air_temperature" instance="running" time-utc="2024-09-19T01:01:00+00:00" time-local="2024-09-19T11:01:00+10:00">12.3</element>
+          <element start-time-local="2024-09-19T18:00:00+10:00" end-time-local="2024-09-20T09:00:00+10:00" start-time-utc="2024-09-19T08:00:00+00:00" end-time-utc="2024-09-19T23:00:00+00:00" units="Celsius" type="minimum_air_temperature" instance="running" time-utc="2024-09-19T09:27:00+00:00" time-local="2024-09-19T19:27:00+10:00">3.5</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="knots" type="maximum_gust_spd" instance="running" time-utc="2024-09-19T06:50:00+00:00" time-local="2024-09-19T16:50:00+10:00">48</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="km/h" type="maximum_gust_kmh" instance="running" time-utc="2024-09-19T06:50:00+00:00" time-local="2024-09-19T16:50:00+10:00">89</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" type="maximum_gust_dir" instance="running" time-utc="2024-09-19T06:50:00+00:00" time-local="2024-09-19T16:50:00+10:00">WSW</element>
+        </level>
+      </period>
+    </station>
+    <station wmo-id="94985" bom-id="093053" tz="Australia/Hobart" stn-name="ROSS (THE BOULEVARDS)" stn-height="186.00" type="Non-AWS" lat="-42.0250" lon="147.4954" forecast-district-id="TAS_PW005" description="Ross">
+      <period index="0" time-utc="2024-09-18T23:00:00+00:00" time-local="2024-09-19T09:00:00+10:00" wind-src="mdf">
+        <level index="0" type="surface">
+          <element units="Celsius" type="apparent_temp">-2.5</element>
+          <element type="cloud">Partly cloudy</element>
+          <element units="m" type="cloud_base_m">2500</element>
+          <element type="cloud_oktas">5</element>
+          <element units="Celsius" type="delta_t">2.0</element>
+          <element units="Celsius" type="air_temperature">7.4</element>
+          <element units="Celsius" type="dew_point">2.7</element>
+          <element units="%" type="rel-humidity">72</element>
+          <element units="km" type="vis_km">30</element>
+          <element type="weather">Fine</element>
+          <element type="wind_dir">NNW</element>
+          <element units="deg" type="wind_dir_deg">340</element>
+          <element units="km/h" type="wind_spd_kmh">44</element>
+          <element units="knots" type="wind_spd">24</element>
+          <element start-time-local="2024-09-18T09:00:00+10:00" end-time-local="2024-09-19T09:00:00+10:00" duration="1440" start-time-utc="2024-09-17T23:00:00+00:00" end-time-utc="2024-09-18T23:00:00+00:00" units="mm" type="rainfall">2.0</element>
+          <element start-time-local="2024-09-18T09:00:00+10:00" end-time-local="2024-09-19T09:00:00+10:00" duration="1440" start-time-utc="2024-09-17T23:00:00+00:00" end-time-utc="2024-09-18T23:00:00+00:00" units="mm" type="rainfall_24hr">2.0</element>
+        </level>
+      </period>
+    </station>
+    <station wmo-id="95964" bom-id="091293" tz="Australia/Hobart" stn-name="LOW HEAD" stn-height="3.00" type="AWS" lat="-41.0547" lon="146.7874" forecast-district-id="TAS_PW004" description="Low Head">
+      <period index="0" time-utc="2024-09-19T09:30:00+00:00" time-local="2024-09-19T19:30:00+10:00" wind-src="metar_10">
+        <level index="0" type="surface">
+          <element units="Celsius" type="apparent_temp">-2.5</element>
+          <element units="Celsius" type="delta_t">2.1</element>
+          <element units="km/h" type="gust_kmh">69</element>
+          <element units="knots" type="wind_gust_spd">37</element>
+          <element units="Celsius" type="air_temperature">9.3</element>
+          <element units="Celsius" type="dew_point">4.7</element>
+          <element units="hPa" type="pres">998.5</element>
+          <element units="hPa" type="msl_pres">998.5</element>
+          <element units="hPa" type="qnh_pres">998.5</element>
+          <element units="mm" type="rain_hour">0.0</element>
+          <element units="mm" type="rain_ten">0.0</element>
+          <element units="%" type="rel-humidity">73</element>
+          <element type="wind_dir">W</element>
+          <element units="deg" type="wind_dir_deg">265</element>
+          <element units="km/h" type="wind_spd_kmh">56</element>
+          <element units="knots" type="wind_spd">30</element>
+          <element start-time-local="2024-09-19T09:00:00+10:00" end-time-local="2024-09-19T19:31:00+10:00" duration="631" start-time-utc="2024-09-18T23:00:00+00:00" end-time-utc="2024-09-19T09:31:00+00:00" units="mm" type="rainfall">0.8</element>
+          <element start-time-local="2024-09-18T09:00:00+10:00" end-time-local="2024-09-19T09:00:00+10:00" duration="1440" start-time-utc="2024-09-17T23:00:00+00:00" end-time-utc="2024-09-18T23:00:00+00:00" units="mm" type="rainfall_24hr">3.0</element>
+          <element start-time-local="2024-09-19T06:00:00+10:00" end-time-local="2024-09-19T21:00:00+10:00" start-time-utc="2024-09-18T20:00:00+00:00" end-time-utc="2024-09-19T11:00:00+00:00" units="Celsius" type="maximum_air_temperature" instance="running" time-utc="2024-09-19T02:37:00+00:00" time-local="2024-09-19T12:37:00+10:00">12.7</element>
+          <element start-time-local="2024-09-19T18:00:00+10:00" end-time-local="2024-09-20T09:00:00+10:00" start-time-utc="2024-09-19T08:00:00+00:00" end-time-utc="2024-09-19T23:00:00+00:00" units="Celsius" type="minimum_air_temperature" instance="running" time-utc="2024-09-19T09:19:00+00:00" time-local="2024-09-19T19:19:00+10:00">9.0</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="knots" type="maximum_gust_spd" instance="running" time-utc="2024-09-19T03:42:00+00:00" time-local="2024-09-19T13:42:00+10:00">45</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="km/h" type="maximum_gust_kmh" instance="running" time-utc="2024-09-19T03:42:00+00:00" time-local="2024-09-19T13:42:00+10:00">83</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" type="maximum_gust_dir" instance="running" time-utc="2024-09-19T03:42:00+00:00" time-local="2024-09-19T13:42:00+10:00">W</element>
+        </level>
+      </period>
+    </station>
+    <station wmo-id="94983" bom-id="092045" tz="Australia/Hobart" stn-name="LARAPUNA (EDDYSTONE POINT)" stn-height="19.70" type="AWS" lat="-40.9928" lon="148.3467" forecast-district-id="TAS_PW002" description="Larapuna (Eddystone Point)">
+      <period index="0" time-utc="2024-09-19T09:30:00+00:00" time-local="2024-09-19T19:30:00+10:00" wind-src="metar_10">
+        <level index="0" type="surface">
+          <element units="Celsius" type="apparent_temp">0.9</element>
+          <element units="Celsius" type="delta_t">3.0</element>
+          <element units="km/h" type="gust_kmh">41</element>
+          <element units="knots" type="wind_gust_spd">22</element>
+          <element units="Celsius" type="air_temperature">8.1</element>
+          <element units="Celsius" type="dew_point">0.6</element>
+          <element units="hPa" type="pres">997.2</element>
+          <element units="hPa" type="msl_pres">997.2</element>
+          <element units="hPa" type="qnh_pres">997.2</element>
+          <element units="mm" type="rain_hour">0.0</element>
+          <element units="mm" type="rain_ten">0.0</element>
+          <element units="%" type="rel-humidity">59</element>
+          <element type="wind_dir">WNW</element>
+          <element units="deg" type="wind_dir_deg">288</element>
+          <element units="km/h" type="wind_spd_kmh">28</element>
+          <element units="knots" type="wind_spd">15</element>
+          <element start-time-local="2024-09-19T09:00:00+10:00" end-time-local="2024-09-19T19:31:00+10:00" duration="631" start-time-utc="2024-09-18T23:00:00+00:00" end-time-utc="2024-09-19T09:31:00+00:00" units="mm" type="rainfall">2.0</element>
+          <element start-time-local="2024-09-18T09:00:00+10:00" end-time-local="2024-09-19T09:00:00+10:00" duration="1440" start-time-utc="2024-09-17T23:00:00+00:00" end-time-utc="2024-09-18T23:00:00+00:00" units="mm" type="rainfall_24hr">1.6</element>
+          <element start-time-local="2024-09-19T06:00:00+10:00" end-time-local="2024-09-19T21:00:00+10:00" start-time-utc="2024-09-18T20:00:00+00:00" end-time-utc="2024-09-19T11:00:00+00:00" units="Celsius" type="maximum_air_temperature" instance="running" time-utc="2024-09-19T00:57:00+00:00" time-local="2024-09-19T10:57:00+10:00">13.5</element>
+          <element start-time-local="2024-09-19T18:00:00+10:00" end-time-local="2024-09-20T09:00:00+10:00" start-time-utc="2024-09-19T08:00:00+00:00" end-time-utc="2024-09-19T23:00:00+00:00" units="Celsius" type="minimum_air_temperature" instance="running" time-utc="2024-09-19T09:26:00+00:00" time-local="2024-09-19T19:26:00+10:00">7.9</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="knots" type="maximum_gust_spd" instance="running" time-utc="2024-09-19T03:42:00+00:00" time-local="2024-09-19T13:42:00+10:00">49</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="km/h" type="maximum_gust_kmh" instance="running" time-utc="2024-09-19T03:42:00+00:00" time-local="2024-09-19T13:42:00+10:00">91</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" type="maximum_gust_dir" instance="running" time-utc="2024-09-19T03:42:00+00:00" time-local="2024-09-19T13:42:00+10:00">WNW</element>
+        </level>
+      </period>
+    </station>
+    <station wmo-id="94972" bom-id="091219" tz="Australia/Hobart" stn-name="SCOTTSDALE (WEST MINSTONE ROAD)" stn-height="197.50" type="AWS" lat="-41.1708" lon="147.4883" forecast-district-id="TAS_PW002" description="Scottsdale">
+      <period index="0" time-utc="2024-09-19T09:30:00+00:00" time-local="2024-09-19T19:30:00+10:00" wind-src="metar_10">
+        <level index="0" type="surface">
+          <element units="Celsius" type="apparent_temp">0.3</element>
+          <element units="Celsius" type="delta_t">3.0</element>
+          <element units="km/h" type="gust_kmh">28</element>
+          <element units="knots" type="wind_gust_spd">15</element>
+          <element units="Celsius" type="air_temperature">6.2</element>
+          <element units="Celsius" type="dew_point">-1.9</element>
+          <element units="hPa" type="pres">997.6</element>
+          <element units="hPa" type="msl_pres">997.6</element>
+          <element units="hPa" type="qnh_pres">997.5</element>
+          <element units="mm" type="rain_hour">0.0</element>
+          <element units="mm" type="rain_ten">0.0</element>
+          <element units="%" type="rel-humidity">56</element>
+          <element type="wind_dir">W</element>
+          <element units="deg" type="wind_dir_deg">268</element>
+          <element units="km/h" type="wind_spd_kmh">19</element>
+          <element units="knots" type="wind_spd">10</element>
+          <element start-time-local="2024-09-19T09:00:00+10:00" end-time-local="2024-09-19T19:32:00+10:00" duration="632" start-time-utc="2024-09-18T23:00:00+00:00" end-time-utc="2024-09-19T09:32:00+00:00" units="mm" type="rainfall">2.2</element>
+          <element start-time-local="2024-09-18T09:00:00+10:00" end-time-local="2024-09-19T09:00:00+10:00" duration="1440" start-time-utc="2024-09-17T23:00:00+00:00" end-time-utc="2024-09-18T23:00:00+00:00" units="mm" type="rainfall_24hr">5.6</element>
+          <element start-time-local="2024-09-19T06:00:00+10:00" end-time-local="2024-09-19T21:00:00+10:00" start-time-utc="2024-09-18T20:00:00+00:00" end-time-utc="2024-09-19T11:00:00+00:00" units="Celsius" type="maximum_air_temperature" instance="running" time-utc="2024-09-19T02:13:00+00:00" time-local="2024-09-19T12:13:00+10:00">10.8</element>
+          <element start-time-local="2024-09-19T18:00:00+10:00" end-time-local="2024-09-20T09:00:00+10:00" start-time-utc="2024-09-19T08:00:00+00:00" end-time-utc="2024-09-19T23:00:00+00:00" units="Celsius" type="minimum_air_temperature" instance="running" time-utc="2024-09-19T09:29:00+00:00" time-local="2024-09-19T19:29:00+10:00">6.0</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="knots" type="maximum_gust_spd" instance="running" time-utc="2024-09-19T03:22:00+00:00" time-local="2024-09-19T13:22:00+10:00">38</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="km/h" type="maximum_gust_kmh" instance="running" time-utc="2024-09-19T03:22:00+00:00" time-local="2024-09-19T13:22:00+10:00">70</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" type="maximum_gust_dir" instance="running" time-utc="2024-09-19T03:22:00+00:00" time-local="2024-09-19T13:22:00+10:00">W</element>
+        </level>
+      </period>
+    </station>
+    <station wmo-id="95989" bom-id="092003" tz="Australia/Hobart" stn-name="BICHENO (COUNCIL DEPOT)" stn-height="11.00" type="Non-AWS" lat="-41.8739" lon="148.3036" forecast-district-id="TAS_PW003" description="Bicheno">
+      <period index="0" time-utc="2024-09-18T23:00:00+00:00" time-local="2024-09-19T09:00:00+10:00" wind-src="mdf">
+        <level index="0" type="surface">
+          <element units="Celsius" type="apparent_temp">8.4</element>
+          <element type="cloud">Partly cloudy</element>
+          <element units="m" type="cloud_base_m">2500</element>
+          <element type="cloud_oktas">4</element>
+          <element units="Celsius" type="delta_t">3.5</element>
+          <element units="Celsius" type="air_temperature">11.5</element>
+          <element units="Celsius" type="dew_point">3.6</element>
+          <element units="%" type="rel-humidity">58</element>
+          <element units="km" type="vis_km">20</element>
+          <element type="weather">Fine</element>
+          <element type="wind_dir">W</element>
+          <element units="deg" type="wind_dir_deg">270</element>
+          <element units="km/h" type="wind_spd_kmh">9</element>
+          <element units="knots" type="wind_spd">5</element>
+          <element start-time-local="2024-09-18T09:00:00+10:00" end-time-local="2024-09-19T09:00:00+10:00" duration="1440" start-time-utc="2024-09-17T23:00:00+00:00" end-time-utc="2024-09-18T23:00:00+00:00" units="mm" type="rainfall">1.0</element>
+          <element start-time-local="2024-09-18T09:00:00+10:00" end-time-local="2024-09-19T09:00:00+10:00" duration="1440" start-time-utc="2024-09-17T23:00:00+00:00" end-time-utc="2024-09-18T23:00:00+00:00" units="mm" type="rainfall_24hr">1.0</element>
+        </level>
+      </period>
+    </station>
+    <station wmo-id="95975" bom-id="092163" tz="Australia/Hobart" stn-name="FINGAL (FLEMING ST)" stn-height="255.00" type="AWS" lat="-41.6430" lon="147.9800" forecast-district-id="TAS_PW003" description="Fingal">
+      <period index="0" time-utc="2024-09-19T09:30:00+00:00" time-local="2024-09-19T19:30:00+10:00" wind-src="metar_10">
+        <level index="0" type="surface">
+          <element units="Celsius" type="apparent_temp">-0.9</element>
+          <element units="Celsius" type="delta_t">4.1</element>
+          <element units="km/h" type="gust_kmh">37</element>
+          <element units="knots" type="wind_gust_spd">20</element>
+          <element units="Celsius" type="air_temperature">6.7</element>
+          <element units="Celsius" type="dew_point">-5.3</element>
+          <element units="mm" type="rain_hour">0.0</element>
+          <element units="mm" type="rain_ten">0.0</element>
+          <element units="%" type="rel-humidity">42</element>
+          <element type="wind_dir">WSW</element>
+          <element units="deg" type="wind_dir_deg">246</element>
+          <element units="km/h" type="wind_spd_kmh">26</element>
+          <element units="knots" type="wind_spd">14</element>
+          <element start-time-local="2024-09-19T09:00:00+10:00" end-time-local="2024-09-19T19:32:00+10:00" duration="632" start-time-utc="2024-09-18T23:00:00+00:00" end-time-utc="2024-09-19T09:32:00+00:00" units="mm" type="rainfall">0.0</element>
+          <element start-time-local="2024-09-18T09:00:00+10:00" end-time-local="2024-09-19T09:00:00+10:00" duration="1440" start-time-utc="2024-09-17T23:00:00+00:00" end-time-utc="2024-09-18T23:00:00+00:00" units="mm" type="rainfall_24hr">0.2</element>
+          <element start-time-local="2024-09-19T06:00:00+10:00" end-time-local="2024-09-19T21:00:00+10:00" start-time-utc="2024-09-18T20:00:00+00:00" end-time-utc="2024-09-19T11:00:00+00:00" units="Celsius" type="maximum_air_temperature" instance="running" time-utc="2024-09-19T00:47:00+00:00" time-local="2024-09-19T10:47:00+10:00">12.9</element>
+          <element start-time-local="2024-09-19T18:00:00+10:00" end-time-local="2024-09-20T09:00:00+10:00" start-time-utc="2024-09-19T08:00:00+00:00" end-time-utc="2024-09-19T23:00:00+00:00" units="Celsius" type="minimum_air_temperature" instance="running" time-utc="2024-09-19T09:30:00+00:00" time-local="2024-09-19T19:30:00+10:00">6.6</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="knots" type="maximum_gust_spd" instance="running" time-utc="2024-09-19T07:37:00+00:00" time-local="2024-09-19T17:37:00+10:00">36</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="km/h" type="maximum_gust_kmh" instance="running" time-utc="2024-09-19T07:37:00+00:00" time-local="2024-09-19T17:37:00+10:00">67</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" type="maximum_gust_dir" instance="running" time-utc="2024-09-19T07:37:00+00:00" time-local="2024-09-19T17:37:00+10:00">SW</element>
+        </level>
+      </period>
+    </station>
+    <station wmo-id="95981" bom-id="092120" tz="Australia/Hobart" stn-name="ST HELENS AERODROME" stn-height="48.00" type="AWS" lat="-41.3381" lon="148.2792" forecast-district-id="TAS_PW003" description="St Helens">
+      <period index="0" time-utc="2024-09-19T09:30:00+00:00" time-local="2024-09-19T19:30:00+10:00" wind-src="metar_10">
+        <level index="0" type="surface">
+          <element units="Celsius" type="apparent_temp">4.9</element>
+          <element type="cloud">Clear</element>
+          <element type="cloud_oktas">0</element>
+          <element units="Celsius" type="delta_t">4.8</element>
+          <element units="km/h" type="gust_kmh">19</element>
+          <element units="knots" type="wind_gust_spd">10</element>
+          <element units="Celsius" type="air_temperature">9.1</element>
+          <element units="Celsius" type="dew_point">-4.1</element>
+          <element units="hPa" type="pres">996.6</element>
+          <element units="hPa" type="msl_pres">996.6</element>
+          <element units="hPa" type="qnh_pres">996.6</element>
+          <element units="mm" type="rain_hour">0.0</element>
+          <element units="mm" type="rain_ten">0.0</element>
+          <element units="%" type="rel-humidity">39</element>
+          <element units="km" type="vis_km">10</element>
+          <element type="wind_dir">WSW</element>
+          <element units="deg" type="wind_dir_deg">256</element>
+          <element units="km/h" type="wind_spd_kmh">9</element>
+          <element units="knots" type="wind_spd">5</element>
+          <element start-time-local="2024-09-19T09:00:00+10:00" end-time-local="2024-09-19T19:31:00+10:00" duration="631" start-time-utc="2024-09-18T23:00:00+00:00" end-time-utc="2024-09-19T09:31:00+00:00" units="mm" type="rainfall">1.0</element>
+          <element start-time-local="2024-09-18T09:00:00+10:00" end-time-local="2024-09-19T09:00:00+10:00" duration="1440" start-time-utc="2024-09-17T23:00:00+00:00" end-time-utc="2024-09-18T23:00:00+00:00" units="mm" type="rainfall_24hr">2.0</element>
+          <element start-time-local="2024-09-19T06:00:00+10:00" end-time-local="2024-09-19T21:00:00+10:00" start-time-utc="2024-09-18T20:00:00+00:00" end-time-utc="2024-09-19T11:00:00+00:00" units="Celsius" type="maximum_air_temperature" instance="running" time-utc="2024-09-19T03:00:00+00:00" time-local="2024-09-19T13:00:00+10:00">14.0</element>
+          <element start-time-local="2024-09-19T18:00:00+10:00" end-time-local="2024-09-20T09:00:00+10:00" start-time-utc="2024-09-19T08:00:00+00:00" end-time-utc="2024-09-19T23:00:00+00:00" units="Celsius" type="minimum_air_temperature" instance="running" time-utc="2024-09-19T09:22:00+00:00" time-local="2024-09-19T19:22:00+10:00">8.9</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="knots" type="maximum_gust_spd" instance="running" time-utc="2024-09-19T02:25:00+00:00" time-local="2024-09-19T12:25:00+10:00">35</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="km/h" type="maximum_gust_kmh" instance="running" time-utc="2024-09-19T02:25:00+00:00" time-local="2024-09-19T12:25:00+10:00">65</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" type="maximum_gust_dir" instance="running" time-utc="2024-09-19T02:25:00+00:00" time-local="2024-09-19T12:25:00+10:00">WNW</element>
+        </level>
+      </period>
+    </station>
+    <station wmo-id="94969" bom-id="091237" tz="Australia/Hobart" stn-name="LAUNCESTON (TI TREE BEND)" stn-height="5.00" type="AWS" lat="-41.4194" lon="147.1219" forecast-district-id="TAS_PW004" description="Launceston">
+      <period index="0" time-utc="2024-09-19T09:30:00+00:00" time-local="2024-09-19T19:30:00+10:00" wind-src="metar_10">
+        <level index="0" type="surface">
+          <element units="Celsius" type="apparent_temp">2.8</element>
+          <element units="Celsius" type="delta_t">3.3</element>
+          <element units="km/h" type="gust_kmh">26</element>
+          <element units="knots" type="wind_gust_spd">14</element>
+          <element units="Celsius" type="air_temperature">8.1</element>
+          <element units="Celsius" type="dew_point">-0.4</element>
+          <element units="mm" type="rain_hour">0.0</element>
+          <element units="mm" type="rain_ten">0.0</element>
+          <element units="%" type="rel-humidity">55</element>
+          <element type="wind_dir">NW</element>
+          <element units="deg" type="wind_dir_deg">319</element>
+          <element units="km/h" type="wind_spd_kmh">17</element>
+          <element units="knots" type="wind_spd">9</element>
+          <element start-time-local="2024-09-19T09:00:00+10:00" end-time-local="2024-09-19T19:32:00+10:00" duration="632" start-time-utc="2024-09-18T23:00:00+00:00" end-time-utc="2024-09-19T09:32:00+00:00" units="mm" type="rainfall">0.0</element>
+          <element start-time-local="2024-09-18T09:00:00+10:00" end-time-local="2024-09-19T09:00:00+10:00" duration="1440" start-time-utc="2024-09-17T23:00:00+00:00" end-time-utc="2024-09-18T23:00:00+00:00" units="mm" type="rainfall_24hr">1.4</element>
+          <element start-time-local="2024-09-19T06:00:00+10:00" end-time-local="2024-09-19T21:00:00+10:00" start-time-utc="2024-09-18T20:00:00+00:00" end-time-utc="2024-09-19T11:00:00+00:00" units="Celsius" type="maximum_air_temperature" instance="running" time-utc="2024-09-19T03:07:00+00:00" time-local="2024-09-19T13:07:00+10:00">13.5</element>
+          <element start-time-local="2024-09-19T18:00:00+10:00" end-time-local="2024-09-20T09:00:00+10:00" start-time-utc="2024-09-19T08:00:00+00:00" end-time-utc="2024-09-19T23:00:00+00:00" units="Celsius" type="minimum_air_temperature" instance="running" time-utc="2024-09-19T09:20:00+00:00" time-local="2024-09-19T19:20:00+10:00">7.8</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="knots" type="maximum_gust_spd" instance="running" time-utc="2024-09-19T03:12:00+00:00" time-local="2024-09-19T13:12:00+10:00">36</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="km/h" type="maximum_gust_kmh" instance="running" time-utc="2024-09-19T03:12:00+00:00" time-local="2024-09-19T13:12:00+10:00">67</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" type="maximum_gust_dir" instance="running" time-utc="2024-09-19T03:12:00+00:00" time-local="2024-09-19T13:12:00+10:00">NW</element>
+        </level>
+      </period>
+    </station>
+    <station wmo-id="95966" bom-id="091311" tz="Australia/Hobart" stn-name="LAUNCESTON AIRPORT" stn-height="166.90" type="AWS" lat="-41.5476" lon="147.2156" forecast-district-id="TAS_PW004" description="Launceston Airport">
+      <period index="0" time-utc="2024-09-19T09:30:00+00:00" time-local="2024-09-19T19:30:00+10:00" wind-src="metar_10">
+        <level index="0" type="surface">
+          <element units="Celsius" type="apparent_temp">-2.1</element>
+          <element type="cloud">Clear</element>
+          <element type="cloud_oktas">0</element>
+          <element units="Celsius" type="delta_t">2.4</element>
+          <element units="km/h" type="gust_kmh">39</element>
+          <element units="knots" type="wind_gust_spd">21</element>
+          <element units="Celsius" type="air_temperature">5.3</element>
+          <element units="Celsius" type="dew_point">-0.9</element>
+          <element units="hPa" type="pres">997.2</element>
+          <element units="hPa" type="msl_pres">997.2</element>
+          <element units="hPa" type="qnh_pres">997.1</element>
+          <element units="mm" type="rain_hour">0.0</element>
+          <element units="mm" type="rain_ten">0.0</element>
+          <element units="%" type="rel-humidity">64</element>
+          <element units="km" type="vis_km">10</element>
+          <element type="wind_dir">NW</element>
+          <element units="deg" type="wind_dir_deg">319</element>
+          <element units="km/h" type="wind_spd_kmh">28</element>
+          <element units="knots" type="wind_spd">15</element>
+          <element start-time-local="2024-09-19T09:00:00+10:00" end-time-local="2024-09-19T19:32:00+10:00" duration="632" start-time-utc="2024-09-18T23:00:00+00:00" end-time-utc="2024-09-19T09:32:00+00:00" units="mm" type="rainfall">0.0</element>
+          <element start-time-local="2024-09-18T09:00:00+10:00" end-time-local="2024-09-19T09:00:00+10:00" duration="1440" start-time-utc="2024-09-17T23:00:00+00:00" end-time-utc="2024-09-18T23:00:00+00:00" units="mm" type="rainfall_24hr">0.8</element>
+          <element start-time-local="2024-09-19T06:00:00+10:00" end-time-local="2024-09-19T21:00:00+10:00" start-time-utc="2024-09-18T20:00:00+00:00" end-time-utc="2024-09-19T11:00:00+00:00" units="Celsius" type="maximum_air_temperature" instance="running" time-utc="2024-09-19T04:13:00+00:00" time-local="2024-09-19T14:13:00+10:00">12.5</element>
+          <element start-time-local="2024-09-19T18:00:00+10:00" end-time-local="2024-09-20T09:00:00+10:00" start-time-utc="2024-09-19T08:00:00+00:00" end-time-utc="2024-09-19T23:00:00+00:00" units="Celsius" type="minimum_air_temperature" instance="running" time-utc="2024-09-19T09:21:00+00:00" time-local="2024-09-19T19:21:00+10:00">4.9</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="knots" type="maximum_gust_spd" instance="running" time-utc="2024-09-19T02:59:00+00:00" time-local="2024-09-19T12:59:00+10:00">40</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="km/h" type="maximum_gust_kmh" instance="running" time-utc="2024-09-19T02:59:00+00:00" time-local="2024-09-19T12:59:00+10:00">74</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" type="maximum_gust_dir" instance="running" time-utc="2024-09-19T02:59:00+00:00" time-local="2024-09-19T12:59:00+10:00">NW</element>
+        </level>
+      </period>
+    </station>
+    <station wmo-id="95970" bom-id="091375" tz="Australia/Hobart" stn-name="CRESSY (BRUMBYS CREEK)" stn-height="152.00" type="AWS" lat="-41.7114" lon="147.0820" forecast-district-id="TAS_PW004" description="Cressy">
+      <period index="0" time-utc="2024-09-19T09:30:00+00:00" time-local="2024-09-19T19:30:00+10:00" wind-src="metar_10">
+        <level index="0" type="surface">
+          <element units="Celsius" type="apparent_temp">-1.6</element>
+          <element units="Celsius" type="delta_t">2.4</element>
+          <element units="km/h" type="gust_kmh">39</element>
+          <element units="knots" type="wind_gust_spd">21</element>
+          <element units="Celsius" type="air_temperature">6.1</element>
+          <element units="Celsius" type="dew_point">0.0</element>
+          <element units="mm" type="rain_hour">0.0</element>
+          <element units="mm" type="rain_ten">0.0</element>
+          <element units="%" type="rel-humidity">65</element>
+          <element type="wind_dir">NW</element>
+          <element units="deg" type="wind_dir_deg">322</element>
+          <element units="km/h" type="wind_spd_kmh">30</element>
+          <element units="knots" type="wind_spd">16</element>
+          <element start-time-local="2024-09-19T09:00:00+10:00" end-time-local="2024-09-19T19:32:00+10:00" duration="632" start-time-utc="2024-09-18T23:00:00+00:00" end-time-utc="2024-09-19T09:32:00+00:00" units="mm" type="rainfall">0.4</element>
+          <element start-time-local="2024-09-18T09:00:00+10:00" end-time-local="2024-09-19T09:00:00+10:00" duration="1440" start-time-utc="2024-09-17T23:00:00+00:00" end-time-utc="2024-09-18T23:00:00+00:00" units="mm" type="rainfall_24hr">1.8</element>
+          <element start-time-local="2024-09-19T06:00:00+10:00" end-time-local="2024-09-19T21:00:00+10:00" start-time-utc="2024-09-18T20:00:00+00:00" end-time-utc="2024-09-19T11:00:00+00:00" units="Celsius" type="maximum_air_temperature" instance="running" time-utc="2024-09-19T02:15:00+00:00" time-local="2024-09-19T12:15:00+10:00">13.0</element>
+          <element start-time-local="2024-09-19T18:00:00+10:00" end-time-local="2024-09-20T09:00:00+10:00" start-time-utc="2024-09-19T08:00:00+00:00" end-time-utc="2024-09-19T23:00:00+00:00" units="Celsius" type="minimum_air_temperature" instance="running" time-utc="2024-09-19T08:57:00+00:00" time-local="2024-09-19T18:57:00+10:00">5.2</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="knots" type="maximum_gust_spd" instance="running" time-utc="2024-09-19T02:18:00+00:00" time-local="2024-09-19T12:18:00+10:00">41</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="km/h" type="maximum_gust_kmh" instance="running" time-utc="2024-09-19T02:18:00+00:00" time-local="2024-09-19T12:18:00+10:00">76</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" type="maximum_gust_dir" instance="running" time-utc="2024-09-19T02:18:00+00:00" time-local="2024-09-19T12:18:00+10:00">NNW</element>
+        </level>
+      </period>
+    </station>
+    <station wmo-id="94960" bom-id="094195" tz="Australia/Hobart" stn-name="TUNNACK FIRE STATION" stn-height="461.50" type="AWS" lat="-42.4543" lon="147.4612" forecast-district-id="TAS_PW005" description="Tunnack">
+      <period index="0" time-utc="2024-09-19T09:30:00+00:00" time-local="2024-09-19T19:30:00+10:00" wind-src="metar_10">
+        <level index="0" type="surface">
+          <element units="Celsius" type="apparent_temp">-6.4</element>
+          <element units="Celsius" type="delta_t">1.6</element>
+          <element units="km/h" type="gust_kmh">50</element>
+          <element units="knots" type="wind_gust_spd">27</element>
+          <element units="Celsius" type="air_temperature">2.0</element>
+          <element units="Celsius" type="dew_point">-2.3</element>
+          <element units="hPa" type="pres">994.0</element>
+          <element units="hPa" type="msl_pres">994.0</element>
+          <element units="hPa" type="qnh_pres">993.6</element>
+          <element units="mm" type="rain_hour">0.0</element>
+          <element units="mm" type="rain_ten">0.0</element>
+          <element units="%" type="rel-humidity">73</element>
+          <element type="wind_dir">W</element>
+          <element units="deg" type="wind_dir_deg">267</element>
+          <element units="km/h" type="wind_spd_kmh">32</element>
+          <element units="knots" type="wind_spd">17</element>
+          <element start-time-local="2024-09-19T09:00:00+10:00" end-time-local="2024-09-19T19:32:00+10:00" duration="632" start-time-utc="2024-09-18T23:00:00+00:00" end-time-utc="2024-09-19T09:32:00+00:00" units="mm" type="rainfall">1.6</element>
+          <element start-time-local="2024-09-18T09:00:00+10:00" end-time-local="2024-09-19T09:00:00+10:00" duration="1440" start-time-utc="2024-09-17T23:00:00+00:00" end-time-utc="2024-09-18T23:00:00+00:00" units="mm" type="rainfall_24hr">2.4</element>
+          <element start-time-local="2024-09-19T06:00:00+10:00" end-time-local="2024-09-19T21:00:00+10:00" start-time-utc="2024-09-18T20:00:00+00:00" end-time-utc="2024-09-19T11:00:00+00:00" units="Celsius" type="maximum_air_temperature" instance="running" time-utc="2024-09-19T01:47:00+00:00" time-local="2024-09-19T11:47:00+10:00">11.2</element>
+          <element start-time-local="2024-09-19T18:00:00+10:00" end-time-local="2024-09-20T09:00:00+10:00" start-time-utc="2024-09-19T08:00:00+00:00" end-time-utc="2024-09-19T23:00:00+00:00" units="Celsius" type="minimum_air_temperature" instance="running" time-utc="2024-09-19T08:17:00+00:00" time-local="2024-09-19T18:17:00+10:00">1.2</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="knots" type="maximum_gust_spd" instance="running" time-utc="2024-09-19T02:03:00+00:00" time-local="2024-09-19T12:03:00+10:00">43</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="km/h" type="maximum_gust_kmh" instance="running" time-utc="2024-09-19T02:03:00+00:00" time-local="2024-09-19T12:03:00+10:00">80</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" type="maximum_gust_dir" instance="running" time-utc="2024-09-19T02:03:00+00:00" time-local="2024-09-19T12:03:00+10:00">WNW</element>
+        </level>
+      </period>
+    </station>
+    <station wmo-id="95977" bom-id="094220" tz="Australia/Hobart" stn-name="GROVE (RESEARCH STATION)" stn-height="65.00" type="AWS" lat="-42.9844" lon="147.0756" forecast-district-id="TAS_PW006" description="Grove">
+      <period index="0" time-utc="2024-09-19T09:30:00+00:00" time-local="2024-09-19T19:30:00+10:00" wind-src="metar_10">
+        <level index="0" type="surface">
+          <element units="Celsius" type="apparent_temp">0.4</element>
+          <element units="Celsius" type="delta_t">1.0</element>
+          <element units="km/h" type="gust_kmh">20</element>
+          <element units="knots" type="wind_gust_spd">11</element>
+          <element units="Celsius" type="air_temperature">3.9</element>
+          <element units="Celsius" type="dew_point">1.3</element>
+          <element units="mm" type="rain_hour">0.2</element>
+          <element units="mm" type="rain_ten">0.0</element>
+          <element units="%" type="rel-humidity">83</element>
+          <element type="wind_dir">SSW</element>
+          <element units="deg" type="wind_dir_deg">192</element>
+          <element units="km/h" type="wind_spd_kmh">9</element>
+          <element units="knots" type="wind_spd">5</element>
+          <element start-time-local="2024-09-19T09:00:00+10:00" end-time-local="2024-09-19T19:32:00+10:00" duration="632" start-time-utc="2024-09-18T23:00:00+00:00" end-time-utc="2024-09-19T09:32:00+00:00" units="mm" type="rainfall">10.4</element>
+          <element start-time-local="2024-09-18T09:00:00+10:00" end-time-local="2024-09-19T09:00:00+10:00" duration="1440" start-time-utc="2024-09-17T23:00:00+00:00" end-time-utc="2024-09-18T23:00:00+00:00" units="mm" type="rainfall_24hr">9.4</element>
+          <element start-time-local="2024-09-19T06:00:00+10:00" end-time-local="2024-09-19T21:00:00+10:00" start-time-utc="2024-09-18T20:00:00+00:00" end-time-utc="2024-09-19T11:00:00+00:00" units="Celsius" type="maximum_air_temperature" instance="running" time-utc="2024-09-19T01:17:00+00:00" time-local="2024-09-19T11:17:00+10:00">11.8</element>
+          <element start-time-local="2024-09-19T18:00:00+10:00" end-time-local="2024-09-20T09:00:00+10:00" start-time-utc="2024-09-19T08:00:00+00:00" end-time-utc="2024-09-19T23:00:00+00:00" units="Celsius" type="minimum_air_temperature" instance="running" time-utc="2024-09-19T09:22:00+00:00" time-local="2024-09-19T19:22:00+10:00">3.7</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="knots" type="maximum_gust_spd" instance="running" time-utc="2024-09-19T05:33:00+00:00" time-local="2024-09-19T15:33:00+10:00">34</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="km/h" type="maximum_gust_kmh" instance="running" time-utc="2024-09-19T05:33:00+00:00" time-local="2024-09-19T15:33:00+10:00">63</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" type="maximum_gust_dir" instance="running" time-utc="2024-09-19T05:33:00+00:00" time-local="2024-09-19T15:33:00+10:00">W</element>
+        </level>
+      </period>
+    </station>
+    <station wmo-id="94977" bom-id="094191" tz="Australia/Hobart" stn-name="HARTZ MOUNTAIN (KEOGHS PIMPLE)" stn-height="831.00" type="AWS" lat="-43.2006" lon="146.7683" forecast-district-id="TAS_PW006" description="Hartz Mountains">
+      <period index="0" time-utc="2024-09-19T09:30:00+00:00" time-local="2024-09-19T19:30:00+10:00" wind-src="metar_10">
+        <level index="0" type="surface">
+          <element units="Celsius" type="apparent_temp">-9.2</element>
+          <element units="Celsius" type="delta_t">0.3</element>
+          <element units="km/h" type="gust_kmh">46</element>
+          <element units="knots" type="wind_gust_spd">25</element>
+          <element units="Celsius" type="air_temperature">-1.2</element>
+          <element units="Celsius" type="dew_point">-2.2</element>
+          <element units="mm" type="rain_hour">0.0</element>
+          <element units="mm" type="rain_ten">0.0</element>
+          <element units="%" type="rel-humidity">93</element>
+          <element type="wind_dir">W</element>
+          <element units="deg" type="wind_dir_deg">263</element>
+          <element units="km/h" type="wind_spd_kmh">30</element>
+          <element units="knots" type="wind_spd">16</element>
+          <element start-time-local="2024-09-19T09:00:00+10:00" end-time-local="2024-09-19T19:32:00+10:00" duration="632" start-time-utc="2024-09-18T23:00:00+00:00" end-time-utc="2024-09-19T09:32:00+00:00" units="mm" type="rainfall">5.0</element>
+          <element start-time-local="2024-09-18T09:00:00+10:00" end-time-local="2024-09-19T09:00:00+10:00" duration="1440" start-time-utc="2024-09-17T23:00:00+00:00" end-time-utc="2024-09-18T23:00:00+00:00" units="mm" type="rainfall_24hr">13.2</element>
+          <element start-time-local="2024-09-19T06:00:00+10:00" end-time-local="2024-09-19T21:00:00+10:00" start-time-utc="2024-09-18T20:00:00+00:00" end-time-utc="2024-09-19T11:00:00+00:00" units="Celsius" type="maximum_air_temperature" instance="running" time-utc="2024-09-19T00:23:00+00:00" time-local="2024-09-19T10:23:00+10:00">2.6</element>
+          <element start-time-local="2024-09-19T18:00:00+10:00" end-time-local="2024-09-20T09:00:00+10:00" start-time-utc="2024-09-19T08:00:00+00:00" end-time-utc="2024-09-19T23:00:00+00:00" units="Celsius" type="minimum_air_temperature" instance="running" time-utc="2024-09-19T08:10:00+00:00" time-local="2024-09-19T18:10:00+10:00">-1.8</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="knots" type="maximum_gust_spd" instance="running" time-utc="2024-09-19T07:06:00+00:00" time-local="2024-09-19T17:06:00+10:00">49</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="km/h" type="maximum_gust_kmh" instance="running" time-utc="2024-09-19T07:06:00+00:00" time-local="2024-09-19T17:06:00+10:00">91</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" type="maximum_gust_dir" instance="running" time-utc="2024-09-19T07:06:00+00:00" time-local="2024-09-19T17:06:00+10:00">WNW</element>
+        </level>
+      </period>
+    </station>
+    <station wmo-id="94951" bom-id="094254" tz="Australia/Hobart" stn-name="DUNALLEY (STROUD POINT)" stn-height="12.43" type="AWS" lat="-42.9017" lon="147.7894" forecast-district-id="TAS_PW006" description="Dunalley">
+      <period index="0" time-utc="2024-09-19T09:30:00+00:00" time-local="2024-09-19T19:30:00+10:00" wind-src="metar_10">
+        <level index="0" type="surface">
+          <element units="Celsius" type="apparent_temp">-1.6</element>
+          <element units="Celsius" type="delta_t">1.5</element>
+          <element units="km/h" type="gust_kmh">39</element>
+          <element units="knots" type="wind_gust_spd">21</element>
+          <element units="Celsius" type="air_temperature">6.1</element>
+          <element units="Celsius" type="dew_point">2.4</element>
+          <element units="hPa" type="pres">994.1</element>
+          <element units="hPa" type="msl_pres">994.1</element>
+          <element units="hPa" type="qnh_pres">994.1</element>
+          <element units="mm" type="rain_hour">0.0</element>
+          <element units="mm" type="rain_ten">0.0</element>
+          <element units="%" type="rel-humidity">77</element>
+          <element type="wind_dir">WSW</element>
+          <element units="deg" type="wind_dir_deg">247</element>
+          <element units="km/h" type="wind_spd_kmh">32</element>
+          <element units="knots" type="wind_spd">17</element>
+          <element start-time-local="2024-09-19T09:00:00+10:00" end-time-local="2024-09-19T19:32:00+10:00" duration="632" start-time-utc="2024-09-18T23:00:00+00:00" end-time-utc="2024-09-19T09:32:00+00:00" units="mm" type="rainfall">3.0</element>
+          <element start-time-local="2024-09-18T09:00:00+10:00" end-time-local="2024-09-19T09:00:00+10:00" duration="1440" start-time-utc="2024-09-17T23:00:00+00:00" end-time-utc="2024-09-18T23:00:00+00:00" units="mm" type="rainfall_24hr">0.4</element>
+          <element start-time-local="2024-09-19T06:00:00+10:00" end-time-local="2024-09-19T21:00:00+10:00" start-time-utc="2024-09-18T20:00:00+00:00" end-time-utc="2024-09-19T11:00:00+00:00" units="Celsius" type="maximum_air_temperature" instance="running" time-utc="2024-09-19T01:09:00+00:00" time-local="2024-09-19T11:09:00+10:00">15.2</element>
+          <element start-time-local="2024-09-19T18:00:00+10:00" end-time-local="2024-09-20T09:00:00+10:00" start-time-utc="2024-09-19T08:00:00+00:00" end-time-utc="2024-09-19T23:00:00+00:00" units="Celsius" type="minimum_air_temperature" instance="running" time-utc="2024-09-19T08:15:00+00:00" time-local="2024-09-19T18:15:00+10:00">4.8</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="knots" type="maximum_gust_spd" instance="running" time-utc="2024-09-19T04:50:00+00:00" time-local="2024-09-19T14:50:00+10:00">58</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="km/h" type="maximum_gust_kmh" instance="running" time-utc="2024-09-19T04:50:00+00:00" time-local="2024-09-19T14:50:00+10:00">107</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" type="maximum_gust_dir" instance="running" time-utc="2024-09-19T04:50:00+00:00" time-local="2024-09-19T14:50:00+10:00">WSW</element>
+        </level>
+      </period>
+    </station>
+    <station wmo-id="94988" bom-id="094255" tz="Australia/Hobart" stn-name="DENNES POINT" stn-height="5.67" type="AWS" lat="-43.0639" lon="147.3567" forecast-district-id="TAS_PW006" description="Dennes Point">
+      <period index="0" time-utc="2024-09-19T09:30:00+00:00" time-local="2024-09-19T19:30:00+10:00" wind-src="metar_10">
+        <level index="0" type="surface">
+          <element units="Celsius" type="apparent_temp">-3.0</element>
+          <element units="Celsius" type="delta_t">1.1</element>
+          <element units="km/h" type="gust_kmh">43</element>
+          <element units="knots" type="wind_gust_spd">23</element>
+          <element units="Celsius" type="air_temperature">5.2</element>
+          <element units="Celsius" type="dew_point">2.6</element>
+          <element units="hPa" type="pres">993.3</element>
+          <element units="hPa" type="msl_pres">993.3</element>
+          <element units="hPa" type="qnh_pres">993.3</element>
+          <element units="mm" type="rain_hour">1.0</element>
+          <element units="mm" type="rain_ten">0.0</element>
+          <element units="%" type="rel-humidity">83</element>
+          <element type="wind_dir">W</element>
+          <element units="deg" type="wind_dir_deg">274</element>
+          <element units="km/h" type="wind_spd_kmh">35</element>
+          <element units="knots" type="wind_spd">19</element>
+          <element start-time-local="2024-09-19T09:00:00+10:00" end-time-local="2024-09-19T19:32:00+10:00" duration="632" start-time-utc="2024-09-18T23:00:00+00:00" end-time-utc="2024-09-19T09:32:00+00:00" units="mm" type="rainfall">8.2</element>
+          <element start-time-local="2024-09-18T09:00:00+10:00" end-time-local="2024-09-19T09:00:00+10:00" duration="1440" start-time-utc="2024-09-17T23:00:00+00:00" end-time-utc="2024-09-18T23:00:00+00:00" units="mm" type="rainfall_24hr">0.8</element>
+          <element start-time-local="2024-09-19T06:00:00+10:00" end-time-local="2024-09-19T21:00:00+10:00" start-time-utc="2024-09-18T20:00:00+00:00" end-time-utc="2024-09-19T11:00:00+00:00" units="Celsius" type="maximum_air_temperature" instance="running" time-utc="2024-09-19T00:30:00+00:00" time-local="2024-09-19T10:30:00+10:00">13.1</element>
+          <element start-time-local="2024-09-19T18:00:00+10:00" end-time-local="2024-09-20T09:00:00+10:00" start-time-utc="2024-09-19T08:00:00+00:00" end-time-utc="2024-09-19T23:00:00+00:00" units="Celsius" type="minimum_air_temperature" instance="running" time-utc="2024-09-19T08:36:00+00:00" time-local="2024-09-19T18:36:00+10:00">4.0</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="knots" type="maximum_gust_spd" instance="running" time-utc="2024-09-19T04:18:00+00:00" time-local="2024-09-19T14:18:00+10:00">46</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="km/h" type="maximum_gust_kmh" instance="running" time-utc="2024-09-19T04:18:00+00:00" time-local="2024-09-19T14:18:00+10:00">85</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" type="maximum_gust_dir" instance="running" time-utc="2024-09-19T04:18:00+00:00" time-local="2024-09-19T14:18:00+10:00">W</element>
+        </level>
+      </period>
+    </station>
+    <station wmo-id="94964" bom-id="095003" tz="Australia/Hobart" stn-name="BUSHY PARK (BUSHY PARK ESTATES)" stn-height="27.00" type="AWS" lat="-42.7097" lon="146.8983" forecast-district-id="TAS_PW007" description="Bushy Park">
+      <period index="0" time-utc="2024-09-19T09:30:00+00:00" time-local="2024-09-19T19:30:00+10:00" wind-src="metar_10">
+        <level index="0" type="surface">
+          <element units="Celsius" type="apparent_temp">-0.3</element>
+          <element units="Celsius" type="delta_t">0.7</element>
+          <element units="km/h" type="gust_kmh">19</element>
+          <element units="knots" type="wind_gust_spd">10</element>
+          <element units="Celsius" type="air_temperature">3.8</element>
+          <element units="Celsius" type="dew_point">2.0</element>
+          <element units="mm" type="rain_hour">0.0</element>
+          <element units="mm" type="rain_ten">0.0</element>
+          <element units="%" type="rel-humidity">88</element>
+          <element type="wind_dir">NNW</element>
+          <element units="deg" type="wind_dir_deg">330</element>
+          <element units="km/h" type="wind_spd_kmh">13</element>
+          <element units="knots" type="wind_spd">7</element>
+          <element start-time-local="2024-09-19T09:00:00+10:00" end-time-local="2024-09-19T19:31:00+10:00" duration="631" start-time-utc="2024-09-18T23:00:00+00:00" end-time-utc="2024-09-19T09:31:00+00:00" units="mm" type="rainfall">0.0</element>
+          <element start-time-local="2024-09-18T09:00:00+10:00" end-time-local="2024-09-19T09:00:00+10:00" duration="1440" start-time-utc="2024-09-17T23:00:00+00:00" end-time-utc="2024-09-18T23:00:00+00:00" units="mm" type="rainfall_24hr">0.2</element>
+          <element start-time-local="2024-09-19T06:00:00+10:00" end-time-local="2024-09-19T21:00:00+10:00" start-time-utc="2024-09-18T20:00:00+00:00" end-time-utc="2024-09-19T11:00:00+00:00" units="Celsius" type="maximum_air_temperature" instance="running" time-utc="2024-09-19T00:24:00+00:00" time-local="2024-09-19T10:24:00+10:00">12.4</element>
+          <element start-time-local="2024-09-19T18:00:00+10:00" end-time-local="2024-09-20T09:00:00+10:00" start-time-utc="2024-09-19T08:00:00+00:00" end-time-utc="2024-09-19T23:00:00+00:00" units="Celsius" type="minimum_air_temperature" instance="running" time-utc="2024-09-19T09:30:00+00:00" time-local="2024-09-19T19:30:00+10:00">3.8</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="knots" type="maximum_gust_spd" instance="running" time-utc="2024-09-19T04:42:00+00:00" time-local="2024-09-19T14:42:00+10:00">35</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="km/h" type="maximum_gust_kmh" instance="running" time-utc="2024-09-19T04:42:00+00:00" time-local="2024-09-19T14:42:00+10:00">65</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" type="maximum_gust_dir" instance="running" time-utc="2024-09-19T04:42:00+00:00" time-local="2024-09-19T14:42:00+10:00">WNW</element>
+        </level>
+      </period>
+    </station>
+    <station wmo-id="94959" bom-id="096003" tz="Australia/Hobart" stn-name="BUTLERS GORGE" stn-height="667.00" type="AWS" lat="-42.2753" lon="146.2758" forecast-district-id="TAS_PW008" description="Butlers Gorge">
+      <period index="0" time-utc="2024-09-19T09:30:00+00:00" time-local="2024-09-19T19:30:00+10:00" wind-src="metar_10">
+        <level index="0" type="surface">
+          <element units="Celsius" type="apparent_temp">-4.2</element>
+          <element units="Celsius" type="delta_t">1.2</element>
+          <element units="km/h" type="gust_kmh">35</element>
+          <element units="knots" type="wind_gust_spd">19</element>
+          <element units="Celsius" type="air_temperature">0.9</element>
+          <element units="Celsius" type="dew_point">-2.3</element>
+          <element units="mm" type="rain_hour">0.0</element>
+          <element units="mm" type="rain_ten">0.0</element>
+          <element units="%" type="rel-humidity">79</element>
+          <element type="wind_dir">W</element>
+          <element units="deg" type="wind_dir_deg">260</element>
+          <element units="km/h" type="wind_spd_kmh">15</element>
+          <element units="knots" type="wind_spd">8</element>
+          <element start-time-local="2024-09-19T09:00:00+10:00" end-time-local="2024-09-19T19:31:00+10:00" duration="631" start-time-utc="2024-09-18T23:00:00+00:00" end-time-utc="2024-09-19T09:31:00+00:00" units="mm" type="rainfall">8.6</element>
+          <element start-time-local="2024-09-18T09:00:00+10:00" end-time-local="2024-09-19T09:00:00+10:00" duration="1440" start-time-utc="2024-09-17T23:00:00+00:00" end-time-utc="2024-09-18T23:00:00+00:00" units="mm" type="rainfall_24hr">20.0</element>
+          <element start-time-local="2024-09-19T06:00:00+10:00" end-time-local="2024-09-19T21:00:00+10:00" start-time-utc="2024-09-18T20:00:00+00:00" end-time-utc="2024-09-19T11:00:00+00:00" units="Celsius" type="maximum_air_temperature" instance="running" time-utc="2024-09-19T00:17:00+00:00" time-local="2024-09-19T10:17:00+10:00">4.8</element>
+          <element start-time-local="2024-09-19T18:00:00+10:00" end-time-local="2024-09-20T09:00:00+10:00" start-time-utc="2024-09-19T08:00:00+00:00" end-time-utc="2024-09-19T23:00:00+00:00" units="Celsius" type="minimum_air_temperature" instance="running" time-utc="2024-09-19T09:14:00+00:00" time-local="2024-09-19T19:14:00+10:00">0.0</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="knots" type="maximum_gust_spd" instance="running" time-utc="2024-09-19T04:40:00+00:00" time-local="2024-09-19T14:40:00+10:00">30</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="km/h" type="maximum_gust_kmh" instance="running" time-utc="2024-09-19T04:40:00+00:00" time-local="2024-09-19T14:40:00+10:00">56</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" type="maximum_gust_dir" instance="running" time-utc="2024-09-19T04:40:00+00:00" time-local="2024-09-19T14:40:00+10:00">WSW</element>
+        </level>
+      </period>
+    </station>
+    <station wmo-id="95952" bom-id="097085" tz="Australia/Hobart" stn-name="MOUNT READ" stn-height="1119.50" type="AWS" lat="-41.8444" lon="145.5417" forecast-district-id="TAS_PW009" description="Mount Read">
+      <period index="0" time-utc="2024-09-19T09:30:00+00:00" time-local="2024-09-19T19:30:00+10:00" wind-src="metar_10">
+        <level index="0" type="surface">
+          <element units="km/h" type="gust_kmh">57</element>
+          <element units="knots" type="wind_gust_spd">31</element>
+          <element units="Celsius" type="air_temperature">-2.1</element>
+          <element units="hPa" type="pres">997.0</element>
+          <element units="hPa" type="msl_pres">997.0</element>
+          <element units="hPa" type="qnh_pres">995.8</element>
+          <element units="mm" type="rain_hour">0.0</element>
+          <element units="mm" type="rain_ten">0.0</element>
+          <element type="wind_dir">WSW</element>
+          <element units="deg" type="wind_dir_deg">249</element>
+          <element units="km/h" type="wind_spd_kmh">41</element>
+          <element units="knots" type="wind_spd">22</element>
+          <element start-time-local="2024-09-19T09:00:00+10:00" end-time-local="2024-09-19T19:32:00+10:00" duration="632" start-time-utc="2024-09-18T23:00:00+00:00" end-time-utc="2024-09-19T09:32:00+00:00" units="mm" type="rainfall">9.6</element>
+          <element start-time-local="2024-09-18T09:00:00+10:00" end-time-local="2024-09-19T09:00:00+10:00" duration="1440" start-time-utc="2024-09-17T23:00:00+00:00" end-time-utc="2024-09-18T23:00:00+00:00" units="mm" type="rainfall_24hr">15.0</element>
+          <element start-time-local="2024-09-19T06:00:00+10:00" end-time-local="2024-09-19T21:00:00+10:00" start-time-utc="2024-09-18T20:00:00+00:00" end-time-utc="2024-09-19T11:00:00+00:00" units="Celsius" type="maximum_air_temperature" instance="running" time-utc="2024-09-19T01:46:00+00:00" time-local="2024-09-19T11:46:00+10:00">1.1</element>
+          <element start-time-local="2024-09-19T18:00:00+10:00" end-time-local="2024-09-20T09:00:00+10:00" start-time-utc="2024-09-19T08:00:00+00:00" end-time-utc="2024-09-19T23:00:00+00:00" units="Celsius" type="minimum_air_temperature" instance="running" time-utc="2024-09-19T09:14:00+00:00" time-local="2024-09-19T19:14:00+10:00">-2.6</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="knots" type="maximum_gust_spd" instance="running" time-utc="2024-09-19T01:27:00+00:00" time-local="2024-09-19T11:27:00+10:00">61</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="km/h" type="maximum_gust_kmh" instance="running" time-utc="2024-09-19T01:27:00+00:00" time-local="2024-09-19T11:27:00+10:00">113</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" type="maximum_gust_dir" instance="running" time-utc="2024-09-19T01:27:00+00:00" time-local="2024-09-19T11:27:00+10:00">WNW</element>
+        </level>
+      </period>
+    </station>
+    <station wmo-id="95958" bom-id="097083" tz="Australia/Hobart" stn-name="SCOTTS PEAK DAM" stn-height="408.00" type="AWS" lat="-43.0425" lon="146.2722" forecast-district-id="TAS_PW009" description="Scotts Peak">
+      <period index="0" time-utc="2024-09-19T09:30:00+00:00" time-local="2024-09-19T19:30:00+10:00" wind-src="metar_10">
+        <level index="0" type="surface">
+          <element units="Celsius" type="apparent_temp">-9.0</element>
+          <element units="Celsius" type="delta_t">0.7</element>
+          <element units="km/h" type="gust_kmh">70</element>
+          <element units="knots" type="wind_gust_spd">38</element>
+          <element units="Celsius" type="air_temperature">2.7</element>
+          <element units="Celsius" type="dew_point">0.8</element>
+          <element units="mm" type="rain_hour">0.0</element>
+          <element units="mm" type="rain_ten">0.0</element>
+          <element units="%" type="rel-humidity">87</element>
+          <element type="wind_dir">NW</element>
+          <element units="deg" type="wind_dir_deg">309</element>
+          <element units="km/h" type="wind_spd_kmh">52</element>
+          <element units="knots" type="wind_spd">28</element>
+          <element start-time-local="2024-09-19T09:00:00+10:00" end-time-local="2024-09-19T19:32:00+10:00" duration="632" start-time-utc="2024-09-18T23:00:00+00:00" end-time-utc="2024-09-19T09:32:00+00:00" units="mm" type="rainfall">6.2</element>
+          <element start-time-local="2024-09-18T09:00:00+10:00" end-time-local="2024-09-19T09:00:00+10:00" duration="1440" start-time-utc="2024-09-17T23:00:00+00:00" end-time-utc="2024-09-18T23:00:00+00:00" units="mm" type="rainfall_24hr">17.0</element>
+          <element start-time-local="2024-09-19T06:00:00+10:00" end-time-local="2024-09-19T21:00:00+10:00" start-time-utc="2024-09-18T20:00:00+00:00" end-time-utc="2024-09-19T11:00:00+00:00" units="Celsius" type="maximum_air_temperature" instance="running" time-utc="2024-09-19T00:50:00+00:00" time-local="2024-09-19T10:50:00+10:00">6.2</element>
+          <element start-time-local="2024-09-19T18:00:00+10:00" end-time-local="2024-09-20T09:00:00+10:00" start-time-utc="2024-09-19T08:00:00+00:00" end-time-utc="2024-09-19T23:00:00+00:00" units="Celsius" type="minimum_air_temperature" instance="running" time-utc="2024-09-19T08:48:00+00:00" time-local="2024-09-19T18:48:00+10:00">2.2</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="knots" type="maximum_gust_spd" instance="running" time-utc="2024-09-19T02:26:00+00:00" time-local="2024-09-19T12:26:00+10:00">59</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="km/h" type="maximum_gust_kmh" instance="running" time-utc="2024-09-19T02:26:00+00:00" time-local="2024-09-19T12:26:00+10:00">109</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" type="maximum_gust_dir" instance="running" time-utc="2024-09-19T02:26:00+00:00" time-local="2024-09-19T12:26:00+10:00">WNW</element>
+        </level>
+      </period>
+    </station>
+    <station wmo-id="95962" bom-id="097024" tz="Australia/Hobart" stn-name="WARRA" stn-height="495.00" type="AWS" lat="-43.0609" lon="146.7040" forecast-district-id="TAS_PW009" description="Warra">
+      <period index="0" time-utc="2024-09-19T09:30:00+00:00" time-local="2024-09-19T19:30:00+10:00" wind-src="metar_10">
+        <level index="0" type="surface">
+          <element units="Celsius" type="apparent_temp">-4.5</element>
+          <element units="Celsius" type="delta_t">1.6</element>
+          <element units="km/h" type="gust_kmh">43</element>
+          <element units="knots" type="wind_gust_spd">23</element>
+          <element units="Celsius" type="air_temperature">2.3</element>
+          <element units="Celsius" type="dew_point">-2.0</element>
+          <element units="mm" type="rain_hour">0.0</element>
+          <element units="mm" type="rain_ten">0.0</element>
+          <element units="%" type="rel-humidity">73</element>
+          <element type="wind_dir">WNW</element>
+          <element units="deg" type="wind_dir_deg">286</element>
+          <element units="km/h" type="wind_spd_kmh">24</element>
+          <element units="knots" type="wind_spd">13</element>
+          <element start-time-local="2024-09-19T09:00:00+10:00" end-time-local="2024-09-19T19:31:00+10:00" duration="631" start-time-utc="2024-09-18T23:00:00+00:00" end-time-utc="2024-09-19T09:31:00+00:00" units="mm" type="rainfall">20.2</element>
+          <element start-time-local="2024-09-18T09:00:00+10:00" end-time-local="2024-09-19T09:00:00+10:00" duration="1440" start-time-utc="2024-09-17T23:00:00+00:00" end-time-utc="2024-09-18T23:00:00+00:00" units="mm" type="rainfall_24hr">31.4</element>
+          <element start-time-local="2024-09-19T06:00:00+10:00" end-time-local="2024-09-19T21:00:00+10:00" start-time-utc="2024-09-18T20:00:00+00:00" end-time-utc="2024-09-19T11:00:00+00:00" units="Celsius" type="maximum_air_temperature" instance="running" time-utc="2024-09-19T00:39:00+00:00" time-local="2024-09-19T10:39:00+10:00">6.1</element>
+          <element start-time-local="2024-09-19T18:00:00+10:00" end-time-local="2024-09-20T09:00:00+10:00" start-time-utc="2024-09-19T08:00:00+00:00" end-time-utc="2024-09-19T23:00:00+00:00" units="Celsius" type="minimum_air_temperature" instance="running" time-utc="2024-09-19T08:56:00+00:00" time-local="2024-09-19T18:56:00+10:00">0.9</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="knots" type="maximum_gust_spd" instance="running" time-utc="2024-09-19T05:09:00+00:00" time-local="2024-09-19T15:09:00+10:00">44</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="km/h" type="maximum_gust_kmh" instance="running" time-utc="2024-09-19T05:09:00+00:00" time-local="2024-09-19T15:09:00+10:00">82</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" type="maximum_gust_dir" instance="running" time-utc="2024-09-19T05:09:00+00:00" time-local="2024-09-19T15:09:00+10:00">WNW</element>
+        </level>
+      </period>
+    </station>
+    <station wmo-id="95954" bom-id="091331" tz="Australia/Hobart" stn-name="KENNAOOK/CAPE GRIM" stn-height="86.00" type="AWS" lat="-40.6764" lon="144.6922" forecast-district-id="TAS_PW010" description="Kennaook / Cape Grim">
+      <period index="0" time-utc="2024-09-19T09:30:00+00:00" time-local="2024-09-19T19:30:00+10:00" wind-src="metar_10">
+        <level index="0" type="surface">
+          <element units="Celsius" type="apparent_temp">0.1</element>
+          <element type="cloud">Mostly clear</element>
+          <element units="m" type="cloud_base_m">570</element>
+          <element type="cloud_oktas">1</element>
+          <element units="Celsius" type="delta_t">1.6</element>
+          <element units="km/h" type="gust_kmh">57</element>
+          <element units="knots" type="wind_gust_spd">31</element>
+          <element units="Celsius" type="air_temperature">8.3</element>
+          <element units="Celsius" type="dew_point">4.7</element>
+          <element units="hPa" type="pres">1002.6</element>
+          <element units="hPa" type="msl_pres">1002.6</element>
+          <element units="hPa" type="qnh_pres">1002.5</element>
+          <element units="mm" type="rain_hour">0.2</element>
+          <element units="mm" type="rain_ten">0.0</element>
+          <element units="%" type="rel-humidity">78</element>
+          <element type="wind_dir">WSW</element>
+          <element units="deg" type="wind_dir_deg">237</element>
+          <element units="km/h" type="wind_spd_kmh">37</element>
+          <element units="knots" type="wind_spd">20</element>
+          <element start-time-local="2024-09-19T09:00:00+10:00" end-time-local="2024-09-19T19:31:00+10:00" duration="631" start-time-utc="2024-09-18T23:00:00+00:00" end-time-utc="2024-09-19T09:31:00+00:00" units="mm" type="rainfall">4.2</element>
+          <element start-time-local="2024-09-18T09:00:00+10:00" end-time-local="2024-09-19T09:00:00+10:00" duration="1440" start-time-utc="2024-09-17T23:00:00+00:00" end-time-utc="2024-09-18T23:00:00+00:00" units="mm" type="rainfall_24hr">3.4</element>
+          <element start-time-local="2024-09-19T06:00:00+10:00" end-time-local="2024-09-19T21:00:00+10:00" start-time-utc="2024-09-18T20:00:00+00:00" end-time-utc="2024-09-19T11:00:00+00:00" units="Celsius" type="maximum_air_temperature" instance="running" time-utc="2024-09-19T01:02:00+00:00" time-local="2024-09-19T11:02:00+10:00">12.5</element>
+          <element start-time-local="2024-09-19T18:00:00+10:00" end-time-local="2024-09-20T09:00:00+10:00" start-time-utc="2024-09-19T08:00:00+00:00" end-time-utc="2024-09-19T23:00:00+00:00" units="Celsius" type="minimum_air_temperature" instance="running" time-utc="2024-09-19T09:12:00+00:00" time-local="2024-09-19T19:12:00+10:00">6.8</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="knots" type="maximum_gust_spd" instance="running" time-utc="2024-09-19T02:26:00+00:00" time-local="2024-09-19T12:26:00+10:00">56</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="km/h" type="maximum_gust_kmh" instance="running" time-utc="2024-09-19T02:26:00+00:00" time-local="2024-09-19T12:26:00+10:00">104</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" type="maximum_gust_dir" instance="running" time-utc="2024-09-19T02:26:00+00:00" time-local="2024-09-19T12:26:00+10:00">W</element>
+        </level>
+      </period>
+    </station>
+    <station wmo-id="95957" bom-id="091107" tz="Australia/Hobart" stn-name="WYNYARD AIRPORT" stn-height="12.00" type="AWS" lat="-40.9964" lon="145.7311" forecast-district-id="TAS_PW010" description="Wynyard">
+      <period index="0" time-utc="2024-09-19T09:30:00+00:00" time-local="2024-09-19T19:30:00+10:00" wind-src="metar_10">
+        <level index="0" type="surface">
+          <element units="Celsius" type="apparent_temp">-0.6</element>
+          <element type="cloud">Mostly clear</element>
+          <element units="m" type="cloud_base_m">1350</element>
+          <element type="cloud_oktas">1</element>
+          <element units="Celsius" type="delta_t">1.6</element>
+          <element units="km/h" type="gust_kmh">41</element>
+          <element units="knots" type="wind_gust_spd">22</element>
+          <element units="Celsius" type="air_temperature">6.3</element>
+          <element units="Celsius" type="dew_point">2.4</element>
+          <element units="hPa" type="pres">1000.4</element>
+          <element units="hPa" type="msl_pres">1000.4</element>
+          <element units="hPa" type="qnh_pres">1000.4</element>
+          <element units="mm" type="rain_hour">0.0</element>
+          <element units="mm" type="rain_ten">0.0</element>
+          <element units="%" type="rel-humidity">76</element>
+          <element units="km" type="vis_km">10</element>
+          <element type="wind_dir">W</element>
+          <element units="deg" type="wind_dir_deg">262</element>
+          <element units="km/h" type="wind_spd_kmh">28</element>
+          <element units="knots" type="wind_spd">15</element>
+          <element start-time-local="2024-09-19T09:00:00+10:00" end-time-local="2024-09-19T19:32:00+10:00" duration="632" start-time-utc="2024-09-18T23:00:00+00:00" end-time-utc="2024-09-19T09:32:00+00:00" units="mm" type="rainfall">5.2</element>
+          <element start-time-local="2024-09-18T09:00:00+10:00" end-time-local="2024-09-19T09:00:00+10:00" duration="1440" start-time-utc="2024-09-17T23:00:00+00:00" end-time-utc="2024-09-18T23:00:00+00:00" units="mm" type="rainfall_24hr">5.8</element>
+          <element start-time-local="2024-09-19T06:00:00+10:00" end-time-local="2024-09-19T21:00:00+10:00" start-time-utc="2024-09-18T20:00:00+00:00" end-time-utc="2024-09-19T11:00:00+00:00" units="Celsius" type="maximum_air_temperature" instance="running" time-utc="2024-09-19T01:33:00+00:00" time-local="2024-09-19T11:33:00+10:00">12.8</element>
+          <element start-time-local="2024-09-19T18:00:00+10:00" end-time-local="2024-09-20T09:00:00+10:00" start-time-utc="2024-09-19T08:00:00+00:00" end-time-utc="2024-09-19T23:00:00+00:00" units="Celsius" type="minimum_air_temperature" instance="running" time-utc="2024-09-19T08:41:00+00:00" time-local="2024-09-19T18:41:00+10:00">5.4</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="knots" type="maximum_gust_spd" instance="running" time-utc="2024-09-19T04:16:00+00:00" time-local="2024-09-19T14:16:00+10:00">39</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="km/h" type="maximum_gust_kmh" instance="running" time-utc="2024-09-19T04:16:00+00:00" time-local="2024-09-19T14:16:00+10:00">72</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" type="maximum_gust_dir" instance="running" time-utc="2024-09-19T04:16:00+00:00" time-local="2024-09-19T14:16:00+10:00">W</element>
+        </level>
+      </period>
+    </station>
+    <station wmo-id="95963" bom-id="091344" tz="Australia/Hobart" stn-name="BURNIE NTC AWS" stn-height="0.00" type="AWS" lat="-41.0500" lon="145.9149" forecast-district-id="TAS_MW002" description="Burnie Port">
+      <period index="0" time-utc="2024-09-19T09:30:00+00:00" time-local="2024-09-19T19:30:00+10:00" wind-src="metar_10">
+        <level index="0" type="surface">
+          <element units="km/h" type="gust_kmh">32</element>
+          <element units="knots" type="wind_gust_spd">17</element>
+          <element units="Celsius" type="air_temperature">6.9</element>
+          <element units="hPa" type="pres">1000.0</element>
+          <element units="hPa" type="msl_pres">1000.0</element>
+          <element units="hPa" type="qnh_pres">1000.0</element>
+          <element type="wind_dir">W</element>
+          <element units="deg" type="wind_dir_deg">279</element>
+          <element units="km/h" type="wind_spd_kmh">19</element>
+          <element units="knots" type="wind_spd">10</element>
+        </level>
+      </period>
+    </station>
+    <station wmo-id="95956" bom-id="091259" tz="Australia/Hobart" stn-name="LUNCHEON HILL (FORESTRY)" stn-height="344.00" type="AWS" lat="-41.1492" lon="145.1517" forecast-district-id="TAS_PW010" description="Luncheon Hill">
+      <period index="0" time-utc="2024-09-19T09:30:00+00:00" time-local="2024-09-19T19:30:00+10:00" wind-src="metar_10">
+        <level index="0" type="surface">
+          <element units="Celsius" type="apparent_temp">-3.7</element>
+          <element units="Celsius" type="delta_t">0.9</element>
+          <element units="km/h" type="gust_kmh">54</element>
+          <element units="knots" type="wind_gust_spd">29</element>
+          <element units="Celsius" type="air_temperature">3.4</element>
+          <element units="Celsius" type="dew_point">1.1</element>
+          <element units="mm" type="rain_hour">0.0</element>
+          <element units="mm" type="rain_ten">0.0</element>
+          <element units="%" type="rel-humidity">85</element>
+          <element type="wind_dir">SW</element>
+          <element units="deg" type="wind_dir_deg">234</element>
+          <element units="km/h" type="wind_spd_kmh">28</element>
+          <element units="knots" type="wind_spd">15</element>
+          <element start-time-local="2024-09-19T09:00:00+10:00" end-time-local="2024-09-19T19:32:00+10:00" duration="632" start-time-utc="2024-09-18T23:00:00+00:00" end-time-utc="2024-09-19T09:32:00+00:00" units="mm" type="rainfall">0.4</element>
+          <element start-time-local="2024-09-18T09:00:00+10:00" end-time-local="2024-09-19T09:00:00+10:00" duration="1440" start-time-utc="2024-09-17T23:00:00+00:00" end-time-utc="2024-09-18T23:00:00+00:00" units="mm" type="rainfall_24hr">0.8</element>
+          <element start-time-local="2024-09-19T06:00:00+10:00" end-time-local="2024-09-19T21:00:00+10:00" start-time-utc="2024-09-18T20:00:00+00:00" end-time-utc="2024-09-19T11:00:00+00:00" units="Celsius" type="maximum_air_temperature" instance="running" time-utc="2024-09-19T01:42:00+00:00" time-local="2024-09-19T11:42:00+10:00">9.0</element>
+          <element start-time-local="2024-09-19T18:00:00+10:00" end-time-local="2024-09-20T09:00:00+10:00" start-time-utc="2024-09-19T08:00:00+00:00" end-time-utc="2024-09-19T23:00:00+00:00" units="Celsius" type="minimum_air_temperature" instance="running" time-utc="2024-09-19T09:26:00+00:00" time-local="2024-09-19T19:26:00+10:00">3.1</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="knots" type="maximum_gust_spd" instance="running" time-utc="2024-09-19T01:27:00+00:00" time-local="2024-09-19T11:27:00+10:00">47</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="km/h" type="maximum_gust_kmh" instance="running" time-utc="2024-09-19T01:27:00+00:00" time-local="2024-09-19T11:27:00+10:00">87</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" type="maximum_gust_dir" instance="running" time-utc="2024-09-19T01:27:00+00:00" time-local="2024-09-19T11:27:00+10:00">W</element>
+        </level>
+      </period>
+    </station>
+    <station wmo-id="95960" bom-id="091126" tz="Australia/Hobart" stn-name="DEVONPORT AIRPORT" stn-height="8.00" type="AWS" lat="-41.1701" lon="146.4289" forecast-district-id="TAS_PW010" description="Devonport Airport">
+      <period index="0" time-utc="2024-09-19T09:30:00+00:00" time-local="2024-09-19T19:30:00+10:00" wind-src="metar_10">
+        <level index="0" type="surface">
+          <element units="Celsius" type="apparent_temp">-1.6</element>
+          <element type="cloud">Mostly clear</element>
+          <element units="m" type="cloud_base_m">1560</element>
+          <element type="cloud_oktas">1</element>
+          <element units="Celsius" type="delta_t">2.7</element>
+          <element units="km/h" type="gust_kmh">50</element>
+          <element units="knots" type="wind_gust_spd">27</element>
+          <element units="Celsius" type="air_temperature">7.3</element>
+          <element units="Celsius" type="dew_point">0.5</element>
+          <element units="hPa" type="pres">999.5</element>
+          <element units="hPa" type="msl_pres">999.5</element>
+          <element units="hPa" type="qnh_pres">999.5</element>
+          <element units="mm" type="rain_hour">0.0</element>
+          <element units="mm" type="rain_ten">0.0</element>
+          <element units="%" type="rel-humidity">62</element>
+          <element units="km" type="vis_km">10</element>
+          <element type="wind_dir">W</element>
+          <element units="deg" type="wind_dir_deg">268</element>
+          <element units="km/h" type="wind_spd_kmh">37</element>
+          <element units="knots" type="wind_spd">20</element>
+          <element start-time-local="2024-09-19T09:00:00+10:00" end-time-local="2024-09-19T19:31:00+10:00" duration="631" start-time-utc="2024-09-18T23:00:00+00:00" end-time-utc="2024-09-19T09:31:00+00:00" units="mm" type="rainfall">0.8</element>
+          <element start-time-local="2024-09-18T09:00:00+10:00" end-time-local="2024-09-19T09:00:00+10:00" duration="1440" start-time-utc="2024-09-17T23:00:00+00:00" end-time-utc="2024-09-18T23:00:00+00:00" units="mm" type="rainfall_24hr">3.0</element>
+          <element start-time-local="2024-09-19T06:00:00+10:00" end-time-local="2024-09-19T21:00:00+10:00" start-time-utc="2024-09-18T20:00:00+00:00" end-time-utc="2024-09-19T11:00:00+00:00" units="Celsius" type="maximum_air_temperature" instance="running" time-utc="2024-09-19T02:09:00+00:00" time-local="2024-09-19T12:09:00+10:00">13.6</element>
+          <element start-time-local="2024-09-19T18:00:00+10:00" end-time-local="2024-09-20T09:00:00+10:00" start-time-utc="2024-09-19T08:00:00+00:00" end-time-utc="2024-09-19T23:00:00+00:00" units="Celsius" type="minimum_air_temperature" instance="running" time-utc="2024-09-19T09:30:00+00:00" time-local="2024-09-19T19:30:00+10:00">7.3</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="knots" type="maximum_gust_spd" instance="running" time-utc="2024-09-19T02:34:00+00:00" time-local="2024-09-19T12:34:00+10:00">44</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="km/h" type="maximum_gust_kmh" instance="running" time-utc="2024-09-19T02:34:00+00:00" time-local="2024-09-19T12:34:00+10:00">82</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" type="maximum_gust_dir" instance="running" time-utc="2024-09-19T02:34:00+00:00" time-local="2024-09-19T12:34:00+10:00">WNW</element>
+        </level>
+      </period>
+    </station>
+    <station wmo-id="94955" bom-id="091291" tz="Australia/Hobart" stn-name="SHEFFIELD SCHOOL FARM" stn-height="277.29" type="AWS" lat="-41.3890" lon="146.3173" forecast-district-id="TAS_PW010" description="Sheffield">
+      <period index="0" time-utc="2024-09-19T09:30:00+00:00" time-local="2024-09-19T19:30:00+10:00" wind-src="metar_10">
+        <level index="0" type="surface">
+          <element units="Celsius" type="apparent_temp">-3.4</element>
+          <element units="Celsius" type="delta_t">1.2</element>
+          <element units="km/h" type="gust_kmh">48</element>
+          <element units="knots" type="wind_gust_spd">26</element>
+          <element units="Celsius" type="air_temperature">3.8</element>
+          <element units="Celsius" type="dew_point">0.7</element>
+          <element units="hPa" type="pres">997.9</element>
+          <element units="hPa" type="msl_pres">997.9</element>
+          <element units="hPa" type="qnh_pres">997.6</element>
+          <element units="mm" type="rain_hour">0.0</element>
+          <element units="mm" type="rain_ten">0.0</element>
+          <element units="%" type="rel-humidity">80</element>
+          <element type="wind_dir">WNW</element>
+          <element units="deg" type="wind_dir_deg">291</element>
+          <element units="km/h" type="wind_spd_kmh">28</element>
+          <element units="knots" type="wind_spd">15</element>
+          <element start-time-local="2024-09-19T09:00:00+10:00" end-time-local="2024-09-19T19:32:00+10:00" duration="632" start-time-utc="2024-09-18T23:00:00+00:00" end-time-utc="2024-09-19T09:32:00+00:00" units="mm" type="rainfall">2.4</element>
+          <element start-time-local="2024-09-18T09:00:00+10:00" end-time-local="2024-09-19T09:00:00+10:00" duration="1440" start-time-utc="2024-09-17T23:00:00+00:00" end-time-utc="2024-09-18T23:00:00+00:00" units="mm" type="rainfall_24hr">2.0</element>
+          <element start-time-local="2024-09-19T06:00:00+10:00" end-time-local="2024-09-19T21:00:00+10:00" start-time-utc="2024-09-18T20:00:00+00:00" end-time-utc="2024-09-19T11:00:00+00:00" units="Celsius" type="maximum_air_temperature" instance="running" time-utc="2024-09-19T01:47:00+00:00" time-local="2024-09-19T11:47:00+10:00">10.3</element>
+          <element start-time-local="2024-09-19T18:00:00+10:00" end-time-local="2024-09-20T09:00:00+10:00" start-time-utc="2024-09-19T08:00:00+00:00" end-time-utc="2024-09-19T23:00:00+00:00" units="Celsius" type="minimum_air_temperature" instance="running" time-utc="2024-09-19T09:30:00+00:00" time-local="2024-09-19T19:30:00+10:00">3.8</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="knots" type="maximum_gust_spd" instance="running" time-utc="2024-09-19T05:36:00+00:00" time-local="2024-09-19T15:36:00+10:00">37</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="km/h" type="maximum_gust_kmh" instance="running" time-utc="2024-09-19T05:36:00+00:00" time-local="2024-09-19T15:36:00+10:00">69</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" type="maximum_gust_dir" instance="running" time-utc="2024-09-19T05:36:00+00:00" time-local="2024-09-19T15:36:00+10:00">WSW</element>
+        </level>
+      </period>
+    </station>
+    <station wmo-id="94850" bom-id="098017" tz="Australia/Hobart" stn-name="KING ISLAND AIRPORT" stn-height="35.42" type="AWS" lat="-39.8804" lon="143.8857" forecast-district-id="TAS_PW011" description="King Island Airport">
+      <period index="0" time-utc="2024-09-19T09:30:00+00:00" time-local="2024-09-19T19:30:00+10:00" wind-src="metar_10">
+        <level index="0" type="surface">
+          <element units="Celsius" type="apparent_temp">1.3</element>
+          <element type="cloud">Partly cloudy</element>
+          <element units="m" type="cloud_base_m">1260</element>
+          <element type="cloud_oktas">3</element>
+          <element units="Celsius" type="delta_t">3.3</element>
+          <element units="km/h" type="gust_kmh">57</element>
+          <element units="knots" type="wind_gust_spd">31</element>
+          <element units="Celsius" type="air_temperature">10.6</element>
+          <element units="Celsius" type="dew_point">2.9</element>
+          <element units="hPa" type="pres">1005.4</element>
+          <element units="hPa" type="msl_pres">1005.4</element>
+          <element units="hPa" type="qnh_pres">1005.4</element>
+          <element units="mm" type="rain_hour">0.0</element>
+          <element units="mm" type="rain_ten">0.0</element>
+          <element units="%" type="rel-humidity">59</element>
+          <element units="km" type="vis_km">10</element>
+          <element type="wind_dir">W</element>
+          <element units="deg" type="wind_dir_deg">259</element>
+          <element units="km/h" type="wind_spd_kmh">41</element>
+          <element units="knots" type="wind_spd">22</element>
+          <element start-time-local="2024-09-19T09:00:00+10:00" end-time-local="2024-09-19T19:32:00+10:00" duration="632" start-time-utc="2024-09-18T23:00:00+00:00" end-time-utc="2024-09-19T09:32:00+00:00" units="mm" type="rainfall">1.8</element>
+          <element start-time-local="2024-09-18T09:00:00+10:00" end-time-local="2024-09-19T09:00:00+10:00" duration="1440" start-time-utc="2024-09-17T23:00:00+00:00" end-time-utc="2024-09-18T23:00:00+00:00" units="mm" type="rainfall_24hr">4.4</element>
+          <element start-time-local="2024-09-19T06:00:00+10:00" end-time-local="2024-09-19T21:00:00+10:00" start-time-utc="2024-09-18T20:00:00+00:00" end-time-utc="2024-09-19T11:00:00+00:00" units="Celsius" type="maximum_air_temperature" instance="running" time-utc="2024-09-19T02:51:00+00:00" time-local="2024-09-19T12:51:00+10:00">13.9</element>
+          <element start-time-local="2024-09-19T18:00:00+10:00" end-time-local="2024-09-20T09:00:00+10:00" start-time-utc="2024-09-19T08:00:00+00:00" end-time-utc="2024-09-19T23:00:00+00:00" units="Celsius" type="minimum_air_temperature" instance="running" time-utc="2024-09-19T08:47:00+00:00" time-local="2024-09-19T18:47:00+10:00">10.2</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="knots" type="maximum_gust_spd" instance="running" time-utc="2024-09-19T03:05:00+00:00" time-local="2024-09-19T13:05:00+10:00">46</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="km/h" type="maximum_gust_kmh" instance="running" time-utc="2024-09-19T03:05:00+00:00" time-local="2024-09-19T13:05:00+10:00">85</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" type="maximum_gust_dir" instance="running" time-utc="2024-09-19T03:05:00+00:00" time-local="2024-09-19T13:05:00+10:00">W</element>
+        </level>
+      </period>
+    </station>
+    <station wmo-id="89817" bom-id="300061" tz="UTC" stn-name="BUNGER HILLS" stn-height="12.00" type="AWS" lat="-66.2510" lon="100.6000" forecast-district-id="TAS_FA001" description="Bunger Hills">
+      <period index="0" time-utc="2024-09-19T06:30:00+00:00" time-local="2024-09-19T06:30:00+00:00">
+        <level index="0" type="surface"/>
+      </period>
+    </station>
+    <station wmo-id="89611" bom-id="300017" tz="Australia/Casey" stn-name="CASEY" stn-height="40.00" type="AWS" lat="-66.2825" lon="110.5231" forecast-district-id="TAS_FA001" description="Casey">
+      <period index="0" time-utc="2024-09-19T09:30:00+00:00" time-local="2024-09-19T17:30:00+08:00" wind-src="metar_10">
+        <level index="0" type="surface">
+          <element units="Celsius" type="apparent_temp">-22.5</element>
+          <element type="cloud">Partly cloudy</element>
+          <element units="m" type="cloud_base_m">420</element>
+          <element type="cloud_oktas">5</element>
+          <element units="km/h" type="gust_kmh">11</element>
+          <element units="knots" type="wind_gust_spd">6</element>
+          <element units="Celsius" type="air_temperature">-17.6</element>
+          <element units="Celsius" type="dew_point">-20.8</element>
+          <element units="hPa" type="pres">988.3</element>
+          <element units="hPa" type="msl_pres">988.3</element>
+          <element units="hPa" type="qnh_pres">987.8</element>
+          <element units="%" type="rel-humidity">76</element>
+          <element units="km" type="vis_km">3</element>
+          <element type="wind_dir">SSE</element>
+          <element units="deg" type="wind_dir_deg">167</element>
+          <element units="km/h" type="wind_spd_kmh">7</element>
+          <element units="knots" type="wind_spd">4</element>
+          <element start-time-local="2024-09-19T06:00:00+08:00" end-time-local="2024-09-19T21:00:00+08:00" start-time-utc="2024-09-18T22:00:00+00:00" end-time-utc="2024-09-19T13:00:00+00:00" units="Celsius" type="maximum_air_temperature" instance="running" time-utc="2024-09-19T09:00:00+00:00" time-local="2024-09-19T17:00:00+08:00">-16.8</element>
+          <element start-time-local="2024-09-18T18:00:00+08:00" end-time-local="2024-09-19T09:00:00+08:00" start-time-utc="2024-09-18T10:00:00+00:00" end-time-utc="2024-09-19T01:00:00+00:00" units="Celsius" type="minimum_air_temperature" instance="running" time-utc="2024-09-18T20:02:00+00:00" time-local="2024-09-19T04:02:00+08:00">-22.0</element>
+          <element start-time-local="2024-09-19T00:00:00+08:00" end-time-local="2024-09-20T00:00:00+08:00" start-time-utc="2024-09-18T16:00:00+00:00" end-time-utc="2024-09-19T16:00:00+00:00" units="knots" type="maximum_gust_spd" instance="running" time-utc="2024-09-18T16:25:00+00:00" time-local="2024-09-19T00:25:00+08:00">19</element>
+          <element start-time-local="2024-09-19T00:00:00+08:00" end-time-local="2024-09-20T00:00:00+08:00" start-time-utc="2024-09-18T16:00:00+00:00" end-time-utc="2024-09-19T16:00:00+00:00" units="km/h" type="maximum_gust_kmh" instance="running" time-utc="2024-09-18T16:25:00+00:00" time-local="2024-09-19T00:25:00+08:00">35</element>
+          <element start-time-local="2024-09-19T00:00:00+08:00" end-time-local="2024-09-20T00:00:00+08:00" start-time-utc="2024-09-18T16:00:00+00:00" end-time-utc="2024-09-19T16:00:00+00:00" type="maximum_gust_dir" instance="running" time-utc="2024-09-18T16:25:00+00:00" time-local="2024-09-19T00:25:00+08:00">NNE</element>
+        </level>
+      </period>
+    </station>
+    <station wmo-id="89512" bom-id="989512" tz="UTC" stn-name="NOVOLAZAREVSKAJA" stn-height="102.00" type="Non-AWS" lat="-70.7667" lon="11.8333" forecast-district-id="TAS_FA001" description="Novolazarevskaja">
+      <period index="0" time-utc="2024-09-19T06:00:00+00:00" time-local="2024-09-19T06:00:00+00:00" wind-src="synop">
+        <level index="0" type="surface">
+          <element units="Celsius" type="apparent_temp">-27.1</element>
+          <element type="cloud">Cloudy</element>
+          <element units="m" type="cloud_base_m">300</element>
+          <element type="cloud_oktas">8</element>
+          <element type="cloud_type_id">30</element>
+          <element units="Celsius" type="air_temperature">-13.4</element>
+          <element units="Celsius" type="dew_point">-16.0</element>
+          <element units="hPa" type="pres">980.5</element>
+          <element units="hPa" type="msl_pres">980.5</element>
+          <element units="%" type="rel-humidity">81</element>
+          <element units="km" type="vis_km">1</element>
+          <element type="weather">Snow</element>
+          <element units="deg" type="wind_dir_deg">110</element>
+        </level>
+      </period>
+    </station>
+    <station wmo-id="89532" bom-id="989532" tz="UTC" stn-name="SYOWA" stn-height="25.50" type="Non-AWS" lat="-69.0053" lon="39.5811" forecast-district-id="TAS_FA001" description="Syowa">
+      <period index="0" time-utc="2024-09-19T09:00:00+00:00" time-local="2024-09-19T09:00:00+00:00" wind-src="synop">
+        <level index="0" type="surface">
+          <element units="Celsius" type="apparent_temp">-18.6</element>
+          <element units="Celsius" type="air_temperature">-12.8</element>
+          <element units="Celsius" type="dew_point">-22.8</element>
+          <element units="hPa" type="pres">996.4</element>
+          <element units="hPa" type="msl_pres">996.4</element>
+          <element units="%" type="rel-humidity">43</element>
+          <element type="wind_dir">E</element>
+          <element units="deg" type="wind_dir_deg">80</element>
+          <element units="km/h" type="wind_spd_kmh">11</element>
+          <element units="knots" type="wind_spd">6</element>
+        </level>
+      </period>
+    </station>
+    <station wmo-id="94998" bom-id="300004" tz="Australia/Hobart" stn-name="MACQUARIE ISLAND" stn-height="6.00" type="AWS" lat="-54.4994" lon="158.9369" forecast-district-id="TAS_FA001" description="Macquarie Island">
+      <period index="0" time-utc="2024-09-19T09:30:00+00:00" time-local="2024-09-19T19:30:00+10:00" wind-src="OMD">
+        <level index="0" type="surface">
+          <element units="Celsius" type="apparent_temp">-3.8</element>
+          <element units="Celsius" type="delta_t">0.8</element>
+          <element units="km/h" type="gust_kmh">46</element>
+          <element units="knots" type="wind_gust_spd">25</element>
+          <element units="Celsius" type="air_temperature">4.8</element>
+          <element units="Celsius" type="dew_point">2.8</element>
+          <element units="hPa" type="pres">973.7</element>
+          <element units="hPa" type="msl_pres">973.7</element>
+          <element units="hPa" type="qnh_pres">973.4</element>
+          <element units="%" type="rel-humidity">87</element>
+          <element type="wind_dir">N</element>
+          <element units="deg" type="wind_dir_deg">359</element>
+          <element units="km/h" type="wind_spd_kmh">37</element>
+          <element units="knots" type="wind_spd">20</element>
+          <element start-time-local="2024-09-19T09:00:00+10:00" end-time-local="2024-09-19T19:32:00+10:00" duration="632" start-time-utc="2024-09-18T23:00:00+00:00" end-time-utc="2024-09-19T09:32:00+00:00" units="mm" type="rainfall">1.0</element>
+          <element start-time-local="2024-09-18T09:00:00+10:00" end-time-local="2024-09-19T09:00:00+10:00" duration="1440" start-time-utc="2024-09-17T23:00:00+00:00" end-time-utc="2024-09-18T23:00:00+00:00" units="mm" type="rainfall_24hr">2.4</element>
+          <element start-time-local="2024-09-19T06:00:00+10:00" end-time-local="2024-09-19T21:00:00+10:00" start-time-utc="2024-09-18T20:00:00+00:00" end-time-utc="2024-09-19T11:00:00+00:00" units="Celsius" type="maximum_air_temperature" instance="running" time-utc="2024-09-19T08:20:00+00:00" time-local="2024-09-19T18:20:00+10:00">5.0</element>
+          <element start-time-local="2024-09-19T18:00:00+10:00" end-time-local="2024-09-20T09:00:00+10:00" start-time-utc="2024-09-19T08:00:00+00:00" end-time-utc="2024-09-19T23:00:00+00:00" units="Celsius" type="minimum_air_temperature" instance="running" time-utc="2024-09-19T09:01:00+00:00" time-local="2024-09-19T19:01:00+10:00">4.4</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="knots" type="maximum_gust_spd" instance="running" time-utc="2024-09-18T20:34:00+00:00" time-local="2024-09-19T06:34:00+10:00">41</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="km/h" type="maximum_gust_kmh" instance="running" time-utc="2024-09-18T20:34:00+00:00" time-local="2024-09-19T06:34:00+10:00">76</element>
+          <element start-time-local="2024-09-19T00:00:00+10:00" end-time-local="2024-09-20T00:00:00+10:00" start-time-utc="2024-09-18T14:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" type="maximum_gust_dir" instance="running" time-utc="2024-09-18T20:34:00+00:00" time-local="2024-09-19T06:34:00+10:00">WNW</element>
+        </level>
+      </period>
+    </station>
+    <station wmo-id="89571" bom-id="300000" tz="Australia/Davis" stn-name="DAVIS" stn-height="18.00" type="AWS" lat="-68.5744" lon="77.9672" forecast-district-id="TAS_FA001" description="Davis">
+      <period index="0" time-utc="2024-09-19T09:30:00+00:00" time-local="2024-09-19T16:30:00+07:00" wind-src="metar_10">
+        <level index="0" type="surface">
+          <element units="Celsius" type="apparent_temp">-25.2</element>
+          <element type="cloud">Clear</element>
+          <element type="cloud_oktas">0</element>
+          <element units="km/h" type="gust_kmh">9</element>
+          <element units="knots" type="wind_gust_spd">5</element>
+          <element units="Celsius" type="air_temperature">-20.1</element>
+          <element units="Celsius" type="dew_point">-28.7</element>
+          <element units="hPa" type="pres">994.4</element>
+          <element units="hPa" type="msl_pres">994.4</element>
+          <element units="hPa" type="qnh_pres">994.0</element>
+          <element units="%" type="rel-humidity">46</element>
+          <element units="km" type="vis_km">10</element>
+          <element type="wind_dir">SSW</element>
+          <element units="deg" type="wind_dir_deg">212</element>
+          <element units="km/h" type="wind_spd_kmh">7</element>
+          <element units="knots" type="wind_spd">4</element>
+          <element start-time-local="2024-09-19T06:00:00+07:00" end-time-local="2024-09-19T21:00:00+07:00" start-time-utc="2024-09-18T23:00:00+00:00" end-time-utc="2024-09-19T14:00:00+00:00" units="Celsius" type="maximum_air_temperature" instance="running" time-utc="2024-09-19T06:05:00+00:00" time-local="2024-09-19T13:05:00+07:00">-19.1</element>
+          <element start-time-local="2024-09-18T18:00:00+07:00" end-time-local="2024-09-19T09:00:00+07:00" start-time-utc="2024-09-18T11:00:00+00:00" end-time-utc="2024-09-19T02:00:00+00:00" units="Celsius" type="minimum_air_temperature" instance="running" time-utc="2024-09-19T00:58:00+00:00" time-local="2024-09-19T07:58:00+07:00">-26.7</element>
+          <element start-time-local="2024-09-19T00:00:00+07:00" end-time-local="2024-09-20T00:00:00+07:00" start-time-utc="2024-09-18T17:00:00+00:00" end-time-utc="2024-09-19T17:00:00+00:00" units="knots" type="maximum_gust_spd" instance="running" time-utc="2024-09-19T05:04:00+00:00" time-local="2024-09-19T12:04:00+07:00">13</element>
+          <element start-time-local="2024-09-19T00:00:00+07:00" end-time-local="2024-09-20T00:00:00+07:00" start-time-utc="2024-09-18T17:00:00+00:00" end-time-utc="2024-09-19T17:00:00+00:00" units="km/h" type="maximum_gust_kmh" instance="running" time-utc="2024-09-19T05:04:00+00:00" time-local="2024-09-19T12:04:00+07:00">24</element>
+          <element start-time-local="2024-09-19T00:00:00+07:00" end-time-local="2024-09-20T00:00:00+07:00" start-time-utc="2024-09-18T17:00:00+00:00" end-time-utc="2024-09-19T17:00:00+00:00" type="maximum_gust_dir" instance="running" time-utc="2024-09-19T05:04:00+00:00" time-local="2024-09-19T12:04:00+07:00">SE</element>
+        </level>
+      </period>
+    </station>
+    <station wmo-id="89642" bom-id="989642" tz="UTC" stn-name="DUMONT D URVILLE" stn-height="43.00" type="Non-AWS" lat="-66.6631" lon="140.0011" forecast-district-id="TAS_FA001" description="Dumont D'urville">
+      <period index="0" time-utc="2024-09-19T09:00:00+00:00" time-local="2024-09-19T09:00:00+00:00" wind-src="synop">
+        <level index="0" type="surface">
+          <element units="Celsius" type="apparent_temp">-27.2</element>
+          <element type="cloud">Mostly clear</element>
+          <element units="m" type="cloud_base_m">2500</element>
+          <element type="cloud_oktas">1</element>
+          <element type="cloud_type_id">30</element>
+          <element units="Celsius" type="air_temperature">-17.7</element>
+          <element units="Celsius" type="dew_point">-26.1</element>
+          <element units="hPa" type="pres">987.0</element>
+          <element units="hPa" type="msl_pres">987.0</element>
+          <element units="%" type="rel-humidity">48</element>
+          <element units="km" type="vis_km">20</element>
+          <element type="wind_dir">ESE</element>
+          <element units="deg" type="wind_dir_deg">120</element>
+          <element units="km/h" type="wind_spd_kmh">30</element>
+          <element units="knots" type="wind_spd">16</element>
+        </level>
+      </period>
+    </station>
+    <station wmo-id="89564" bom-id="300001" tz="Australia/Mawson" stn-name="MAWSON" stn-height="9.90" type="AWS" lat="-67.6017" lon="62.8753" forecast-district-id="TAS_FA001" description="Mawson">
+      <period index="0" time-utc="2024-09-19T09:30:00+00:00" time-local="2024-09-19T15:30:00+06:00" wind-src="OMD">
+        <level index="0" type="surface">
+          <element units="Celsius" type="apparent_temp">-22.8</element>
+          <element units="km/h" type="gust_kmh">13</element>
+          <element units="knots" type="wind_gust_spd">7</element>
+          <element units="Celsius" type="air_temperature">-17.0</element>
+          <element units="Celsius" type="dew_point">-26.1</element>
+          <element units="hPa" type="pres">996.6</element>
+          <element units="hPa" type="msl_pres">996.6</element>
+          <element units="hPa" type="qnh_pres">996.4</element>
+          <element units="%" type="rel-humidity">45</element>
+          <element type="wind_dir">NE</element>
+          <element units="deg" type="wind_dir_deg">51</element>
+          <element units="km/h" type="wind_spd_kmh">11</element>
+          <element units="knots" type="wind_spd">6</element>
+          <element start-time-local="2024-09-19T06:00:00+06:00" end-time-local="2024-09-19T21:00:00+06:00" start-time-utc="2024-09-19T00:00:00+00:00" end-time-utc="2024-09-19T15:00:00+00:00" units="Celsius" type="maximum_air_temperature" instance="running" time-utc="2024-09-19T08:50:00+00:00" time-local="2024-09-19T14:50:00+06:00">-15.2</element>
+          <element start-time-local="2024-09-18T18:00:00+06:00" end-time-local="2024-09-19T09:00:00+06:00" start-time-utc="2024-09-18T12:00:00+00:00" end-time-utc="2024-09-19T03:00:00+00:00" units="Celsius" type="minimum_air_temperature" instance="running" time-utc="2024-09-19T01:34:00+00:00" time-local="2024-09-19T07:34:00+06:00">-22.9</element>
+          <element start-time-local="2024-09-19T00:00:00+06:00" end-time-local="2024-09-20T00:00:00+06:00" start-time-utc="2024-09-18T18:00:00+00:00" end-time-utc="2024-09-19T18:00:00+00:00" units="knots" type="maximum_gust_spd" instance="running" time-utc="2024-09-18T20:11:00+00:00" time-local="2024-09-19T02:11:00+06:00">30</element>
+          <element start-time-local="2024-09-19T00:00:00+06:00" end-time-local="2024-09-20T00:00:00+06:00" start-time-utc="2024-09-18T18:00:00+00:00" end-time-utc="2024-09-19T18:00:00+00:00" units="km/h" type="maximum_gust_kmh" instance="running" time-utc="2024-09-18T20:11:00+00:00" time-local="2024-09-19T02:11:00+06:00">56</element>
+          <element start-time-local="2024-09-19T00:00:00+06:00" end-time-local="2024-09-20T00:00:00+06:00" start-time-utc="2024-09-18T18:00:00+00:00" end-time-utc="2024-09-19T18:00:00+00:00" type="maximum_gust_dir" instance="running" time-utc="2024-09-18T20:11:00+00:00" time-local="2024-09-19T02:11:00+06:00">ESE</element>
+        </level>
+      </period>
+    </station>
+    <station wmo-id="89664" bom-id="989664" tz="UTC" stn-name="MCMURDO" stn-height="24.00" type="Non-AWS" lat="-77.8500" lon="166.6667" forecast-district-id="TAS_FA001" description="McMurdo">
+      <period index="0" time-utc="2024-09-19T00:00:00+00:00" time-local="2024-09-19T00:00:00+00:00" wind-src="synop">
+        <level index="0" type="surface">
+          <element units="Celsius" type="apparent_temp">-22.8</element>
+          <element type="cloud">Cloudy</element>
+          <element units="m" type="cloud_base_m">1500</element>
+          <element type="cloud_oktas">8</element>
+          <element type="cloud_type_id">36</element>
+          <element units="Celsius" type="air_temperature">-14.8</element>
+          <element units="Celsius" type="dew_point">-29.5</element>
+          <element units="%" type="rel-humidity">27</element>
+          <element units="km" type="vis_km">11</element>
+          <element type="wind_dir">NE</element>
+          <element units="deg" type="wind_dir_deg">40</element>
+          <element units="km/h" type="wind_spd_kmh">22</element>
+          <element units="knots" type="wind_spd">12</element>
+        </level>
+      </period>
+    </station>
+    <station wmo-id="89592" bom-id="989592" tz="UTC" stn-name="MIRNYJ" stn-height="35.00" type="Non-AWS" lat="-66.5500" lon="93.0167" forecast-district-id="TAS_FA001" description="Mirnyj">
+      <period index="0" time-utc="2024-09-19T06:00:00+00:00" time-local="2024-09-19T06:00:00+00:00" wind-src="synop">
+        <level index="0" type="surface">
+          <element units="Celsius" type="apparent_temp">-32.3</element>
+          <element type="cloud">Partly cloudy</element>
+          <element units="m" type="cloud_base_m">2500</element>
+          <element type="cloud_oktas">4</element>
+          <element type="cloud_type_id">30</element>
+          <element units="Celsius" type="air_temperature">-21.1</element>
+          <element units="Celsius" type="dew_point">-25.5</element>
+          <element units="hPa" type="pres">991.2</element>
+          <element units="hPa" type="msl_pres">991.2</element>
+          <element units="%" type="rel-humidity">68</element>
+          <element units="km" type="vis_km">20</element>
+          <element type="weather">Blowing snow</element>
+          <element type="wind_dir">ESE</element>
+          <element units="deg" type="wind_dir_deg">120</element>
+          <element units="km/h" type="wind_spd_kmh">39</element>
+          <element units="knots" type="wind_spd">21</element>
+        </level>
+      </period>
+    </station>
+    <station wmo-id="99142" bom-id="250094" tz="Australia/Hobart" stn-name="TAS PARKS WILDLIFE PORTABLE C" stn-height="25.00" type="Non-AWS" lat="-43.4167" lon="146.1509" forecast-district-id="TAS_FA001" description="PWS C">
+      <period index="0" time-utc="2024-09-19T09:00:00+00:00" time-local="2024-09-19T19:00:00+10:00" wind-src="metar_10">
+        <level index="0" type="surface">
+          <element units="Celsius" type="apparent_temp">-2.8</element>
+          <element units="Celsius" type="delta_t">1.6</element>
+          <element units="km/h" type="gust_kmh">46</element>
+          <element units="knots" type="wind_gust_spd">25</element>
+          <element units="Celsius" type="air_temperature">5.9</element>
+          <element units="Celsius" type="dew_point">2.0</element>
+          <element units="mm" type="rain_hour">0.6</element>
+          <element units="mm" type="rain_ten">0.0</element>
+          <element units="%" type="rel-humidity">76</element>
+          <element type="wind_dir">W</element>
+          <element units="deg" type="wind_dir_deg">260</element>
+          <element units="km/h" type="wind_spd_kmh">37</element>
+          <element units="knots" type="wind_spd">20</element>
+          <element start-time-local="2024-09-19T09:00:00+10:00" end-time-local="2024-09-19T19:00:00+10:00" duration="600" start-time-utc="2024-09-18T23:00:00+00:00" end-time-utc="2024-09-19T09:00:00+00:00" units="mm" type="rainfall">13.8</element>
+          <element start-time-local="2024-09-18T09:00:00+10:00" end-time-local="2024-09-19T09:00:00+10:00" duration="1440" start-time-utc="2024-09-17T23:00:00+00:00" end-time-utc="2024-09-18T23:00:00+00:00" units="mm" type="rainfall_24hr">31.2</element>
+        </level>
+      </period>
+    </station>
+    <station wmo-id="99148" bom-id="250107" tz="Australia/Hobart" stn-name="TAS PARKS WILDLIFE PORTABLE D" stn-height="50.00" type="Non-AWS" lat="-43.1455" lon="145.9479" forecast-district-id="TAS_FA001" description="Davey Gorge (PWS)">
+      <period index="0" time-utc="2024-09-19T09:00:00+00:00" time-local="2024-09-19T19:00:00+10:00" wind-src="metar_10">
+        <level index="0" type="surface">
+          <element units="Celsius" type="apparent_temp">-2.6</element>
+          <element units="Celsius" type="delta_t">3.2</element>
+          <element units="km/h" type="gust_kmh">54</element>
+          <element units="knots" type="wind_gust_spd">29</element>
+          <element units="Celsius" type="air_temperature">7.6</element>
+          <element units="Celsius" type="dew_point">-0.6</element>
+          <element units="hPa" type="pres">985.3</element>
+          <element units="hPa" type="qnh_pres">985.3</element>
+          <element units="mm" type="rain_hour">0.0</element>
+          <element units="mm" type="rain_ten">0.0</element>
+          <element units="%" type="rel-humidity">56</element>
+          <element type="wind_dir">WSW</element>
+          <element units="deg" type="wind_dir_deg">240</element>
+          <element units="km/h" type="wind_spd_kmh">43</element>
+          <element units="knots" type="wind_spd">23</element>
+          <element start-time-local="2024-09-19T09:00:00+10:00" end-time-local="2024-09-19T19:00:00+10:00" duration="600" start-time-utc="2024-09-18T23:00:00+00:00" end-time-utc="2024-09-19T09:00:00+00:00" units="mm" type="rainfall">10.4</element>
+          <element start-time-local="2024-09-18T09:00:00+10:00" end-time-local="2024-09-19T09:00:00+10:00" duration="1440" start-time-utc="2024-09-17T23:00:00+00:00" end-time-utc="2024-09-18T23:00:00+00:00" units="mm" type="rainfall_24hr">30.4</element>
+        </level>
+      </period>
+    </station>
+    <station wmo-id="99151" bom-id="250113" tz="Australia/Hobart" stn-name="TAS PARKS WILDLIFE PORTABLE F" stn-height="253.00" type="Non-AWS" lat="-41.5984" lon="145.9734" forecast-district-id="TAS_FA001" description="Dove River (PWS)">
+      <period index="0" time-utc="2024-09-19T09:00:00+00:00" time-local="2024-09-19T19:00:00+10:00" wind-src="metar_10">
+        <level index="0" type="surface">
+          <element units="Celsius" type="apparent_temp">-15.5</element>
+          <element units="Celsius" type="delta_t">0.0</element>
+          <element units="km/h" type="gust_kmh">72</element>
+          <element units="knots" type="wind_gust_spd">39</element>
+          <element units="Celsius" type="air_temperature">-2.0</element>
+          <element units="Celsius" type="dew_point">-2.3</element>
+          <element units="hPa" type="pres">993.5</element>
+          <element units="hPa" type="qnh_pres">993.5</element>
+          <element units="mm" type="rain_hour">0.0</element>
+          <element units="mm" type="rain_ten">0.0</element>
+          <element units="%" type="rel-humidity">98</element>
+          <element type="wind_dir">W</element>
+          <element units="deg" type="wind_dir_deg">260</element>
+          <element units="km/h" type="wind_spd_kmh">59</element>
+          <element units="knots" type="wind_spd">32</element>
+          <element start-time-local="2024-09-19T09:00:00+10:00" end-time-local="2024-09-19T19:00:00+10:00" duration="600" start-time-utc="2024-09-18T23:00:00+00:00" end-time-utc="2024-09-19T09:00:00+00:00" units="mm" type="rainfall">6.6</element>
+          <element start-time-local="2024-09-18T09:00:00+10:00" end-time-local="2024-09-19T09:00:00+10:00" duration="1440" start-time-utc="2024-09-17T23:00:00+00:00" end-time-utc="2024-09-18T23:00:00+00:00" units="mm" type="rainfall_24hr">15.2</element>
+        </level>
+      </period>
+    </station>
+    <station wmo-id="99829" bom-id="250167" tz="Australia/Hobart" stn-name="HOBART BUSHLAND OPERATIONS DEPOT (HCC)" stn-height="265.00" type="AWS" lat="-42.9053" lon="147.2849" forecast-district-id="TAS_FA001" description="Hobart Bushland Operations Depot (HCC)">
+      <period index="0" time-utc="2024-09-19T09:10:00+00:00" time-local="2024-09-19T19:10:00+10:00" wind-src="metar_10">
+        <level index="0" type="surface">
+          <element units="Celsius" type="apparent_temp">0.5</element>
+          <element units="Celsius" type="delta_t">2.0</element>
+          <element units="km/h" type="gust_kmh">15</element>
+          <element units="knots" type="wind_gust_spd">8</element>
+          <element units="Celsius" type="air_temperature">4.3</element>
+          <element units="Celsius" type="dew_point">-0.9</element>
+          <element units="hPa" type="pres">993.0</element>
+          <element units="hPa" type="qnh_pres">993.0</element>
+          <element units="mm" type="rain_hour">0.0</element>
+          <element units="mm" type="rain_ten">0.0</element>
+          <element units="%" type="rel-humidity">69</element>
+          <element type="wind_dir">SSW</element>
+          <element units="deg" type="wind_dir_deg">200</element>
+          <element units="km/h" type="wind_spd_kmh">9</element>
+          <element units="knots" type="wind_spd">5</element>
+          <element start-time-local="2024-09-19T09:00:00+10:00" end-time-local="2024-09-19T19:10:00+10:00" duration="610" start-time-utc="2024-09-18T23:00:00+00:00" end-time-utc="2024-09-19T09:10:00+00:00" units="mm" type="rainfall">12.0</element>
+        </level>
+      </period>
+    </station>
+  </observations>
+</product>
