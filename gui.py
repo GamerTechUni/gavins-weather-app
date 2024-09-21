@@ -295,31 +295,31 @@ class MainWindow(QMainWindow):
         self.ui.day1_temp_overview.setText(f"{daily_forecast_info[1].get(
             'min_temp')}\u00b0—{daily_forecast_info[1].get('max_temp')}\u00b0")
         self.set_overview_forecast_icons(
-            daily_forecast_info[1].get('icon_descriptor'), self.ui.icon_overview1, is_night)
+            daily_forecast_info[1].get('icon_descriptor'), self.ui.icon_overview1, is_night=False)
 
         self.ui.day2_overview.setText(daily_forecast_info[2].get('date'))
         self.ui.day2_temp_overview.setText(f"{daily_forecast_info[2].get(
             'min_temp')}\u00b0—{daily_forecast_info[2].get('max_temp')}\u00b0")
         self.set_overview_forecast_icons(
-            daily_forecast_info[2].get('icon_descriptor'), self.ui.icon_overview2, is_night)
+            daily_forecast_info[2].get('icon_descriptor'), self.ui.icon_overview2, is_night=False)
 
         self.ui.day3_overview.setText(daily_forecast_info[3].get('date'))
         self.ui.day3_temp_overview.setText(f"{daily_forecast_info[3].get(
             'min_temp')}\u00b0—{daily_forecast_info[3].get('max_temp')}\u00b0")
         self.set_overview_forecast_icons(
-            daily_forecast_info[3].get('icon_descriptor'), self.ui.icon_overview3, is_night)
+            daily_forecast_info[3].get('icon_descriptor'), self.ui.icon_overview3, is_night=False)
 
         self.ui.day4_overview.setText(daily_forecast_info[4].get('date'))
         self.ui.day4_temp_overview.setText(f"{daily_forecast_info[4].get(
             'min_temp')}\u00b0—{daily_forecast_info[4].get('max_temp')}\u00b0")
         self.set_overview_forecast_icons(
-            daily_forecast_info[4].get('icon_descriptor'), self.ui.icon_overview4, is_night)
+            daily_forecast_info[4].get('icon_descriptor'), self.ui.icon_overview4, is_night=False)
 
         self.ui.day5_overview.setText(daily_forecast_info[5].get('date'))
         self.ui.day5_temp_overview.setText(f"{daily_forecast_info[5].get(
             'min_temp')}\u00b0—{daily_forecast_info[5].get('max_temp')}\u00b0")
         self.set_overview_forecast_icons(
-            daily_forecast_info[5].get('icon_descriptor'), self.ui.icon_overview5, is_night)
+            daily_forecast_info[5].get('icon_descriptor'), self.ui.icon_overview5, is_night=False)
 
         # Past Weather
 
@@ -339,6 +339,7 @@ class MainWindow(QMainWindow):
             f"{ob_info.get('rain_since_9am')}mm")
 
     def set_overview_forecast_icons(self, weather_condition, label, is_night):
+        print(weather_condition)
         if is_night:
             if weather_condition == 'clear':
                 label.setPixmap(self.clear_icon)
