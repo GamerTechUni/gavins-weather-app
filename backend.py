@@ -294,7 +294,7 @@ if __name__ == "__main__":
     # print(fetch_location_options('Perth'))
     daily_forecast = fetch_daily_forecast(
         'r6sxpuw', timezone='Australia/Sydney')
-    print(daily_forecast[0])
+    print(daily_forecast)
     # print(daily_forecast[0])
     # write_to_settings({'ws_unit': 'km/h'})
     # print(read_settings('ws_unit'))

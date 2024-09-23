@@ -247,6 +247,17 @@ class MainWindow(QMainWindow):
         self.ui.chance_of_rain_overview.setText(
             f'{daily_forecast_info[0].get('chance_of_rain')}%')
 
+        self.ui.icon_chance_of_rain1.setText(f"{daily_forecast_info[1].get(
+            'chance_of_rain')}%")
+        self.ui.icon_chance_of_rain2.setText(f"{daily_forecast_info[2].get(
+            'chance_of_rain')}%")
+        self.ui.icon_chance_of_rain3.setText(f"{daily_forecast_info[3].get(
+            'chance_of_rain')}%")
+        self.ui.icon_chance_of_rain4.setText(f"{daily_forecast_info[4].get(
+            'chance_of_rain')}%")
+        self.ui.icon_chance_of_rain5.setText(f"{daily_forecast_info[5].get(
+            'chance_of_rain')}%")
+
         # Wind Speed
         wind_direction = ob_info.get('wind_direction')
         wind_direction_full = ''

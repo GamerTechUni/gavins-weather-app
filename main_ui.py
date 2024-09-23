@@ -198,7 +198,9 @@ class Ui_WeatherApp(object):
         self.horizontalLayout_9.addLayout(self.verticalLayout_2)
 
         self.verticalLayout_3 = QVBoxLayout()
+        self.verticalLayout_3.setSpacing(0)
         self.verticalLayout_3.setObjectName(u"verticalLayout_3")
+        self.verticalLayout_3.setContentsMargins(0, -1, 0, 0)
         self.icon_overview1 = QLabel(self.forecast_overview)
         self.icon_overview1.setObjectName(u"icon_overview1")
         self.icon_overview1.setMaximumSize(QSize(75, 75))
@@ -208,36 +210,93 @@ class Ui_WeatherApp(object):
         self.icon_overview1.setFont(font5)
         self.icon_overview1.setPixmap(QPixmap(u"../8a3a0566/sunny.png"))
         self.icon_overview1.setScaledContents(True)
+        self.icon_overview1.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
 
         self.verticalLayout_3.addWidget(self.icon_overview1)
+
+        self.icon_chance_of_rain1 = QLabel(self.forecast_overview)
+        self.icon_chance_of_rain1.setObjectName(u"icon_chance_of_rain1")
+        self.icon_chance_of_rain1.setMaximumSize(QSize(75, 75))
+        font6 = QFont()
+        font6.setFamilies([u"Liberation Sans"])
+        font6.setPointSize(10)
+        font6.setBold(True)
+        self.icon_chance_of_rain1.setFont(font6)
+        self.icon_chance_of_rain1.setStyleSheet(u"color: rgb(85, 170, 255);")
+        self.icon_chance_of_rain1.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.verticalLayout_3.addWidget(self.icon_chance_of_rain1)
 
         self.icon_overview2 = QLabel(self.forecast_overview)
         self.icon_overview2.setObjectName(u"icon_overview2")
         self.icon_overview2.setMaximumSize(QSize(75, 75))
         self.icon_overview2.setFont(font5)
+        self.icon_overview2.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
 
         self.verticalLayout_3.addWidget(self.icon_overview2)
+
+        self.icon_chance_of_rain2 = QLabel(self.forecast_overview)
+        self.icon_chance_of_rain2.setObjectName(u"icon_chance_of_rain2")
+        self.icon_chance_of_rain2.setMaximumSize(QSize(75, 75))
+        font7 = QFont()
+        font7.setFamilies([u"Noto Sans"])
+        font7.setBold(True)
+        self.icon_chance_of_rain2.setFont(font7)
+        self.icon_chance_of_rain2.setStyleSheet(u"color: rgb(85, 170, 255);")
+        self.icon_chance_of_rain2.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.verticalLayout_3.addWidget(self.icon_chance_of_rain2)
 
         self.icon_overview3 = QLabel(self.forecast_overview)
         self.icon_overview3.setObjectName(u"icon_overview3")
         self.icon_overview3.setMaximumSize(QSize(75, 75))
         self.icon_overview3.setFont(font5)
+        self.icon_overview3.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
 
         self.verticalLayout_3.addWidget(self.icon_overview3)
+
+        self.icon_chance_of_rain3 = QLabel(self.forecast_overview)
+        self.icon_chance_of_rain3.setObjectName(u"icon_chance_of_rain3")
+        self.icon_chance_of_rain3.setMaximumSize(QSize(75, 75))
+        self.icon_chance_of_rain3.setFont(font7)
+        self.icon_chance_of_rain3.setStyleSheet(u"color: rgb(85, 170, 255);")
+        self.icon_chance_of_rain3.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.verticalLayout_3.addWidget(self.icon_chance_of_rain3)
 
         self.icon_overview4 = QLabel(self.forecast_overview)
         self.icon_overview4.setObjectName(u"icon_overview4")
         self.icon_overview4.setMaximumSize(QSize(75, 75))
         self.icon_overview4.setFont(font5)
+        self.icon_overview4.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
 
         self.verticalLayout_3.addWidget(self.icon_overview4)
+
+        self.icon_chance_of_rain4 = QLabel(self.forecast_overview)
+        self.icon_chance_of_rain4.setObjectName(u"icon_chance_of_rain4")
+        self.icon_chance_of_rain4.setMaximumSize(QSize(75, 75))
+        self.icon_chance_of_rain4.setFont(font7)
+        self.icon_chance_of_rain4.setStyleSheet(u"color: rgb(85, 170, 255);")
+        self.icon_chance_of_rain4.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.verticalLayout_3.addWidget(self.icon_chance_of_rain4)
 
         self.icon_overview5 = QLabel(self.forecast_overview)
         self.icon_overview5.setObjectName(u"icon_overview5")
         self.icon_overview5.setMaximumSize(QSize(75, 75))
         self.icon_overview5.setFont(font5)
+        self.icon_overview5.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
 
         self.verticalLayout_3.addWidget(self.icon_overview5)
+
+        self.icon_chance_of_rain5 = QLabel(self.forecast_overview)
+        self.icon_chance_of_rain5.setObjectName(u"icon_chance_of_rain5")
+        self.icon_chance_of_rain5.setMaximumSize(QSize(75, 75))
+        self.icon_chance_of_rain5.setFont(font7)
+        self.icon_chance_of_rain5.setStyleSheet(u"color: rgb(85, 170, 255);")
+        self.icon_chance_of_rain5.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.verticalLayout_3.addWidget(self.icon_chance_of_rain5)
 
 
         self.horizontalLayout_9.addLayout(self.verticalLayout_3)
@@ -246,26 +305,31 @@ class Ui_WeatherApp(object):
         self.verticalLayout_4.setObjectName(u"verticalLayout_4")
         self.day1_temp_overview = QLabel(self.forecast_overview)
         self.day1_temp_overview.setObjectName(u"day1_temp_overview")
+        self.day1_temp_overview.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
 
         self.verticalLayout_4.addWidget(self.day1_temp_overview)
 
         self.day2_temp_overview = QLabel(self.forecast_overview)
         self.day2_temp_overview.setObjectName(u"day2_temp_overview")
+        self.day2_temp_overview.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
 
         self.verticalLayout_4.addWidget(self.day2_temp_overview)
 
         self.day3_temp_overview = QLabel(self.forecast_overview)
         self.day3_temp_overview.setObjectName(u"day3_temp_overview")
+        self.day3_temp_overview.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
 
         self.verticalLayout_4.addWidget(self.day3_temp_overview)
 
         self.day4_temp_overview = QLabel(self.forecast_overview)
         self.day4_temp_overview.setObjectName(u"day4_temp_overview")
+        self.day4_temp_overview.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
 
         self.verticalLayout_4.addWidget(self.day4_temp_overview)
 
         self.day5_temp_overview = QLabel(self.forecast_overview)
         self.day5_temp_overview.setObjectName(u"day5_temp_overview")
+        self.day5_temp_overview.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
 
         self.verticalLayout_4.addWidget(self.day5_temp_overview)
 
@@ -292,10 +356,10 @@ class Ui_WeatherApp(object):
         self.verticalLayout_5.setObjectName(u"verticalLayout_5")
         self.label_17 = QLabel(self.uv_index)
         self.label_17.setObjectName(u"label_17")
-        font6 = QFont()
-        font6.setFamilies([u"Liberation Sans"])
-        font6.setPointSize(20)
-        self.label_17.setFont(font6)
+        font8 = QFont()
+        font8.setFamilies([u"Liberation Sans"])
+        font8.setPointSize(20)
+        self.label_17.setFont(font8)
 
         self.verticalLayout_5.addWidget(self.label_17)
 
@@ -427,10 +491,10 @@ class Ui_WeatherApp(object):
         self.verticalLayout_9.setObjectName(u"verticalLayout_9")
         self.label = QLabel(self.wind_speed)
         self.label.setObjectName(u"label")
-        font7 = QFont()
-        font7.setFamilies([u"Liberation Sans"])
-        font7.setBold(True)
-        self.label.setFont(font7)
+        font9 = QFont()
+        font9.setFamilies([u"Liberation Sans"])
+        font9.setBold(True)
+        self.label.setFont(font9)
         self.label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
         self.verticalLayout_9.addWidget(self.label)
@@ -658,11 +722,11 @@ class Ui_WeatherApp(object):
         self.label_3 = QLabel(self.settings)
         self.label_3.setObjectName(u"label_3")
         self.label_3.setGeometry(QRect(10, 0, 271, 61))
-        font8 = QFont()
-        font8.setFamilies([u"Liberation Sans"])
-        font8.setPointSize(25)
-        font8.setBold(True)
-        self.label_3.setFont(font8)
+        font10 = QFont()
+        font10.setFamilies([u"Liberation Sans"])
+        font10.setPointSize(25)
+        font10.setBold(True)
+        self.label_3.setFont(font10)
         self.tabWidget.addTab(self.settings, "")
 
         self.verticalLayout.addWidget(self.tabWidget)
@@ -692,11 +756,16 @@ class Ui_WeatherApp(object):
         self.day3_overview.setText(QCoreApplication.translate("WeatherApp", u"Day3", None))
         self.day4_overview.setText(QCoreApplication.translate("WeatherApp", u"Day 4", None))
         self.day5_overview.setText(QCoreApplication.translate("WeatherApp", u"Day5", None))
-        self.icon_overview1.setText("")
+        self.icon_overview1.setText(QCoreApplication.translate("WeatherApp", u"O", None))
+        self.icon_chance_of_rain1.setText(QCoreApplication.translate("WeatherApp", u"69%", None))
         self.icon_overview2.setText(QCoreApplication.translate("WeatherApp", u"O", None))
+        self.icon_chance_of_rain2.setText(QCoreApplication.translate("WeatherApp", u"69%", None))
         self.icon_overview3.setText(QCoreApplication.translate("WeatherApp", u"O", None))
+        self.icon_chance_of_rain3.setText(QCoreApplication.translate("WeatherApp", u"69%", None))
         self.icon_overview4.setText(QCoreApplication.translate("WeatherApp", u"O", None))
+        self.icon_chance_of_rain4.setText(QCoreApplication.translate("WeatherApp", u"69%", None))
         self.icon_overview5.setText(QCoreApplication.translate("WeatherApp", u"O", None))
+        self.icon_chance_of_rain5.setText(QCoreApplication.translate("WeatherApp", u"69%", None))
         self.day1_temp_overview.setText(QCoreApplication.translate("WeatherApp", u"TextLabel", None))
         self.day2_temp_overview.setText(QCoreApplication.translate("WeatherApp", u"TextLabel", None))
         self.day3_temp_overview.setText(QCoreApplication.translate("WeatherApp", u"TextLabel", None))

@@ -259,6 +259,18 @@
              </item>
              <item>
               <layout class="QVBoxLayout" name="verticalLayout_3">
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
                <item>
                 <widget class="QLabel" name="icon_overview1">
                  <property name="maximumSize">
@@ -274,13 +286,42 @@
                   </font>
                  </property>
                  <property name="text">
-                  <string/>
+                  <string>O</string>
                  </property>
                  <property name="pixmap">
                   <pixmap>../8a3a0566/sunny.png</pixmap>
                  </property>
                  <property name="scaledContents">
                   <bool>true</bool>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="icon_chance_of_rain1">
+                 <property name="maximumSize">
+                  <size>
+                   <width>75</width>
+                   <height>75</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Liberation Sans</family>
+                   <pointsize>10</pointsize>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(85, 170, 255);</string>
+                 </property>
+                 <property name="text">
+                  <string>69%</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignmentFlag::AlignCenter</set>
                  </property>
                 </widget>
                </item>
@@ -301,6 +342,34 @@
                  <property name="text">
                   <string>O</string>
                  </property>
+                 <property name="alignment">
+                  <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="icon_chance_of_rain2">
+                 <property name="maximumSize">
+                  <size>
+                   <width>75</width>
+                   <height>75</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Noto Sans</family>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(85, 170, 255);</string>
+                 </property>
+                 <property name="text">
+                  <string>69%</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignmentFlag::AlignCenter</set>
+                 </property>
                 </widget>
                </item>
                <item>
@@ -319,6 +388,34 @@
                  </property>
                  <property name="text">
                   <string>O</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="icon_chance_of_rain3">
+                 <property name="maximumSize">
+                  <size>
+                   <width>75</width>
+                   <height>75</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Noto Sans</family>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(85, 170, 255);</string>
+                 </property>
+                 <property name="text">
+                  <string>69%</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignmentFlag::AlignCenter</set>
                  </property>
                 </widget>
                </item>
@@ -339,6 +436,34 @@
                  <property name="text">
                   <string>O</string>
                  </property>
+                 <property name="alignment">
+                  <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="icon_chance_of_rain4">
+                 <property name="maximumSize">
+                  <size>
+                   <width>75</width>
+                   <height>75</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Noto Sans</family>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(85, 170, 255);</string>
+                 </property>
+                 <property name="text">
+                  <string>69%</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignmentFlag::AlignCenter</set>
+                 </property>
                 </widget>
                </item>
                <item>
@@ -358,6 +483,34 @@
                  <property name="text">
                   <string>O</string>
                  </property>
+                 <property name="alignment">
+                  <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="icon_chance_of_rain5">
+                 <property name="maximumSize">
+                  <size>
+                   <width>75</width>
+                   <height>75</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Noto Sans</family>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(85, 170, 255);</string>
+                 </property>
+                 <property name="text">
+                  <string>69%</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignmentFlag::AlignCenter</set>
+                 </property>
                 </widget>
                </item>
               </layout>
@@ -369,12 +522,18 @@
                  <property name="text">
                   <string>TextLabel</string>
                  </property>
+                 <property name="alignment">
+                  <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+                 </property>
                 </widget>
                </item>
                <item>
                 <widget class="QLabel" name="day2_temp_overview">
                  <property name="text">
                   <string>TextLabel</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
                  </property>
                 </widget>
                </item>
@@ -383,6 +542,9 @@
                  <property name="text">
                   <string>TextLabel</string>
                  </property>
+                 <property name="alignment">
+                  <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+                 </property>
                 </widget>
                </item>
                <item>
@@ -390,12 +552,18 @@
                  <property name="text">
                   <string>TextLabel</string>
                  </property>
+                 <property name="alignment">
+                  <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+                 </property>
                 </widget>
                </item>
                <item>
                 <widget class="QLabel" name="day5_temp_overview">
                  <property name="text">
                   <string>TextLabel</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
                  </property>
                 </widget>
                </item>
