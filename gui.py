@@ -159,6 +159,8 @@ class MainWindow(QMainWindow):
         self.create_forecast_table(hourly_forecast_info)
         self.create_observation_table(hourly_observation_info)
 
+        self.ui.rain_graph_overview.plot_graph(hourly_forecast_info)
+
         self.ui.tabWidget.setTabEnabled(0, True)
         self.ui.tabWidget.setTabEnabled(1, True)
         self.ui.tabWidget.setTabEnabled(2, True)
@@ -235,6 +237,16 @@ class MainWindow(QMainWindow):
         self.ui.sunset_overview.setText(
             f"Sunset: {daily_forecast_info[0].get('sunset_time')}")
 
+        # Rain Info
+        if daily_forecast_info[0].get('max_rain_amount') == '':
+            self.ui.forecast_amount_of_rain_overview.setText(f'{daily_forecast_info[0].get(
+                'min_rain_amount')}mm')
+        else:
+            self.ui.forecast_amount_of_rain_overview.setText(f'{daily_forecast_info[0].get(
+                'min_rain_amount')}-{daily_forecast_info[0].get('max_rain_amount')}mm')
+        self.ui.chance_of_rain_overview.setText(
+            f'{daily_forecast_info[0].get('chance_of_rain')}%')
+
         # Wind Speed
         wind_direction = ob_info.get('wind_direction')
         wind_direction_full = ''
@@ -286,6 +298,8 @@ class MainWindow(QMainWindow):
         elif wind_direction == 'NNW':
             self.ui.compass_widget.setAngle(157.5)
             wind_direction_full = 'North Northwest'
+        else:
+            self.ui.compass_widget.setAngle(0)
 
         self.ui.wind_speed_overview.setText(
             f"{ob_info.get('wind')}{self.ws_unit} {wind_direction_full}")
@@ -322,7 +336,6 @@ class MainWindow(QMainWindow):
             daily_forecast_info[5].get('icon_descriptor'), self.ui.icon_overview5, is_night=False)
 
         # Past Weather
-
         # Highlights
 
         self.ui.highlights_max_temp.setText(f"{ob_info.get('max_temp')}\u00b0")

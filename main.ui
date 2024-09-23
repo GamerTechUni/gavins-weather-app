@@ -535,7 +535,49 @@
             </property>
             <layout class="QVBoxLayout" name="verticalLayout_11">
              <item>
-              <widget class="QGraphicsView" name="graphicsView"/>
+              <widget class="GraphPlot" name="rain_graph_overview"/>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_17" stretch="1,20">
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="QLabel" name="label_6">
+                 <property name="text">
+                  <string>Forecasted Amount of Rain Today: </string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="forecast_amount_of_rain_overview">
+                 <property name="text">
+                  <string>x-xmm</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_18" stretch="1,20">
+               <item>
+                <widget class="QLabel" name="label_4">
+                 <property name="text">
+                  <string>Chance of Rain Today: </string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="chance_of_rain_overview">
+                 <property name="text">
+                  <string>x%</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
              </item>
             </layout>
            </widget>
@@ -874,6 +916,11 @@
    <extends>QWidget</extends>
    <header>compasswidget.h</header>
    <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>GraphPlot</class>
+   <extends>QGraphicsView</extends>
+   <header>graphplot.h</header>
   </customwidget>
  </customwidgets>
  <resources/>

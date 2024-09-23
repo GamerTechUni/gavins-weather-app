@@ -15,13 +15,14 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QGraphicsView,
-    QGridLayout, QHBoxLayout, QHeaderView, QLabel,
-    QLineEdit, QMainWindow, QProgressBar, QPushButton,
-    QSizePolicy, QTabWidget, QTableWidget, QTableWidgetItem,
-    QVBoxLayout, QWidget)
+from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QGridLayout,
+    QHBoxLayout, QHeaderView, QLabel, QLineEdit,
+    QMainWindow, QProgressBar, QPushButton, QSizePolicy,
+    QTabWidget, QTableWidget, QTableWidgetItem, QVBoxLayout,
+    QWidget)
 
 from compasswidget import CompassWidget
+from graphplot import GraphPlot
 
 class Ui_WeatherApp(object):
     def setupUi(self, WeatherApp):
@@ -374,10 +375,46 @@ class Ui_WeatherApp(object):
         self.amount_of_rain.setFrameShadow(QFrame.Shadow.Plain)
         self.verticalLayout_11 = QVBoxLayout(self.amount_of_rain)
         self.verticalLayout_11.setObjectName(u"verticalLayout_11")
-        self.graphicsView = QGraphicsView(self.amount_of_rain)
-        self.graphicsView.setObjectName(u"graphicsView")
+        self.rain_graph_overview = GraphPlot(self.amount_of_rain)
+        self.rain_graph_overview.setObjectName(u"rain_graph_overview")
 
-        self.verticalLayout_11.addWidget(self.graphicsView)
+        self.verticalLayout_11.addWidget(self.rain_graph_overview)
+
+        self.horizontalLayout_17 = QHBoxLayout()
+        self.horizontalLayout_17.setSpacing(0)
+        self.horizontalLayout_17.setObjectName(u"horizontalLayout_17")
+        self.horizontalLayout_17.setContentsMargins(-1, -1, -1, 0)
+        self.label_6 = QLabel(self.amount_of_rain)
+        self.label_6.setObjectName(u"label_6")
+
+        self.horizontalLayout_17.addWidget(self.label_6)
+
+        self.forecast_amount_of_rain_overview = QLabel(self.amount_of_rain)
+        self.forecast_amount_of_rain_overview.setObjectName(u"forecast_amount_of_rain_overview")
+
+        self.horizontalLayout_17.addWidget(self.forecast_amount_of_rain_overview)
+
+        self.horizontalLayout_17.setStretch(0, 1)
+        self.horizontalLayout_17.setStretch(1, 20)
+
+        self.verticalLayout_11.addLayout(self.horizontalLayout_17)
+
+        self.horizontalLayout_18 = QHBoxLayout()
+        self.horizontalLayout_18.setObjectName(u"horizontalLayout_18")
+        self.label_4 = QLabel(self.amount_of_rain)
+        self.label_4.setObjectName(u"label_4")
+
+        self.horizontalLayout_18.addWidget(self.label_4)
+
+        self.chance_of_rain_overview = QLabel(self.amount_of_rain)
+        self.chance_of_rain_overview.setObjectName(u"chance_of_rain_overview")
+
+        self.horizontalLayout_18.addWidget(self.chance_of_rain_overview)
+
+        self.horizontalLayout_18.setStretch(0, 1)
+        self.horizontalLayout_18.setStretch(1, 20)
+
+        self.verticalLayout_11.addLayout(self.horizontalLayout_18)
 
 
         self.right_side.addWidget(self.amount_of_rain)
@@ -671,6 +708,10 @@ class Ui_WeatherApp(object):
         self.protection_time_overview.setText(QCoreApplication.translate("WeatherApp", u"xx:xxam to xx:xxpm", None))
         self.sunrise_overview.setText(QCoreApplication.translate("WeatherApp", u"Sunrise: xx:xx", None))
         self.sunset_overview.setText(QCoreApplication.translate("WeatherApp", u"Sunset: xx:xx", None))
+        self.label_6.setText(QCoreApplication.translate("WeatherApp", u"Forecasted Amount of Rain Today: ", None))
+        self.forecast_amount_of_rain_overview.setText(QCoreApplication.translate("WeatherApp", u"x-xmm", None))
+        self.label_4.setText(QCoreApplication.translate("WeatherApp", u"Chance of Rain Today: ", None))
+        self.chance_of_rain_overview.setText(QCoreApplication.translate("WeatherApp", u"x%", None))
         self.label.setText(QCoreApplication.translate("WeatherApp", u"N", None))
         self.label_25.setText(QCoreApplication.translate("WeatherApp", u"Current Wind Speed", None))
         self.wind_speed_overview.setText(QCoreApplication.translate("WeatherApp", u"xxkm/h direction", None))

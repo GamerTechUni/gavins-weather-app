@@ -292,7 +292,9 @@ def fetch_hourly_observations(wmo_code, state, timezone):
 if __name__ == "__main__":
     # print(fetch_location_information('rnj5usw'))
     # print(fetch_location_options('Perth'))
-    # daily_forecast = fetch_daily_forecast('qsycvsc')
+    daily_forecast = fetch_daily_forecast(
+        'r6sxpuw', timezone='Australia/Sydney')
+    print(daily_forecast[0])
     # print(daily_forecast[0])
     # write_to_settings({'ws_unit': 'km/h'})
-    print(read_settings('ws_unit'))
+    # print(read_settings('ws_unit'))
