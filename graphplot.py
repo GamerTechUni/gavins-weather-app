@@ -42,6 +42,6 @@ class GraphPlot(QGraphicsView):
 
         pen = pg.mkPen(color=(255, 0, 0), width=3)
         self.graph_widget.showGrid(x=True, y=True)
-        self.graph_widget.setLabel('left', 'Average Amount of Rain (mL)')
+        self.graph_widget.setLabel('left', 'Average Amount of Rain (mm)')
         self.graph_widget.setLabel('bottom', 'Forecast Hours (H)')
         self.graph_widget.plot(hours, rain_amount, pen=pen)
