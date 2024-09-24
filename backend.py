@@ -283,11 +283,11 @@ def check_if_none_value(key, value_name, data):
     """
     try:
         value = data[key].get(value_name)
-        if value == None:
+        if value is None:
             value = ''
     except KeyError:
         value = data.get(value_name)
-        if value == None:
+        if value is None:
             value = '-'
     except AttributeError:
         value = '-'
