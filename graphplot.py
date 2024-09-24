@@ -1,4 +1,3 @@
-import sys
 from PySide6.QtGui import QPalette
 from PySide6.QtWidgets import QApplication, QWidget, QGraphicsView, QVBoxLayout
 import pyqtgraph as pg
@@ -7,13 +6,28 @@ WS_UNIT = 'km/h'
 
 
 class GraphPlot(QGraphicsView):
+    """
+    Widget that takes in weather data and outputs a graphical representation
+
+    ...
+
+    Attributes
+    ----------
+    graph_widget
+        Defines pyqtgraph widget across class
+    plot_graph
+        Method to draw graph with the data given
+    """
 
     def __init__(self, *args, **kwargs):
+        """ Init method to set up the graph
+        """
         super(GraphPlot, self).__init__(*args, **kwargs)
 
         layout = QVBoxLayout()
         self.graph_widget = pg.PlotWidget()
 
+        # Sets the background of graph to the same as the program
         color = self.palette().color(QPalette.Window)
         self.graph_widget.setBackground(color)
 
@@ -21,13 +35,21 @@ class GraphPlot(QGraphicsView):
         self.setLayout(layout)
 
     def plot_graph(self, hourly_info):
+        """
+        Parameters
+        ----------
+        hourly_info : list
+            The weather data that is to be presented graphically
+
+        """
         self.graph_widget.clear()
+        # Sets up autorange to resize the area based on the graph presented
         self.graph_widget.enableAutoRange(axis='y')
         self.graph_widget.setAutoVisible(y=True)
-        # self.graph_widget.setRange(xRange=[0, 73], yRange=[0, 30])
         hours = []
         rain_amount = []
         for hour, data in enumerate(hourly_info):
+            # Make sure to get a list of total hours and also the data too
             min_rain_amount = data.get(
                 'min_rain_amount')
             max_rain_amount = data.get(
@@ -36,10 +58,12 @@ class GraphPlot(QGraphicsView):
             if max_rain_amount == '':
                 max_rain_amount = 0
 
+            # Get the average amount of rain
             average_rain_amount = (min_rain_amount+max_rain_amount)/2
             hours.append(hour)
             rain_amount.append(average_rain_amount)
 
+        # Sets colour to red and makes line thicker
         pen = pg.mkPen(color=(255, 0, 0), width=3)
         self.graph_widget.showGrid(x=True, y=True)
         self.graph_widget.setLabel('left', 'Average Amount of Rain (mm)')

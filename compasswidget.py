@@ -5,6 +5,11 @@ from PySide6.QtGui import QPainter, QPalette, QFont, QFontMetricsF, QPen, QPolyg
 
 
 class CompassWidget(QWidget):
+    """
+    I do not know how to document this, just ported it
+    to QT6, removing features that
+    didn't work
+    """
 
     angleChanged = Signal(float)
 
@@ -14,8 +19,8 @@ class CompassWidget(QWidget):
 
         self._angle = 0.0
         self._margins = 10
-        self._pointText = {0: "N", 45: "NE", 90: "E", 135: "SE", 180: "S",
-                           225: "SW", 270: "W", 315: "NW"}
+        self._point_text = {0: "N", 45: "NE", 90: "E", 135: "SE", 180: "S",
+                            225: "SW", 270: "W", 315: "NW"}
 
     def paintEvent(self, event):
 

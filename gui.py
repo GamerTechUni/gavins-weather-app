@@ -29,28 +29,36 @@ from backend import (fetch_location_options,
 class MainWindow(QMainWindow):
     def __init__(self):
         super(MainWindow, self).__init__()
+
+        # Create attribute to that stores location to share info across class
         self.location_and_geohash = {}
+
+        # Read settings file
         self.ws_unit = read_settings('ws_unit')
         self.previous_location_geohash = read_settings(
             'previous_location_geohash')
         self.previous_location_name = read_settings('previous_location_name')
 
+        # Create thread to avoid freezing program while searching
         self.thread_manager = QThreadPool()
 
         self.ui = Ui_WeatherApp()
         self.ui.setupUi(self)
         self.setWindowTitle("Gavin's Weather App")
 
+        # Sends call everytime the text changes in the search bar
         self.ui.location_input.textChanged.connect(
             self.display_locations_thread)
         self.ui.get_weather_button.clicked.connect(
             self.get_current_location_from_selection)
         self.ui.overview.hide()
+
+        # Disable tabs until weather data is loaded
         self.ui.tabWidget.setTabEnabled(0, False)
         self.ui.tabWidget.setTabEnabled(1, False)
         self.ui.tabWidget.setTabEnabled(2, False)
 
-        # Weather Icons
+        # Define Weather Icons
         self.sunny_icon = QPixmap('assets/bom/sunny.png')
         self.cloudy_icon = QPixmap('assets/bom/cloudy.png')
         self.hazy_icon = QPixmap('assets/bom/haze.png')
@@ -76,6 +84,7 @@ class MainWindow(QMainWindow):
         self.light_shower_night_icon = QPixmap(
             'assets/bom/light-showers-night.png')
 
+        # Resize icons to the limit of the label size
         self.resize(self.sunny_icon.width(), self.sunny_icon.height())
         self.resize(self.cloudy_icon.width(), self.cloudy_icon.height())
         self.resize(self.hazy_icon.width(), self.hazy_icon.height())
@@ -108,9 +117,15 @@ class MainWindow(QMainWindow):
                     self.light_shower_night_icon.height())
 
         if self.previous_location_geohash != '':
+            # If a previous location has been stored in settings, then restore previous location
             self.get_previous_location_info()
 
     def display_locations(self):
+        """ A method that gathers location options to be stored
+        Calls fetch_location_options from the backend module and stores it in
+        self.location_and_geohash for use and then presents the location
+        choices in the dropdown menu.
+        """
         location = self.ui.location_input.text()
         self.location_and_geohash = fetch_location_options(location)
         location_options = self.location_and_geohash.keys()
@@ -119,15 +134,26 @@ class MainWindow(QMainWindow):
 
     @Slot()
     def display_locations_thread(self):
+        """ Creates thread for display_locations method
+        """
         self.thread_manager.start(self.display_locations)
 
     def get_previous_location_info(self):
+        """ Retrieves location info from settings.ini file
+        The info from the settings.ini file is used to gather
+        the weather data for the location to restore it.
+        Calls self.get_weather_info to actually retrieve the data.
+        """
         geohash = self.previous_location_geohash
         location_name = self.previous_location_name
         self.get_weather_info(location_name, geohash)
 
     @Slot()
     def get_current_location_from_selection(self):
+        """ Retrieves weather data from selection
+        Gathers selection from dropdown menu and then calls
+        self.get_weather_info to gather the weather data.
+        """
         try:
             geohash = self.location_and_geohash[self.ui.location_choices.currentText(
             )]
@@ -137,9 +163,25 @@ class MainWindow(QMainWindow):
             self.get_weather_info(location_name, geohash)
         except KeyError:
             QMessageBox.information(
-                self, "No Location Selected", "You have not selected a location\nPlease select a location")
+                self, "No Location Selected",
+                "You have not selected a location\nPlease select a location")
 
     def get_weather_info(self, location_name, geohash):
+        """ Gathers weather info and sets things up
+        The method will gather the data using functions from
+        the backend module and then initialises everything else
+        by calling the self.set_placeholder_values method to replace
+        placeholder data with actual weather data. Also enables the
+        other tabs, creates tables for hourly forecasts and observations,
+        as well as plotting the graph.
+        Parameters
+        ----------
+        location_name : str
+            The name of the location that has been selected or restored
+        geohash : str
+            Seven digit code used to identify location and gather weather data
+
+        """
         location_info = fetch_location_information(geohash)
 
         timezone = location_info.get('timezone')
@@ -167,6 +209,17 @@ class MainWindow(QMainWindow):
         self.ui.tabWidget.setCurrentWidget(self.ui.overview)
 
     def set_placeholder_values(self, ob_info, daily_forecast_info, location_name):
+        """ Replaces placeholder data with actual weather data
+        Parameters
+        ----------
+        ob_info : dict
+            Current observation data used to replace placeholder data in the UI
+        daily_forecast_info : list
+            Forecast info used to replace placeholder data in the UI
+        location_name : str
+            Used to replace location placeholder name with actual location
+
+        """
         # Overview
         is_night = daily_forecast_info[0].get('is_night')
 
@@ -184,7 +237,8 @@ class MainWindow(QMainWindow):
             self.ui.max_temp_overview.setText(
                 f"Tomorrow's Max: {str(daily_forecast_info[1].get('max_temp'))}\u00b0")
             self.set_overview_forecast_icons(
-                daily_forecast_info[0].get('icon_descriptor'), self.ui.current_day_icon_overview, is_night)
+                daily_forecast_info[0].get('icon_descriptor'),
+                self.ui.current_day_icon_overview, is_night)
         else:
 
             self.ui.min_temp_overview.setText(f"Min: {str(
@@ -192,7 +246,8 @@ class MainWindow(QMainWindow):
             self.ui.max_temp_overview.setText(f"Max: {str(
                 daily_forecast_info[0].get('max_temp'))}\u00b0")
             self.set_overview_forecast_icons(
-                daily_forecast_info[0].get('icon_descriptor'), self.ui.current_day_icon_overview, is_night)
+                daily_forecast_info[0].get('icon_descriptor'),
+                self.ui.current_day_icon_overview, is_night)
 
         self.ui.place_overview.setText(location_name)
 
@@ -237,7 +292,7 @@ class MainWindow(QMainWindow):
         self.ui.sunset_overview.setText(
             f"Sunset: {daily_forecast_info[0].get('sunset_time')}")
 
-        # Rain Info
+        # Set the relevant rain info in the rain widget
         if daily_forecast_info[0].get('max_rain_amount') == '':
             self.ui.forecast_amount_of_rain_overview.setText(f'{daily_forecast_info[0].get(
                 'min_rain_amount')}mm')
@@ -247,6 +302,7 @@ class MainWindow(QMainWindow):
         self.ui.chance_of_rain_overview.setText(
             f'{daily_forecast_info[0].get('chance_of_rain')}%')
 
+        # Show chance of rain in the upcoming forecast section
         self.ui.icon_chance_of_rain1.setText(f"{daily_forecast_info[1].get(
             'chance_of_rain')}%")
         self.ui.icon_chance_of_rain2.setText(f"{daily_forecast_info[2].get(
@@ -258,7 +314,7 @@ class MainWindow(QMainWindow):
         self.ui.icon_chance_of_rain5.setText(f"{daily_forecast_info[5].get(
             'chance_of_rain')}%")
 
-        # Wind Speed
+        # Set compass to show direction of wind
         wind_direction = ob_info.get('wind_direction')
         wind_direction_full = ''
         if wind_direction == 'N':
@@ -315,7 +371,7 @@ class MainWindow(QMainWindow):
         self.ui.wind_speed_overview.setText(
             f"{ob_info.get('wind')}{self.ws_unit} {wind_direction_full}")
 
-        # Future Forecast Overview
+        # Set Future Forecast Overview Data
         self.ui.day1_overview.setText("Tomorrow")
         self.ui.day1_temp_overview.setText(f"{daily_forecast_info[1].get(
             'min_temp')}\u00b0—{daily_forecast_info[1].get('max_temp')}\u00b0")
@@ -346,9 +402,7 @@ class MainWindow(QMainWindow):
         self.set_overview_forecast_icons(
             daily_forecast_info[5].get('icon_descriptor'), self.ui.icon_overview5, is_night=False)
 
-        # Past Weather
-        # Highlights
-
+        # Set highlight information in 'Past' tab
         self.ui.highlights_max_temp.setText(f"{ob_info.get('max_temp')}\u00b0")
         self.ui.highlights_max_temp_time.setText(
             f"at {ob_info.get('max_temp_time')}")
@@ -363,11 +417,21 @@ class MainWindow(QMainWindow):
             f"{ob_info.get('rain_since_9am')}mm")
 
     def set_overview_forecast_icons(self, weather_condition, label, is_night):
-        print(weather_condition)
+        """ Sets the weather icons of the given label, based on the condition
+        Parameters
+        ----------
+        weather_condition : str
+            Tells function what the weather condition is from the data
+        label : QLabel
+            Tells function what label to set the pixmap of
+        is_night : bool
+            Tells function whether to set the day icons or night icons
+        """
+
         if is_night:
             if weather_condition == 'clear':
                 label.setPixmap(self.clear_icon)
-            elif weather_condition == 'partly_cloudy':
+            elif weather_condition == 'partly_cloudy' or weather_condition == 'mostly_sunny':
                 label.setPixmap(self.partly_cloudy_night_icon)
             elif weather_condition == 'hazy':
                 label.setPixmap(self.hazy_night_icon)
@@ -393,6 +457,7 @@ class MainWindow(QMainWindow):
             elif weather_condition == 'light_shower':
                 label.setPixmap(self.light_shower_icon)
 
+        # Icons that are the same during day and night
         if weather_condition == 'cloudy':
             label.setPixmap(self.cloudy_icon)
         elif weather_condition == 'storm':
@@ -417,9 +482,16 @@ class MainWindow(QMainWindow):
         label.setScaledContents(True)
 
     def create_forecast_table(self, hourly_data):
+        """ Creates a tabular form of the hourly data on the forecast tab
+        Parameters
+        ----------
+        hourly_data : list
+            The weather data that is used to create a tabular form of the data
+        """
         time_list = []
-        category_list = ['Air temperature (\u00b0C)', 'Feels like (\u00b0C)', 'Dew point temperature (\u00b0C)',
-                         'UV Index', f'Wind speed ({self.ws_unit})', 'Wind direction']
+        category_list = ['Air temperature (\u00b0C)', 'Feels like (\u00b0C)',
+                         'Dew point temperature (\u00b0C)', 'UV Index',
+                         f'Wind speed ({self.ws_unit})', 'Wind direction']
         for hour in hourly_data:
             hour_time = hour.get('time')
             time_list.append(hour_time)
@@ -446,9 +518,17 @@ class MainWindow(QMainWindow):
                 str(hourly_data[i].get('wind_direction'))))
 
     def create_observation_table(self, hourly_data):
+        """ Creates a tabular form of the past hourly observation data on the past tab
+        Parameters
+        ----------
+        hourly_data : list
+            The weather data that is used to create a tabular form of the data
+        """
         time_list = []
-        category_list = ['Air temperature (°C)', 'Feels like (°C)', 'Dew point temperature (°C)',
-                         'Humidity', f'Wind speed ({self.ws_unit})', f'Gust Speed ({self.ws_unit})', 'Wind direction', 'Pressure (hPa)']
+        category_list = ['Air temperature (°C)', 'Feels like (°C)',
+                         'Dew point temperature (°C)', 'Humidity',
+                         f'Wind speed ({self.ws_unit})',
+                         f'Gust Speed ({self.ws_unit})', 'Wind direction', 'Pressure (hPa)']
         for hour in hourly_data:
             hour_time = hour.get('time')
             time_list.append(hour_time)

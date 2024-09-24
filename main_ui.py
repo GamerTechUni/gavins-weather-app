@@ -743,6 +743,7 @@ class Ui_WeatherApp(object):
 
     def retranslateUi(self, WeatherApp):
         WeatherApp.setWindowTitle(QCoreApplication.translate("WeatherApp", u"MainWindow", None))
+        self.location_input.setPlaceholderText(QCoreApplication.translate("WeatherApp", u"Enter Your Location Here", None))
         self.get_weather_button.setText(QCoreApplication.translate("WeatherApp", u"Get Weather", None))
         self.place_overview.setText(QCoreApplication.translate("WeatherApp", u"Place", None))
         self.current_temp_overview.setText(QCoreApplication.translate("WeatherApp", u"X\u00b0", None))
@@ -756,7 +757,7 @@ class Ui_WeatherApp(object):
         self.day3_overview.setText(QCoreApplication.translate("WeatherApp", u"Day3", None))
         self.day4_overview.setText(QCoreApplication.translate("WeatherApp", u"Day 4", None))
         self.day5_overview.setText(QCoreApplication.translate("WeatherApp", u"Day5", None))
-        self.icon_overview1.setText(QCoreApplication.translate("WeatherApp", u"O", None))
+        self.icon_overview1.setText("")
         self.icon_chance_of_rain1.setText(QCoreApplication.translate("WeatherApp", u"69%", None))
         self.icon_overview2.setText(QCoreApplication.translate("WeatherApp", u"O", None))
         self.icon_chance_of_rain2.setText(QCoreApplication.translate("WeatherApp", u"69%", None))

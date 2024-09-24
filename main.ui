@@ -37,6 +37,9 @@
          <property name="styleSheet">
           <string notr="true"/>
          </property>
+         <property name="placeholderText">
+          <string>Enter Your Location Here</string>
+         </property>
         </widget>
        </item>
        <item>
@@ -286,7 +289,7 @@
                   </font>
                  </property>
                  <property name="text">
-                  <string>O</string>
+                  <string/>
                  </property>
                  <property name="pixmap">
                   <pixmap>../8a3a0566/sunny.png</pixmap>
