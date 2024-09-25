@@ -13,7 +13,8 @@ from PySide6.QtWidgets import (QWidget,
                                QTabWidget,
                                QMessageBox,
                                QAbstractItemView,
-                               QTableWidgetItem)
+                               QTableWidgetItem,
+                               QHeaderView)
 from PySide6.QtCore import Qt, Slot, QThreadPool
 from main_ui import Ui_WeatherApp
 from backend import (fetch_location_options,
@@ -504,6 +505,10 @@ class MainWindow(QMainWindow):
         self.ui.forecast_info_table.setHorizontalHeaderLabels(time_list)
         self.ui.forecast_info_table.setEditTriggers(
             QAbstractItemView.NoEditTriggers)
+        self.ui.forecast_info_table.horizontalHeader().setSectionResizeMode(
+            QHeaderView.Fixed)
+        self.ui.forecast_info_table.verticalHeader().setSectionResizeMode(
+            QHeaderView.Fixed)
 
         for i in range(len(time_list)):
             self.ui.forecast_info_table.setItem(
@@ -541,6 +546,10 @@ class MainWindow(QMainWindow):
         self.ui.observation_info_table.setHorizontalHeaderLabels(time_list)
         self.ui.observation_info_table.setEditTriggers(
             QAbstractItemView.NoEditTriggers)
+        self.ui.observation_info_table.horizontalHeader().setSectionResizeMode(
+            QHeaderView.Fixed)
+        self.ui.observation_info_table.verticalHeader().setSectionResizeMode(
+            QHeaderView.Fixed)
 
         for i in range(len(time_list)):
             self.ui.observation_info_table.setItem(
