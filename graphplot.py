@@ -1,3 +1,6 @@
+"""
+TODO: Add Module Docstring
+"""
 from PySide6.QtGui import QPalette
 from PySide6.QtWidgets import QApplication, QWidget, QGraphicsView, QVBoxLayout
 import pyqtgraph as pg
@@ -22,14 +25,14 @@ class GraphPlot(QGraphicsView):
     def __init__(self, *args, **kwargs):
         """ Init method to set up the graph
         """
-        super(GraphPlot, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
 
         layout = QVBoxLayout()
         self.graph_widget = pg.PlotWidget()
 
         # Sets the background of graph to the same as the program
         color = self.palette().color(QPalette.Window)
-        self.graph_widget.setBackground(color)
+        self.graph_widget.setBackground('#19232D')
 
         layout.addWidget(self.graph_widget)
         self.setLayout(layout)
@@ -46,6 +49,7 @@ class GraphPlot(QGraphicsView):
         # Sets up autorange to resize the area based on the graph presented
         self.graph_widget.enableAutoRange(axis='y')
         self.graph_widget.setAutoVisible(y=True)
+        self.graph_widget.setMouseEnabled(x=False, y=False)
         hours = []
         rain_amount = []
         for hour, data in enumerate(hourly_info):

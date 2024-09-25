@@ -1,4 +1,6 @@
-from threading import Thread
+"""
+TODO: Add Module Docstring
+"""
 from PySide6.QtGui import QPixmap
 from PySide6.QtWidgets import (QWidget,
                                QMainWindow,
@@ -28,7 +30,7 @@ from backend import (fetch_location_options,
 
 class MainWindow(QMainWindow):
     def __init__(self):
-        super(MainWindow, self).__init__()
+        super().__init__()
 
         # Create attribute to that stores location to share info across class
         self.location_and_geohash = {}
@@ -272,19 +274,19 @@ class MainWindow(QMainWindow):
             # Set UV Index bar colour based on category of risk
         if max_uv_category == 'low':
             self.ui.uv_index_bar.setStyleSheet(
-                "selection-background-color: green")
+                "QProgressBar::chunk {background-color: green}")
         elif max_uv_category == 'moderate':
             self.ui.uv_index_bar.setStyleSheet(
-                "selection-background-color: yellow")
+                "QProgressBar::chunk {background-color: yellow}")
         elif max_uv_category == 'high':
             self.ui.uv_index_bar.setStyleSheet(
-                "selection-background-color: orange")
+                "QProgressBar::chunk {background-color: orange}")
         elif max_uv_category == 'veryhigh':
             self.ui.uv_index_bar.setStyleSheet(
-                "selection-background-color: red")
+                "QProgressBar::chunk {background-color: red}")
         elif max_uv_category == 'extreme':
             self.ui.uv_index_bar.setStyleSheet(
-                "selection-background-color: violet")
+                "QProgressBar::chunk {background-color: violet}")
 
         # Sunrise and Sunset Time
         self.ui.sunrise_overview.setText(

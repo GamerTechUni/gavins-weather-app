@@ -1,3 +1,7 @@
+"""
+TODO: Add Module Docstring
+"""
+
 import sys
 from PySide6.QtCore import Qt, Signal, Slot, Property, QSize, QPoint
 from PySide6.QtWidgets import QWidget, QApplication, QSpinBox, QVBoxLayout
