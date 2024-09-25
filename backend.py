@@ -141,7 +141,8 @@ def fetch_location_information(geohash):
         timeout=90, headers=HEADERS)
     location_info_raw = json.loads(json.dumps(response1.json()))
     response2 = requests.get(
-        f"https://api.weather.bom.gov.au/v1/locations/{geohash[:-1]}/observations",
+        f"https://api.weather.bom.gov.au/v1/locations/{
+            geohash[:-1]}/observations",
         timeout=90, headers=HEADERS)
     observation_data = json.loads(json.dumps(response2.json())).get("data")
     location_info = {'name': check_if_none_value('data', 'name', location_info_raw),
@@ -170,7 +171,8 @@ def fetch_observation(geohash, timezone):
         Pairs containing observation data for location extracted from BOM API request 
     """
     response = requests.get(
-        f"https://api.weather.bom.gov.au/v1/locations/{geohash[:-1]}/observations",
+        f"https://api.weather.bom.gov.au/v1/locations/{
+            geohash[:-1]}/observations",
         timeout=90, headers=HEADERS)
     observation_data = json.loads(json.dumps(response.json())).get("data")
     ws_unit = read_settings('ws_unit')
@@ -181,23 +183,23 @@ def fetch_observation(geohash, timezone):
         wind_unit = 'speed_knot'
     ob_info = {'max_temp': check_if_none_value("max_temp", "value", observation_data),
                'max_temp_time': parse_time(
-                    check_if_none_value("max_temp", "time", observation_data),
-                    date_format="hour_minute", utc=True, timezone=timezone),
-               'min_temp': check_if_none_value("min_temp", "value", observation_data),
-               'min_temp_time': parse_time(
-                    check_if_none_value("min_temp", "time", observation_data),
-                    date_format="hour_minute", utc=True, timezone=timezone),
-               'current_temp': check_if_none_value(None, "temp", observation_data),
-               'feels_like_temp': check_if_none_value(None, "temp_feels_like", observation_data),
-               'humidity': check_if_none_value(None, "humidity", observation_data),
-               'rain_since_9am': check_if_none_value(None, "rain_since_9am", observation_data),
-               'wind': check_if_none_value("wind", wind_unit, observation_data),
-               'wind_direction': check_if_none_value("wind", "direction", observation_data),
-               'gust': check_if_none_value("gust", wind_unit, observation_data),
-               'max_gust': check_if_none_value("max_gust", wind_unit, observation_data),
-               'max_gust_time': parse_time(
-                    check_if_none_value("max_gust", 'time', observation_data),
-                    date_format="hour_minute", utc=True, timezone=timezone)}
+        check_if_none_value("max_temp", "time", observation_data),
+        date_format="hour_minute", utc=True, timezone=timezone),
+        'min_temp': check_if_none_value("min_temp", "value", observation_data),
+        'min_temp_time': parse_time(
+        check_if_none_value("min_temp", "time", observation_data),
+        date_format="hour_minute", utc=True, timezone=timezone),
+        'current_temp': check_if_none_value(None, "temp", observation_data),
+        'feels_like_temp': check_if_none_value(None, "temp_feels_like", observation_data),
+        'humidity': check_if_none_value(None, "humidity", observation_data),
+        'rain_since_9am': check_if_none_value(None, "rain_since_9am", observation_data),
+        'wind': check_if_none_value("wind", wind_unit, observation_data),
+        'wind_direction': check_if_none_value("wind", "direction", observation_data),
+        'gust': check_if_none_value("gust", wind_unit, observation_data),
+        'max_gust': check_if_none_value("max_gust", wind_unit, observation_data),
+        'max_gust_time': parse_time(
+        check_if_none_value("max_gust", 'time', observation_data),
+        date_format="hour_minute", utc=True, timezone=timezone)}
 
     return ob_info
 
@@ -217,7 +219,8 @@ def fetch_daily_forecast(geohash, timezone):
         Pairs containing daily forecast data for the location extracted from BOM API request 
     """
     response = requests.get(
-        f"https://api.weather.bom.gov.au/v1/locations/{geohash}/forecasts/daily",
+        f"https://api.weather.bom.gov.au/v1/locations/{
+            geohash}/forecasts/daily",
         timeout=90, headers=HEADERS)
 
     forecast_data = json.loads(json.dumps(response.json())).get('data')
@@ -257,8 +260,8 @@ def fetch_daily_forecast(geohash, timezone):
 
         # Rain Information
         forecast_dict.update(
-            {'min_rain_amount': check_if_none_value('amount', 'min', rain_info),
-             'max_rain_amount': check_if_none_value('amount', 'max', rain_info),
+            {'min_rain_amount': check_if_none_value('amount', 'lower_range', rain_info),
+             'max_rain_amount': check_if_none_value('amount', 'upper_range', rain_info),
              'chance_of_rain': check_if_none_value(None, 'chance', rain_info)})
         daily_forecast_info.append(forecast_dict)
     return daily_forecast_info
@@ -454,7 +457,8 @@ def fetch_hourly_observations(wmo_code, state, timezone):
     """
     state_code = STATE_CODES.get(state)
     response = requests.get(
-        f"http://www.bom.gov.au/fwo/{state_code}60801/{state_code}60801.{wmo_code}.json",
+        f"http://www.bom.gov.au/fwo/{state_code}60801/{
+            state_code}60801.{wmo_code}.json",
         timeout=90, headers=HEADERS)
 
     hourly_observation_data = json.loads(json.dumps(response.json()))[
@@ -471,17 +475,17 @@ def fetch_hourly_observations(wmo_code, state, timezone):
     for hour in hourly_observation_data:
 
         observation_dict = {'time': parse_time(
-                                check_if_none_value(None, 'aifstime_utc', hour),
-                                date_format='hour_minute', utc=False, timezone=timezone),
-                            'name': check_if_none_value(None, 'name', hour),
-                            'temp': check_if_none_value(None, 'air_temp', hour),
-                            'feels_like_temp': check_if_none_value(None, 'apparent_t', hour),
-                            'humidity': check_if_none_value(None, 'rel_hum', hour),
-                            'wind_speed': check_if_none_value(None, f'wind_spd_{wind_unit}', hour),
-                            'gust_speed': check_if_none_value(None, f'gust_{wind_unit}', hour),
-                            'wind_direction': check_if_none_value(None, 'wind_dir', hour),
-                            'rain_since_9am': check_if_none_value(None, 'rain_trace', hour),
-                            'pressure': check_if_none_value(None, 'press', hour),
-                            'dew_point': check_if_none_value(None, 'dewpt', hour)}
+            check_if_none_value(None, 'aifstime_utc', hour),
+            date_format='hour_minute', utc=False, timezone=timezone),
+            'name': check_if_none_value(None, 'name', hour),
+            'temp': check_if_none_value(None, 'air_temp', hour),
+            'feels_like_temp': check_if_none_value(None, 'apparent_t', hour),
+            'humidity': check_if_none_value(None, 'rel_hum', hour),
+            'wind_speed': check_if_none_value(None, f'wind_spd_{wind_unit}', hour),
+            'gust_speed': check_if_none_value(None, f'gust_{wind_unit}', hour),
+            'wind_direction': check_if_none_value(None, 'wind_dir', hour),
+            'rain_since_9am': check_if_none_value(None, 'rain_trace', hour),
+            'pressure': check_if_none_value(None, 'press', hour),
+            'dew_point': check_if_none_value(None, 'dewpt', hour)}
         hourly_observation_info.append(observation_dict)
     return hourly_observation_info
