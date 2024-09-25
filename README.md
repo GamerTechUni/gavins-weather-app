@@ -31,7 +31,7 @@
 
  `python -m pip install pyside6 requests python-dateutil ratelimit pyqtgraph`
 
- After that, the program can be run by running the '__main__.py' file in the folder using Python
+ After that, the program can be run by running the "\_\_main__.py" file in the folder using Python
 
 ## Credits/Resources
 
