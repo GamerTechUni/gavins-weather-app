@@ -31,7 +31,6 @@ class GraphPlot(QGraphicsView):
         self.graph_widget = pg.PlotWidget()
 
         # Sets the background of graph to the same as the program
-        color = self.palette().color(QPalette.Window)
         self.graph_widget.setBackground('#19232D')
 
         layout.addWidget(self.graph_widget)
