@@ -48,12 +48,15 @@ class MainWindow(QMainWindow):
         self.ui = Ui_WeatherApp()
         self.ui.setupUi(self)
         self.setWindowTitle("Gavin's Weather App")
-
         # Sends call everytime the text changes in the search bar
         self.ui.location_input.textChanged.connect(
             self.display_locations_thread)
         self.ui.get_weather_button.clicked.connect(
             self.get_current_location_from_selection)
+
+        # Change unit of wind speed when radio buttons change
+        self.ui.ws_unit_button_kmh.toggled.connect(self.set_wind_speed_unit)
+        self.ui.ws_unit_button_knots.toggled.connect(self.set_wind_speed_unit)
         self.ui.overview.hide()
 
         # Disable tabs until weather data is loaded
@@ -185,6 +188,7 @@ class MainWindow(QMainWindow):
             Seven digit code used to identify location and gather weather data
 
         """
+        self.ws_unit = read_settings('ws_unit')
         location_info = fetch_location_information(geohash)
 
         timezone = location_info.get('timezone')
@@ -210,6 +214,16 @@ class MainWindow(QMainWindow):
         self.ui.tabWidget.setTabEnabled(1, True)
         self.ui.tabWidget.setTabEnabled(2, True)
         self.ui.tabWidget.setCurrentWidget(self.ui.overview)
+
+    def set_wind_speed_unit(self):
+        rb = self.sender()
+
+        # Write to settings unit for wind speed depending on what unit is selected
+        if rb.isChecked():
+            if rb.text() == '&km/h':
+                write_to_settings('ws_unit', 'km/h')
+            elif rb.text() == '&knots':
+                write_to_settings('ws_unit', 'kn')
 
     def set_placeholder_values(self, ob_info, daily_forecast_info, location_name):
         """ Replaces placeholder data with actual weather data
@@ -264,10 +278,10 @@ class MainWindow(QMainWindow):
             self.ui.sun_protection_recommended_overview.setText(
                 "Sun Protection Not Required")
         else:
-            if max_uv <= 11:
+            if max_uv <= 14:
                 self.ui.uv_index_bar.setValue(max_uv)
             else:
-                self.ui.uv_index_bar.setValue(11)
+                self.ui.uv_index_bar.setValue(14)
             if max_uv > 2:
                 self.ui.protection_time_overview.setText(f"From {daily_forecast_info[0].get(
                     'sun_prot_start_time')} to {daily_forecast_info[0].get('sun_prot_end_time')}")
@@ -296,7 +310,7 @@ class MainWindow(QMainWindow):
             f"Sunset: {daily_forecast_info[0].get('sunset_time')}")
 
         # Set the relevant rain info in the rain widget
-        if daily_forecast_info[0].get('max_rain_amount') == '':
+        if daily_forecast_info[0].get('max_rain_amount') == '0':
             self.ui.forecast_amount_of_rain_overview.setText(f'{daily_forecast_info[0].get(
                 'min_rain_amount')}mm')
         else:
@@ -419,6 +433,331 @@ class MainWindow(QMainWindow):
         self.ui.highlights_rain_since_9am.setText(
             f"{ob_info.get('rain_since_9am')}mm")
 
+        # Set weather icon for each day in 'Forecast' tab
+        self.set_overview_forecast_icons(
+            daily_forecast_info[0].get('icon_descriptor'),
+            self.ui.forecast_day1_icon, is_night=False)
+        self.set_overview_forecast_icons(
+            daily_forecast_info[1].get('icon_descriptor'),
+            self.ui.forecast_day2_icon, is_night=False)
+        self.set_overview_forecast_icons(
+            daily_forecast_info[2].get('icon_descriptor'),
+            self.ui.forecast_day3_icon, is_night=False)
+        self.set_overview_forecast_icons(
+            daily_forecast_info[3].get('icon_descriptor'),
+            self.ui.forecast_day4_icon, is_night=False)
+        self.set_overview_forecast_icons(
+            daily_forecast_info[4].get('icon_descriptor'),
+            self.ui.forecast_day5_icon, is_night=False)
+        self.set_overview_forecast_icons(
+            daily_forecast_info[5].get('icon_descriptor'),
+            self.ui.forecast_day6_icon, is_night=False)
+
+        # Set date for each day in 'Forecast' tab
+        self.ui.forecast_day1_date.setText(
+            f"Today {daily_forecast_info[0].get('date_no_weekday')}")
+        self.ui.forecast_day2_date.setText(
+            f"Tomorrow {daily_forecast_info[1].get('date_no_weekday')}")
+        self.ui.forecast_day3_date.setText(f"{daily_forecast_info[2].get(
+            'date')} {daily_forecast_info[2].get('date_no_weekday')}")
+        self.ui.forecast_day4_date.setText(f"{daily_forecast_info[3].get(
+            'date')} {daily_forecast_info[3].get('date_no_weekday')}")
+        self.ui.forecast_day5_date.setText(f"{daily_forecast_info[4].get(
+            'date')} {daily_forecast_info[4].get('date_no_weekday')}")
+        self.ui.forecast_day6_date.setText(f"{daily_forecast_info[5].get(
+            'date')} {daily_forecast_info[5].get('date_no_weekday')}")
+
+        # Set minimum temp each day in 'Forecast' tab
+        self.ui.forecast_day1_min_temp.setText(
+            f"{daily_forecast_info[0].get('min_temp')}\u00b0 Min")
+        self.ui.forecast_day2_min_temp.setText(
+            f"{daily_forecast_info[1].get('min_temp')}\u00b0 Min")
+        self.ui.forecast_day3_min_temp.setText(
+            f"{daily_forecast_info[2].get('min_temp')}\u00b0 Min")
+        self.ui.forecast_day4_min_temp.setText(
+            f"{daily_forecast_info[3].get('min_temp')}\u00b0 Min")
+        self.ui.forecast_day5_min_temp.setText(
+            f"{daily_forecast_info[4].get('min_temp')}\u00b0 Min")
+        self.ui.forecast_day6_min_temp.setText(
+            f"{daily_forecast_info[5].get('min_temp')}\u00b0 Min")
+
+        # Set maximum temp each day in 'Forecast' tab
+        self.ui.forecast_day1_max_temp.setText(
+            f"{daily_forecast_info[0].get('max_temp')}\u00b0 Max")
+        self.ui.forecast_day2_max_temp.setText(
+            f"{daily_forecast_info[1].get('max_temp')}\u00b0 Max")
+        self.ui.forecast_day3_max_temp.setText(
+            f"{daily_forecast_info[2].get('max_temp')}\u00b0 Max")
+        self.ui.forecast_day4_max_temp.setText(
+            f"{daily_forecast_info[3].get('max_temp')}\u00b0 Max")
+        self.ui.forecast_day5_max_temp.setText(
+            f"{daily_forecast_info[4].get('max_temp')}\u00b0 Max")
+        self.ui.forecast_day6_max_temp.setText(
+            f"{daily_forecast_info[5].get('max_temp')}\u00b0 Max")
+
+        # Set extended weather text each day in 'Forecast' tab
+        self.ui.forecast_day1_info.setText(
+            daily_forecast_info[0].get('extended_text'))
+        self.ui.forecast_day2_info.setText(
+            daily_forecast_info[1].get('extended_text'))
+        self.ui.forecast_day3_info.setText(
+            daily_forecast_info[2].get('extended_text'))
+        self.ui.forecast_day4_info.setText(
+            daily_forecast_info[3].get('extended_text'))
+        self.ui.forecast_day5_info.setText(
+            daily_forecast_info[4].get('extended_text'))
+        self.ui.forecast_day6_info.setText(
+            daily_forecast_info[5].get('extended_text'))
+
+        # Set fire danger each day in 'Forecast' tab
+        self.ui.forecast_day1_fire_danger.setText(
+            daily_forecast_info[0].get('fire_danger'))
+        self.ui.forecast_day2_fire_danger.setText(
+            daily_forecast_info[1].get('fire_danger'))
+        self.ui.forecast_day3_fire_danger.setText(
+            daily_forecast_info[2].get('fire_danger'))
+        self.ui.forecast_day4_fire_danger.setText(
+            daily_forecast_info[3].get('fire_danger'))
+        self.ui.forecast_day5_fire_danger.setText(
+            daily_forecast_info[4].get('fire_danger'))
+        self.ui.forecast_day6_fire_danger.setText(
+            daily_forecast_info[5].get('fire_danger'))
+
+        # Set rain amount for each percentage
+        self.ui.forecast_day1_amount_of_rain_1.setText(f"{
+            daily_forecast_info[0].get('rain_25_percent_chance')}mm")
+        self.ui.forecast_day1_amount_of_rain_2.setText(f"{
+            daily_forecast_info[0].get('rain_50_percent_chance')}mm")
+        self.ui.forecast_day1_amount_of_rain_3.setText(f"{
+            daily_forecast_info[0].get('rain_75_percent_chance')}mm")
+
+        self.ui.forecast_day2_amount_of_rain_1.setText(f"{
+            daily_forecast_info[1].get('rain_25_percent_chance')}mm")
+        self.ui.forecast_day2_amount_of_rain_2.setText(f"{
+            daily_forecast_info[1].get('rain_50_percent_chance')}mm")
+        self.ui.forecast_day2_amount_of_rain_3.setText(f"{
+            daily_forecast_info[1].get('rain_75_percent_chance')}mm")
+
+        self.ui.forecast_day3_amount_of_rain_1.setText(f"{
+            daily_forecast_info[2].get('rain_25_percent_chance')}mm")
+        self.ui.forecast_day3_amount_of_rain_2.setText(f"{
+            daily_forecast_info[2].get('rain_50_percent_chance')}mm")
+        self.ui.forecast_day3_amount_of_rain_3.setText(f"{
+            daily_forecast_info[2].get('rain_75_percent_chance')}mm")
+
+        self.ui.forecast_day4_amount_of_rain_1.setText(f"{
+            daily_forecast_info[3].get('rain_25_percent_chance')}mm")
+        self.ui.forecast_day4_amount_of_rain_2.setText(f"{
+            daily_forecast_info[3].get('rain_50_percent_chance')}mm")
+        self.ui.forecast_day4_amount_of_rain_3.setText(f"{
+            daily_forecast_info[3].get('rain_75_percent_chance')}mm")
+
+        self.ui.forecast_day5_amount_of_rain_1.setText(f"{
+            daily_forecast_info[4].get('rain_25_percent_chance')}mm")
+        self.ui.forecast_day5_amount_of_rain_2.setText(f"{
+            daily_forecast_info[4].get('rain_50_percent_chance')}mm")
+        self.ui.forecast_day5_amount_of_rain_3.setText(f"{
+            daily_forecast_info[4].get('rain_75_percent_chance')}mm")
+
+        self.ui.forecast_day6_amount_of_rain_1.setText(f"{
+            daily_forecast_info[5].get('rain_25_percent_chance')}mm")
+        self.ui.forecast_day6_amount_of_rain_2.setText(f"{
+            daily_forecast_info[5].get('rain_50_percent_chance')}mm")
+        self.ui.forecast_day6_amount_of_rain_3.setText(f"{
+            daily_forecast_info[5].get('rain_75_percent_chance')}mm")
+
+        # Set sunrise time for each day in 'Forecast' Tab
+        self.ui.forecast_day1_sunrise_time.setText(f"{
+            daily_forecast_info[0].get('sunrise_time')} Sunrise")
+        self.ui.forecast_day2_sunrise_time.setText(f"{
+            daily_forecast_info[1].get('sunrise_time')} Sunrise")
+        self.ui.forecast_day3_sunrise_time.setText(f"{
+            daily_forecast_info[2].get('sunrise_time')} Sunrise")
+        self.ui.forecast_day4_sunrise_time.setText(f"{
+            daily_forecast_info[3].get('sunrise_time')} Sunrise")
+        self.ui.forecast_day5_sunrise_time.setText(f"{
+            daily_forecast_info[4].get('sunrise_time')} Sunrise")
+        self.ui.forecast_day6_sunrise_time.setText(f"{
+            daily_forecast_info[5].get('sunrise_time')} Sunrise")
+
+        # Set sunset time for each day in 'Forecast' tab
+        self.ui.forecast_day1_sunset_time.setText(f"{
+            daily_forecast_info[0].get('sunset_time')} Sunset")
+        self.ui.forecast_day2_sunset_time.setText(f"{
+            daily_forecast_info[1].get('sunset_time')} Sunset")
+        self.ui.forecast_day3_sunset_time.setText(f"{
+            daily_forecast_info[2].get('sunset_time')} Sunset")
+        self.ui.forecast_day4_sunset_time.setText(f"{
+            daily_forecast_info[3].get('sunset_time')} Sunset")
+        self.ui.forecast_day5_sunset_time.setText(f"{
+            daily_forecast_info[4].get('sunset_time')} Sunset")
+        self.ui.forecast_day6_sunset_time.setText(f"{
+            daily_forecast_info[5].get('sunset_time')} Sunset")
+
+        # Set UV Index for each day in 'Forecast' tab
+        if daily_forecast_info[0].get('max_uv_index') == '':
+            self.ui.forecast_day1_uv.hide()
+            self.ui.forecast_day1_uv_label.hide()
+        else:
+            self.ui.forecast_day1_uv.show()
+            self.ui.forecast_day1_uv_label.show()
+            self.ui.forecast_day1_uv.setText(f"{
+                daily_forecast_info[0].get('max_uv_index')} ({daily_forecast_info[0].get('max_uv_category')})")
+
+        if daily_forecast_info[1].get('max_uv_index') == '':
+            self.ui.forecast_day2_uv.hide()
+            self.ui.forecast_day2_uv_label.hide()
+        else:
+            self.ui.forecast_day2_uv.show()
+            self.ui.forecast_day2_uv_label.show()
+            self.ui.forecast_day2_uv.setText(f"{
+                daily_forecast_info[1].get('max_uv_index')} ({daily_forecast_info[1].get('max_uv_category')})")
+
+        if daily_forecast_info[2].get('max_uv_index') == '':
+            self.ui.forecast_day3_uv.hide()
+            self.ui.forecast_day3_uv_label.hide()
+        else:
+            self.ui.forecast_day3_uv.show()
+            self.ui.forecast_day3_uv_label.show()
+            self.ui.forecast_day3_uv.setText(f"{
+                daily_forecast_info[2].get('max_uv_index')} ({daily_forecast_info[2].get('max_uv_category')})")
+
+        if daily_forecast_info[3].get('max_uv_index') == '':
+            self.ui.forecast_day4_uv.hide()
+            self.ui.forecast_day4_uv_label.hide()
+        else:
+            self.ui.forecast_day4_uv.show()
+            self.ui.forecast_day4_uv_label.show()
+            self.ui.forecast_day4_uv.setText(f"{
+                daily_forecast_info[3].get('max_uv_index')} ({daily_forecast_info[3].get('max_uv_category')})")
+
+        if daily_forecast_info[4].get('max_uv_index') == '':
+            self.ui.forecast_day5_uv.hide()
+            self.ui.forecast_day5_uv_label.hide()
+        else:
+            self.ui.forecast_day5_uv.show()
+            self.ui.forecast_day5_uv_label.show()
+            self.ui.forecast_day5_uv.setText(f"{
+                daily_forecast_info[4].get('max_uv_index')} ({daily_forecast_info[4].get('max_uv_category')})")
+
+        if daily_forecast_info[5].get('max_uv_index') == '':
+            self.ui.forecast_day6_uv.hide()
+            self.ui.forecast_day6_uv_label.hide()
+        else:
+            self.ui.forecast_day6_uv.show()
+            self.ui.forecast_day6_uv_label.show()
+            self.ui.forecast_day6_uv.setText(f"{
+                daily_forecast_info[5].get('max_uv_index')} ({daily_forecast_info[5].get('max_uv_category')})")
+
+        # Set sun protection recommendation for each day in 'Forecast' tab
+        if daily_forecast_info[0].get('max_uv_index') == '':
+            self.ui.forecast_day1_prot_rec.hide()
+            self.ui.forecast_day1_prot_time.hide()
+        elif int(daily_forecast_info[0].get('max_uv_index')) <= 2:
+            self.ui.forecast_day1_prot_time.hide()
+            self.ui.forecast_day1_prot_rec.show()
+            self.ui.forecast_day1_prot_rec.setText(
+                'Sun Protection Not Required')
+        else:
+            self.ui.forecast_day1_prot_rec.setText(
+                'Sun Protection Recommended')
+            self.ui.forecast_day1_prot_time.setText(f"{
+                daily_forecast_info[0].get('sun_prot_start_time')}-{
+                daily_forecast_info[0].get('sun_prot_end_time')}")
+
+        if daily_forecast_info[1].get('max_uv_index') == '':
+            self.ui.forecast_day2_prot_rec.hide()
+            self.ui.forecast_day2_prot_time.hide()
+        elif int(daily_forecast_info[1].get('max_uv_index')) <= 2:
+            self.ui.forecast_day2_prot_time.hide()
+            self.ui.forecast_day2_prot_rec.show()
+            self.ui.forecast_day2_prot_rec.setText(
+                'Sun Protection Not Required')
+        else:
+            self.ui.forecast_day2_prot_rec.setText(
+                'Sun Protection Recommended')
+            self.ui.forecast_day2_prot_time.setText(f"{
+                daily_forecast_info[1].get('sun_prot_start_time')}-{
+                daily_forecast_info[1].get('sun_prot_end_time')}")
+
+        if daily_forecast_info[2].get('max_uv_index') == '':
+            self.ui.forecast_day3_prot_rec.hide()
+            self.ui.forecast_day3_prot_time.hide()
+        elif int(daily_forecast_info[2].get('max_uv_index')) <= 2:
+            self.ui.forecast_day3_prot_time.hide()
+            self.ui.forecast_day3_prot_rec.show()
+            self.ui.forecast_day3_prot_rec.setText(
+                'Sun Protection Not Required')
+        else:
+            self.ui.forecast_day3_prot_rec.setText(
+                'Sun Protection Recommended')
+            self.ui.forecast_day3_prot_time.setText(f"{
+                daily_forecast_info[2].get('sun_prot_start_time')}-{
+                daily_forecast_info[2].get('sun_prot_end_time')}")
+
+        if daily_forecast_info[3].get('max_uv_index') == '':
+            self.ui.forecast_day4_prot_rec.hide()
+            self.ui.forecast_day4_prot_time.hide()
+        elif int(daily_forecast_info[1].get('max_uv_index')) <= 2:
+            self.ui.forecast_day4_prot_time.hide()
+            self.ui.forecast_day4_prot_rec.show()
+            self.ui.forecast_day4_prot_rec.setText(
+                'Sun Protection Not Required')
+        else:
+            self.ui.forecast_day4_prot_rec.setText(
+                'Sun Protection Recommended')
+            self.ui.forecast_day4_prot_time.setText(f"{
+                daily_forecast_info[3].get('sun_prot_start_time')}-{
+                daily_forecast_info[3].get('sun_prot_end_time')}")
+
+        if daily_forecast_info[4].get('max_uv_index') == '':
+            self.ui.forecast_day5_prot_rec.hide()
+            self.ui.forecast_day5_prot_time.hide()
+        elif int(daily_forecast_info[1].get('max_uv_index')) <= 2:
+            self.ui.forecast_day5_prot_time.hide()
+            self.ui.forecast_day5_prot_rec.show()
+            self.ui.forecast_day5_prot_rec.setText(
+                'Sun Protection Not Required')
+        else:
+            self.ui.forecast_day5_prot_rec.setText(
+                'Sun Protection Recommended')
+            self.ui.forecast_day5_prot_time.setText(f"{
+                daily_forecast_info[4].get('sun_prot_start_time')}-{
+                daily_forecast_info[4].get('sun_prot_end_time')}")
+
+        if daily_forecast_info[5].get('max_uv_index') == '':
+            self.ui.forecast_day6_prot_rec.hide()
+            self.ui.forecast_day6_prot_time.hide()
+        elif int(daily_forecast_info[5].get('max_uv_index')) <= 2:
+            self.ui.forecast_day6_prot_time.hide()
+            self.ui.forecast_day6_prot_rec.show()
+            self.ui.forecast_day6_prot_rec.setText(
+                'Sun Protection Not Required')
+        else:
+            self.ui.forecast_day6_prot_rec.setText(
+                'Sun Protection Recommended')
+            self.ui.forecast_day6_prot_time.setText(f"{
+                daily_forecast_info[5].get('sun_prot_start_time')}-{
+                daily_forecast_info[5].get('sun_prot_end_time')}")
+
+        # Set sun protection time for each day in 'Forecast' tab
+
+        self.ui.forecast_day2_prot_time.setText(f"{
+            daily_forecast_info[1].get('sun_prot_start_time')}-{
+            daily_forecast_info[1].get('sun_prot_end_time')}")
+        self.ui.forecast_day3_prot_time.setText(f"{
+            daily_forecast_info[2].get('sun_prot_start_time')}-{
+            daily_forecast_info[2].get('sun_prot_end_time')}")
+        self.ui.forecast_day4_prot_time.setText(f"{
+            daily_forecast_info[3].get('sun_prot_start_time')}-{
+            daily_forecast_info[3].get('sun_prot_end_time')}")
+        self.ui.forecast_day5_prot_time.setText(f"{
+            daily_forecast_info[4].get('sun_prot_start_time')}-{
+            daily_forecast_info[4].get('sun_prot_end_time')}")
+        self.ui.forecast_day6_prot_time.setText(f"{
+            daily_forecast_info[5].get('sun_prot_start_time')}-{
+            daily_forecast_info[5].get('sun_prot_end_time')}")
+
     def set_overview_forecast_icons(self, weather_condition, label, is_night):
         """ Sets the weather icons of the given label, based on the condition
         Parameters
@@ -445,7 +784,7 @@ class MainWindow(QMainWindow):
             elif weather_condition == 'light_shower':
                 label.setPixmap(self.light_shower_night_icon)
         else:
-            if weather_condition == 'sunny':
+            if weather_condition == 'sunny' or weather_condition == 'clear':
                 label.setPixmap(self.sunny_icon)
             elif weather_condition == 'mostly_sunny' or weather_condition == 'partly_cloudy':
                 label.setPixmap(self.partly_cloudy_icon)

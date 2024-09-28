@@ -215,7 +215,7 @@ def fetch_daily_forecast(geohash, timezone):
 
     Returns
     -------
-    ob_info : dict
+    daily_forecast_info : dict
         Pairs containing daily forecast data for the location extracted from BOM API request 
     """
     response = requests.get(
@@ -240,11 +240,15 @@ def fetch_daily_forecast(geohash, timezone):
             'max_temp': check_if_none_value(None, 'temp_max', day),
             'min_temp': check_if_none_value(None, 'temp_min', day),
             'short_text': check_if_none_value(None, 'short_text', day),
+            'extended_text': check_if_none_value(None, 'extended_text', day),
             'icon_descriptor': check_if_none_value(None, 'icon_descriptor', day),
             'fire_danger': check_if_none_value(None, 'fire_danger', day),
             'date': parse_time(
                 check_if_none_value(None, 'date', day),
                 date_format='weekday', utc=True, timezone=timezone),
+            'date_no_weekday': parse_time(
+                check_if_none_value(None, 'date', day),
+                date_format='date_no_weekday', utc=True, timezone=timezone),
             # Astronomical Info
             'sunrise_time': parse_time(
                 check_if_none_value('astronomical', 'sunrise_time', day),
@@ -262,7 +266,10 @@ def fetch_daily_forecast(geohash, timezone):
         forecast_dict.update(
             {'min_rain_amount': check_if_none_value('amount', 'lower_range', rain_info),
              'max_rain_amount': check_if_none_value('amount', 'upper_range', rain_info),
-             'chance_of_rain': check_if_none_value(None, 'chance', rain_info)})
+             'chance_of_rain': check_if_none_value(None, 'chance', rain_info),
+             'rain_25_percent_chance': check_if_none_value(None, 'precipitation_amount_25_percent_chance', rain_info),
+             'rain_50_percent_chance': check_if_none_value(None, 'precipitation_amount_50_percent_chance', rain_info),
+             'rain_75_percent_chance': check_if_none_value(None, 'precipitation_amount_75_percent_chance', rain_info)})
         daily_forecast_info.append(forecast_dict)
     return daily_forecast_info
 
@@ -325,6 +332,9 @@ def parse_time(iso_time, date_format, utc, timezone):
             elif date_format == 'weekday':
                 local_time = datetime.datetime.strftime(
                     dt.astimezone(tz_data), "%A")
+            elif date_format == 'date_no_weekday':
+                local_time = datetime.datetime.strftime(
+                    dt.astimezone(tz_data), "%d %B")
             else:
                 local_time = datetime.datetime.strftime(
                     dt.astimezone(tz_data), "%d/%m/%Y %I:%M%p")
@@ -344,6 +354,9 @@ def parse_time(iso_time, date_format, utc, timezone):
             elif date_format == 'weekday':
                 local_time = datetime.datetime.strftime(
                     dt.astimezone(tz_data), "%A")
+            elif date_format == 'date_no_weekday':
+                local_time = datetime.datetime.strftime(
+                    dt.astimezone(tz_data), "%d %B")
             else:
                 local_time = datetime.datetime.strftime(
                     dt.astimezone(tz_data), "%d/%m/%Y %I:%M%p")
