@@ -1,5 +1,14 @@
-"""
-TODO: Add Module Docstring
+"""GUI for Weather Program
+The GUI part of the program, is the frontend for the app, which is designed to be the main
+way that the functions in the backend part of the program are interacted with. 
+
+Most of this file wraps around the backend functions and replaces placeholder data in the
+main_ui file with real weather data from real locations.
+
+Most of the GUI is imported from the main_ui file, which provides a 
+structure for the GUI, which is designed using QT Designer. The GUI file requires
+that 'PySide6' is installed and that the 'backend' file and 'main_ui' file are present
+in the same directory, otherwise it will not function.
 """
 from PySide6.QtGui import QPixmap
 from PySide6.QtWidgets import (QWidget,

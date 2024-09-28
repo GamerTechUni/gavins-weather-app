@@ -1,5 +1,9 @@
-"""
-TODO: Add Module Docstring
+""" The Graphing Widget for the program
+Using PyQtGraph, this file wraps around it to assist
+in plotting graphs for the rain card on the Overview in the frontend
+of the program.
+
+The file requires that the 'pyqtgraph' and 'PySide6' modules be installed.
 """
 from PySide6.QtGui import QPalette
 from PySide6.QtWidgets import QApplication, QWidget, QGraphicsView, QVBoxLayout

@@ -2,7 +2,7 @@
  A weather app that uses data from the Bureau of Meterology to present data in a concise way.
  Written as a part of a school project.
 
- NOTE: This app is still a work in progress and may break at anytime!
+ NOTE: This app is subject to change and may break at anytime!
 
  ## Project Description
  The weather app uses data from the Bureau of Meteorology, either through the BOM API, or through other BOM
@@ -25,11 +25,12 @@
  - Dateutil
  - Ratelimit
  - PyQtGraph
+ - qdarkstyle
 
 
  These modules can be installed by running the following command in the Terminal or Command Prompt:
 
- `python -m pip install pyside6 requests python-dateutil ratelimit pyqtgraph`
+ `python -m pip install pyside6 requests python-dateutil ratelimit pyqtgraph qdarkstyle`
 
  After that, the program can be run by running the "\_\_main__.py" file in the folder using Python
 
