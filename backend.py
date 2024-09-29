@@ -267,9 +267,12 @@ def fetch_daily_forecast(geohash, timezone):
             {'min_rain_amount': check_if_none_value('amount', 'lower_range', rain_info),
              'max_rain_amount': check_if_none_value('amount', 'upper_range', rain_info),
              'chance_of_rain': check_if_none_value(None, 'chance', rain_info),
-             'rain_25_percent_chance': check_if_none_value(None, 'precipitation_amount_25_percent_chance', rain_info),
-             'rain_50_percent_chance': check_if_none_value(None, 'precipitation_amount_50_percent_chance', rain_info),
-             'rain_75_percent_chance': check_if_none_value(None, 'precipitation_amount_75_percent_chance', rain_info)})
+             'rain_25_percent_chance': check_if_none_value(
+                None, 'precipitation_amount_25_percent_chance', rain_info),
+             'rain_50_percent_chance': check_if_none_value(
+                None, 'precipitation_amount_50_percent_chance', rain_info),
+             'rain_75_percent_chance': check_if_none_value(
+                None, 'precipitation_amount_75_percent_chance', rain_info)})
         daily_forecast_info.append(forecast_dict)
     return daily_forecast_info
 
@@ -502,3 +505,9 @@ def fetch_hourly_observations(wmo_code, state, timezone):
             'dew_point': check_if_none_value(None, 'dewpt', hour)}
         hourly_observation_info.append(observation_dict)
     return hourly_observation_info
+
+
+if __name__ == '__main__':
+    location_options = fetch_location_options('Lake Eyre')
+    print(fetch_observation('r4csggu', 'Australia/Adelaide'))
+    print(fetch_location_information('r4csggu'))

@@ -57,6 +57,7 @@ class MainWindow(QMainWindow):
         self.ui = Ui_WeatherApp()
         self.ui.setupUi(self)
         self.setWindowTitle("Gavin's Weather App")
+        self.setMinimumSize(800, 800)
         # Sends call everytime the text changes in the search bar
         self.ui.location_input.textChanged.connect(
             self.display_locations_thread)

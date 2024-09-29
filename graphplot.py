@@ -72,7 +72,11 @@ class GraphPlot(QGraphicsView):
 
         # Sets colour to red and makes line thicker
         pen = pg.mkPen(color=(255, 0, 0), width=3)
-        self.graph_widget.showGrid(x=True, y=True)
+        # self.graph_widget.showGrid(x=True, y=True)
         self.graph_widget.setLabel('left', 'Average Amount of Rain (mm)')
         self.graph_widget.setLabel('bottom', 'Forecast Hours (H)')
-        self.graph_widget.plot(hours, rain_amount, pen=pen)
+        # self.graph_widget.plot(hours, rain_amount, pen=pen)
+        self.graph_widget.plot()
+        bargraph = pg.BarGraphItem(
+            x=hours, height=rain_amount, width=0.6, brush='#005392')
+        self.graph_widget.addItem(bargraph)
