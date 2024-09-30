@@ -848,6 +848,7 @@ class MainWindow(QMainWindow):
             hour_time = hour.get('time')
             time_list.append(hour_time)
 
+        self.ui.forecast_info_table.clearContents()
         self.ui.forecast_info_table.setRowCount(len(category_list))
         self.ui.forecast_info_table.setColumnCount(len(time_list))
         self.ui.forecast_info_table.setVerticalHeaderLabels(category_list)
@@ -889,6 +890,7 @@ class MainWindow(QMainWindow):
             hour_time = hour.get('time')
             time_list.append(hour_time)
 
+        self.ui.observation_info_table.clearContents()
         self.ui.observation_info_table.setRowCount(len(category_list))
         self.ui.observation_info_table.setColumnCount(len(time_list))
         self.ui.observation_info_table.setVerticalHeaderLabels(category_list)

@@ -104,6 +104,7 @@ class Ui_WeatherApp(object):
         self.place_overview.setFont(font2)
         self.place_overview.setTextFormat(Qt.TextFormat.PlainText)
         self.place_overview.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.place_overview.setWordWrap(True)
 
         self.verticalLayout_10.addWidget(self.place_overview)
 
@@ -791,7 +792,7 @@ class Ui_WeatherApp(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(-2518, 0, 3642, 358))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 3642, 358))
         self.horizontalLayout_16 = QHBoxLayout(self.scrollAreaWidgetContents)
         self.horizontalLayout_16.setObjectName(u"horizontalLayout_16")
         self.forecast_day1 = QFrame(self.scrollAreaWidgetContents)
@@ -2343,7 +2344,7 @@ class Ui_WeatherApp(object):
 
         self.retranslateUi(WeatherApp)
 
-        self.tabWidget.setCurrentIndex(2)
+        self.tabWidget.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(WeatherApp)
