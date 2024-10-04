@@ -132,9 +132,12 @@ class MainWindow(QMainWindow):
         self.resize(self.light_shower_night_icon.width(),
                     self.light_shower_night_icon.height())
 
-        if self.previous_location_geohash != '':
+        if self.previous_location_geohash != '' and len(self.previous_location_geohash) == 7:
             # If a previous location has been stored in settings, then restore previous location
-            self.get_previous_location_info()
+            geohash_validator = fetch_location_information(
+                self.previous_location_geohash).get('geohash')
+            if geohash_validator != '-':
+                self.get_previous_location_info()
 
     def display_locations(self):
         """ A method that gathers location options to be stored
@@ -258,7 +261,7 @@ class MainWindow(QMainWindow):
         self.ui.current_condtions_overview.setText(
             daily_forecast_info[0].get('short_text'))
 
-        if is_night:
+        if daily_forecast_info[0].get('min_temp') == '-':
             self.ui.min_temp_overview.setText(
                 f"Overnight Min: {str(daily_forecast_info[0].get('temp_now'))}\u00b0")
             self.ui.max_temp_overview.setText(
@@ -612,7 +615,8 @@ class MainWindow(QMainWindow):
             self.ui.forecast_day1_uv.show()
             self.ui.forecast_day1_uv_label.show()
             self.ui.forecast_day1_uv.setText(f"{
-                daily_forecast_info[0].get('max_uv_index')} ({daily_forecast_info[0].get('max_uv_category')})")
+                daily_forecast_info[0].get('max_uv_index')} ({
+                daily_forecast_info[0].get('max_uv_category')})")
 
         if daily_forecast_info[1].get('max_uv_index') == '':
             self.ui.forecast_day2_uv.hide()
@@ -621,7 +625,8 @@ class MainWindow(QMainWindow):
             self.ui.forecast_day2_uv.show()
             self.ui.forecast_day2_uv_label.show()
             self.ui.forecast_day2_uv.setText(f"{
-                daily_forecast_info[1].get('max_uv_index')} ({daily_forecast_info[1].get('max_uv_category')})")
+                daily_forecast_info[1].get('max_uv_index')} ({
+                daily_forecast_info[1].get('max_uv_category')})")
 
         if daily_forecast_info[2].get('max_uv_index') == '':
             self.ui.forecast_day3_uv.hide()
@@ -630,7 +635,8 @@ class MainWindow(QMainWindow):
             self.ui.forecast_day3_uv.show()
             self.ui.forecast_day3_uv_label.show()
             self.ui.forecast_day3_uv.setText(f"{
-                daily_forecast_info[2].get('max_uv_index')} ({daily_forecast_info[2].get('max_uv_category')})")
+                daily_forecast_info[2].get('max_uv_index')} ({
+                daily_forecast_info[2].get('max_uv_category')})")
 
         if daily_forecast_info[3].get('max_uv_index') == '':
             self.ui.forecast_day4_uv.hide()
@@ -639,7 +645,8 @@ class MainWindow(QMainWindow):
             self.ui.forecast_day4_uv.show()
             self.ui.forecast_day4_uv_label.show()
             self.ui.forecast_day4_uv.setText(f"{
-                daily_forecast_info[3].get('max_uv_index')} ({daily_forecast_info[3].get('max_uv_category')})")
+                daily_forecast_info[3].get('max_uv_index')} ({
+                daily_forecast_info[3].get('max_uv_category')})")
 
         if daily_forecast_info[4].get('max_uv_index') == '':
             self.ui.forecast_day5_uv.hide()
@@ -648,7 +655,8 @@ class MainWindow(QMainWindow):
             self.ui.forecast_day5_uv.show()
             self.ui.forecast_day5_uv_label.show()
             self.ui.forecast_day5_uv.setText(f"{
-                daily_forecast_info[4].get('max_uv_index')} ({daily_forecast_info[4].get('max_uv_category')})")
+                daily_forecast_info[4].get('max_uv_index')} ({
+                daily_forecast_info[4].get('max_uv_category')})")
 
         if daily_forecast_info[5].get('max_uv_index') == '':
             self.ui.forecast_day6_uv.hide()
@@ -657,7 +665,8 @@ class MainWindow(QMainWindow):
             self.ui.forecast_day6_uv.show()
             self.ui.forecast_day6_uv_label.show()
             self.ui.forecast_day6_uv.setText(f"{
-                daily_forecast_info[5].get('max_uv_index')} ({daily_forecast_info[5].get('max_uv_category')})")
+                daily_forecast_info[5].get('max_uv_index')} ({
+                daily_forecast_info[5].get('max_uv_category')})")
 
         # Set sun protection recommendation for each day in 'Forecast' tab
         if daily_forecast_info[0].get('max_uv_index') == '':

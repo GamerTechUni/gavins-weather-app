@@ -471,14 +471,17 @@ def fetch_hourly_observations(wmo_code, state, timezone):
     hourly_observation_info : dict
         A list of hours containing dictionaries of past weather data for each hour
     """
-    state_code = STATE_CODES.get(state)
-    response = requests.get(
-        f"http://www.bom.gov.au/fwo/{state_code}60801/{
-            state_code}60801.{wmo_code}.json",
-        timeout=90, headers=HEADERS)
+    try:
+        state_code = STATE_CODES.get(state)
+        response = requests.get(
+            f"http://www.bom.gov.au/fwo/{state_code}60801/{
+                state_code}60801.{wmo_code}.json",
+            timeout=90, headers=HEADERS)
 
-    hourly_observation_data = json.loads(json.dumps(response.json()))[
-        'observations'].get('data')
+        hourly_observation_data = json.loads(json.dumps(response.json()))[
+            'observations'].get('data')
+    except json.decoder.JSONDecodeError:
+        hourly_observation_data = [{}]
 
     ws_unit = read_settings('ws_unit')
     wind_unit = ''
@@ -489,7 +492,6 @@ def fetch_hourly_observations(wmo_code, state, timezone):
 
     hourly_observation_info = []
     for hour in hourly_observation_data:
-
         observation_dict = {'time': parse_time(
             check_if_none_value(None, 'aifstime_utc', hour),
             date_format='hour_minute', utc=False, timezone=timezone),
@@ -505,9 +507,3 @@ def fetch_hourly_observations(wmo_code, state, timezone):
             'dew_point': check_if_none_value(None, 'dewpt', hour)}
         hourly_observation_info.append(observation_dict)
     return hourly_observation_info
-
-
-if __name__ == '__main__':
-    location_options = fetch_location_options('Lake Eyre')
-    print(fetch_observation('r4csggu', 'Australia/Adelaide'))
-    print(fetch_location_information('r4csggu'))
